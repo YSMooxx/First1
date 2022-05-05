@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Darwin
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let myString = "Hello, World!"
+        print(myString)
     }
 
 
