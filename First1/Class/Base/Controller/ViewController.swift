@@ -15,6 +15,15 @@ class ViewController: UIViewController {
         let myString = "Hello, World!"
         print(myString)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
 
 
 }
