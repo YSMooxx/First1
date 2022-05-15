@@ -1,0 +1,8 @@
+Target dependency graph (4 targets)
+Alamofire in Pods, no dependencies
+Pods-First1 in Pods, depends on:
+Alamofire in Pods (explicit)
+Pods-First1-First1UITests in Pods, depends on:
+Alamofire in Pods (explicit)
+Pods-First1Tests in Pods, depends on:
+Pods-First1 in Pods (explicit)
