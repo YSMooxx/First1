@@ -10,6 +10,7 @@ import Foundation
 let say:(String) -> Void = {
     (name: String) -> Void in
     print("hello \(name)")
+    print("___________________________")
 }
 
 let say2:(String) -> Void = {
