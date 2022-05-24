@@ -92,6 +92,7 @@
 		D5B6DA2A2823B24600481169 /* Pods-First1.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D52823B24600481169 /* Pods-First1.release.xcconfig */; };
 		D5B6DA2B2823B24600481169 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D62823B24600481169 /* Manifest.lock */; };
 		D5B6DA2E2824018300481169 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6DA2D2824018300481169 /* FirstController.swift */; };
+		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
 		E1E3B7E1368ACF1A20CB0B20 /* Pods_First1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535FDC06A436DA89B92C00C1 /* Pods_First1Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -246,6 +247,7 @@
 		D5B6D9D52823B24600481169 /* Pods-First1.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-First1.release.xcconfig"; sourceTree = "<group>"; };
 		D5B6D9D62823B24600481169 /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
 		D5B6DA2D2824018300481169 /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
+		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
 		E7D7D03D340E34F12C9A97FA /* Pods-First1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.release.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -382,6 +384,7 @@
 			children = (
 				D5B6D9462823AF2400481169 /* ViewController.swift */,
 				D5B6DA2D2824018300481169 /* FirstController.swift */,
+				D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
+				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
 				D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */,

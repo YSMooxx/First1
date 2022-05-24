@@ -35,10 +35,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let nextView = FirstController()
-        self.present(nextView, animated: true) {
-            
-        }
+        self.navigationController?.pushViewController(DelegateController(), animated: true)
     }
     
     
