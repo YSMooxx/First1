@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         self.window?.backgroundColor = .white
-        let nav = UINavigationController(rootViewController: ViewController())
-        self.window?.rootViewController = nav;
+        let tab = UINavigationController(rootViewController: YXTabBarContrller())
+        self.window?.rootViewController = tab;
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

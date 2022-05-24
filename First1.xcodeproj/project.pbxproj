@@ -93,6 +93,8 @@
 		D5B6DA2B2823B24600481169 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D62823B24600481169 /* Manifest.lock */; };
 		D5B6DA2E2824018300481169 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6DA2D2824018300481169 /* FirstController.swift */; };
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
+		D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF97283CC72300468664 /* YXTabBarController.swift */; };
+		D5CDEF9C283CD8E700468664 /* ControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF9B283CD8E700468664 /* ControllerModel.swift */; };
 		E1E3B7E1368ACF1A20CB0B20 /* Pods_First1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535FDC06A436DA89B92C00C1 /* Pods_First1Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -248,6 +250,8 @@
 		D5B6D9D62823B24600481169 /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
 		D5B6DA2D2824018300481169 /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
+		D5CDEF97283CC72300468664 /* YXTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXTabBarController.swift; sourceTree = "<group>"; };
+		D5CDEF9B283CD8E700468664 /* ControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerModel.swift; sourceTree = "<group>"; };
 		E7D7D03D340E34F12C9A97FA /* Pods-First1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.release.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B6D9782823B18800481169 /* Base */,
+				D5CDEF8D283CC6AA00468664 /* Section */,
 				D57F685328309B8400647F08 /* Tool */,
 			);
 			path = Class;
@@ -385,6 +390,7 @@
 				D5B6D9462823AF2400481169 /* ViewController.swift */,
 				D5B6DA2D2824018300481169 /* FirstController.swift */,
 				D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */,
+				D5CDEF97283CC72300468664 /* YXTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 		D5B6D97A2823B18800481169 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D5CDEF9B283CD8E700468664 /* ControllerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -572,6 +579,45 @@
 			children = (
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		D5CDEF8D283CC6AA00468664 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				D5CDEF8E283CC6AA00468664 /* Home */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		D5CDEF8E283CC6AA00468664 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5CDEF8F283CC6AA00468664 /* Controller */,
+				D5CDEF90283CC6AA00468664 /* Model */,
+				D5CDEF91283CC6AA00468664 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5CDEF8F283CC6AA00468664 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5CDEF90283CC6AA00468664 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5CDEF91283CC6AA00468664 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D87B3412698D13B98A285641 /* Pods */ = {
@@ -902,9 +948,11 @@
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
+				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
 				D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */,
+				D5CDEF9C283CD8E700468664 /* ControllerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
