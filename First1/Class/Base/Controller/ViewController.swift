@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         say("1112")
-        say2("HaRi")
+        say2("HaRi2")
         say3()
         showArray(array: [1,2,3,4])
         var arr:Array<Int> = [23, 34, 56, 15, 8]
