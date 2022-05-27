@@ -17,7 +17,7 @@ class YXTabBarContrller: UITabBarController {
         
         let dic = ["title":"123","name":"ddd"]
 
-        print(sdic)
+        print(dic)
         
     }
     
