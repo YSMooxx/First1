@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        say("1112")
+        say("11123")
         say2("HaRi2")
         say3()
         showArray(array: [1,2,3,4])
