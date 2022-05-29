@@ -16,11 +16,7 @@ class YXTabBarContrller: UITabBarController {
         
         AddChileVCWithArray(array: VCArray)
         
-<<<<<<< HEAD
-        let dic = ["title":"1235","name":"ddd"]
-=======
         let dic = ["title":"1236","name":"ddd"]
->>>>>>> Feature
 
         print(dic)
         
