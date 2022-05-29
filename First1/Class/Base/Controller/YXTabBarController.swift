@@ -12,12 +12,12 @@ class YXTabBarContrller: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        
         AddChileVCWithArray(array: VCArray)
         
-        let dic = ["title":"1236","name":"ddd"]
+        let dic = ["title":"1237","name":"ddd"]
 
+        print(dic)
+        
         print(dic)
         
     }
