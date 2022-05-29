@@ -60,16 +60,10 @@
 		D5B6DA0A2823B24600481169 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9A72823B24600481169 /* README.md */; };
 		D5B6DA0B2823B24600481169 /* Pods-First1Tests-acknowledgements.markdown in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9AA2823B24600481169 /* Pods-First1Tests-acknowledgements.markdown */; };
 		D5B6DA0C2823B24600481169 /* Pods-First1Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9AC2823B24600481169 /* Pods-First1Tests-dummy.m */; };
-		D5B6DA0D2823B24600481169 /* Pods-First1Tests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9AD2823B24600481169 /* Pods-First1Tests.release.xcconfig */; };
 		D5B6DA0E2823B24600481169 /* Pods-First1Tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9AE2823B24600481169 /* Pods-First1Tests-Info.plist */; };
 		D5B6DA0F2823B24600481169 /* Pods-First1Tests-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9B02823B24600481169 /* Pods-First1Tests-acknowledgements.plist */; };
-		D5B6DA102823B24600481169 /* Pods-First1Tests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9B12823B24600481169 /* Pods-First1Tests.debug.xcconfig */; };
-		D5B6DA112823B24600481169 /* Alamofire.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9B32823B24600481169 /* Alamofire.release.xcconfig */; };
 		D5B6DA122823B24600481169 /* Alamofire-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9B42823B24600481169 /* Alamofire-Info.plist */; };
 		D5B6DA132823B24600481169 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9B52823B24600481169 /* Alamofire-dummy.m */; };
-		D5B6DA142823B24600481169 /* Alamofire.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9B62823B24600481169 /* Alamofire.debug.xcconfig */; };
-		D5B6DA152823B24600481169 /* Pods-First1-First1UITests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9BB2823B24600481169 /* Pods-First1-First1UITests.release.xcconfig */; };
-		D5B6DA162823B24600481169 /* Pods-First1-First1UITests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9BC2823B24600481169 /* Pods-First1-First1UITests.debug.xcconfig */; };
 		D5B6DA172823B24600481169 /* Pods-First1-First1UITests-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9BD2823B24600481169 /* Pods-First1-First1UITests-frameworks.sh */; };
 		D5B6DA182823B24600481169 /* Pods-First1-First1UITests-frameworks-Debug-output-files.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9BE2823B24600481169 /* Pods-First1-First1UITests-frameworks-Debug-output-files.xcfilelist */; };
 		D5B6DA192823B24600481169 /* Pods-First1-First1UITests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9BF2823B24600481169 /* Pods-First1-First1UITests-Info.plist */; };
@@ -87,9 +81,7 @@
 		D5B6DA252823B24600481169 /* Pods-First1-frameworks-Release-input-files.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9CF2823B24600481169 /* Pods-First1-frameworks-Release-input-files.xcfilelist */; };
 		D5B6DA262823B24600481169 /* Pods-First1-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D12823B24600481169 /* Pods-First1-frameworks.sh */; };
 		D5B6DA272823B24600481169 /* Pods-First1-frameworks-Release-output-files.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D22823B24600481169 /* Pods-First1-frameworks-Release-output-files.xcfilelist */; };
-		D5B6DA282823B24600481169 /* Pods-First1.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D32823B24600481169 /* Pods-First1.debug.xcconfig */; };
 		D5B6DA292823B24600481169 /* Pods-First1-acknowledgements.markdown in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D42823B24600481169 /* Pods-First1-acknowledgements.markdown */; };
-		D5B6DA2A2823B24600481169 /* Pods-First1.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D52823B24600481169 /* Pods-First1.release.xcconfig */; };
 		D5B6DA2B2823B24600481169 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9D62823B24600481169 /* Manifest.lock */; };
 		D5B6DA2E2824018300481169 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6DA2D2824018300481169 /* FirstController.swift */; };
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
@@ -792,24 +784,18 @@
 			files = (
 				D5B6DA1B2823B24600481169 /* Pods-First1-First1UITests-frameworks-Debug-input-files.xcfilelist in Resources */,
 				D5B6DA272823B24600481169 /* Pods-First1-frameworks-Release-output-files.xcfilelist in Resources */,
-				D5B6DA112823B24600481169 /* Alamofire.release.xcconfig in Resources */,
 				D5B6DA0A2823B24600481169 /* README.md in Resources */,
-				D5B6DA2A2823B24600481169 /* Pods-First1.release.xcconfig in Resources */,
 				D5B6DA242823B24600481169 /* Pods-First1-frameworks-Debug-input-files.xcfilelist in Resources */,
 				D5B6DA182823B24600481169 /* Pods-First1-First1UITests-frameworks-Debug-output-files.xcfilelist in Resources */,
 				D5B6D9E52823B24600481169 /* LICENSE in Resources */,
 				D5B6DA1A2823B24600481169 /* Pods-First1-First1UITests-frameworks-Release-input-files.xcfilelist in Resources */,
-				D5B6DA152823B24600481169 /* Pods-First1-First1UITests.release.xcconfig in Resources */,
 				D5B6DA292823B24600481169 /* Pods-First1-acknowledgements.markdown in Resources */,
 				D5B6DA1F2823B24600481169 /* Pods-First1-First1UITests-acknowledgements.markdown in Resources */,
 				D5B6DA192823B24600481169 /* Pods-First1-First1UITests-Info.plist in Resources */,
 				D5B6DA262823B24600481169 /* Pods-First1-frameworks.sh in Resources */,
 				D5B6DA172823B24600481169 /* Pods-First1-First1UITests-frameworks.sh in Resources */,
-				D5B6DA0D2823B24600481169 /* Pods-First1Tests.release.xcconfig in Resources */,
-				D5B6DA282823B24600481169 /* Pods-First1.debug.xcconfig in Resources */,
 				D5B6DA232823B24600481169 /* Pods-First1-Info.plist in Resources */,
 				D5B6DA252823B24600481169 /* Pods-First1-frameworks-Release-input-files.xcfilelist in Resources */,
-				D5B6DA142823B24600481169 /* Alamofire.debug.xcconfig in Resources */,
 				D5B6DA0B2823B24600481169 /* Pods-First1Tests-acknowledgements.markdown in Resources */,
 				D5B6DA0F2823B24600481169 /* Pods-First1Tests-acknowledgements.plist in Resources */,
 				D5B6DA1E2823B24600481169 /* Pods-First1-First1UITests-frameworks-Release-output-files.xcfilelist in Resources */,
@@ -819,8 +805,6 @@
 				D5B6DA0E2823B24600481169 /* Pods-First1Tests-Info.plist in Resources */,
 				D5B6DA212823B24600481169 /* Pods-First1-acknowledgements.plist in Resources */,
 				D5B6DA122823B24600481169 /* Alamofire-Info.plist in Resources */,
-				D5B6DA102823B24600481169 /* Pods-First1Tests.debug.xcconfig in Resources */,
-				D5B6DA162823B24600481169 /* Pods-First1-First1UITests.debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,7 +1166,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = first.line.com.First1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1211,7 +1195,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = first.line.com.First1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
