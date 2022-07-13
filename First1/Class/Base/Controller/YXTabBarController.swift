@@ -12,13 +12,7 @@ class YXTabBarContrller: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AddChileVCWithArray(array: VCArray)
-        
-        let dic = ["title":"1237","name":"ddd"]
-
-        print(dic)
-        
-        print(dic)
+        AddChileVCWithArray()
         
     }
     
@@ -28,13 +22,13 @@ class YXTabBarContrller: UITabBarController {
         
     }
     
-    var VCArray : NSArray = [["YClass":"FirstController1","YTitle":"消息","YImage":"","YSelImage":"",],["YClass":"DelegateController","YTitle":"代理","YImage":"","YSelImage":"",]]
-    
-    func AddChileVCWithArray(array:NSArray) {
+    func AddChileVCWithArray() {
         
-        for s in array {
+        let VCArray : NSArray = [["YClass":"FirstController","YTitle":"消息","YImage":"","YSelImage":"",],["YClass":"DelegateController","YTitle":"代理","YImage":"","YSelImage":"",]]
+        
+        for controller in VCArray {
             
-            AddChileVCWithDic(dic: s as! Dictionary<String, String>)
+            AddChileVCWithDic(dic: controller as! Dictionary<String, String>)
         }
         
     }
@@ -43,9 +37,13 @@ class YXTabBarContrller: UITabBarController {
         
         let YClass:String = dic["YClass"] ?? ""
         
-        print(YClass)
+        let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as!String
+        let vcClass = NSClassFromString(namespace+"."+YClass)!as!UIViewController.Type
+        let navigationVC = UINavigationController(rootViewController: vcClass.init())
+        addChildViewController(navigationVC)
         
     }
     
     
 }
+
