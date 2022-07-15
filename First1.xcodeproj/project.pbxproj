@@ -695,6 +695,7 @@
 				TargetAttributes = {
 					D5B6D93E2823AF2400481169 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 					D5B6D9572823AF2800481169 = {
 						CreatedOnToolsVersion = 13.3;
@@ -736,7 +737,6 @@
 		D5B6D9DE2823B24600481169 /* Alamofire */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = Alamofire;
 			path = Alamofire.framework;
 			remoteRef = D5B6D9DD2823B24600481169 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1166,7 +1166,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = first.line.com.First1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1195,7 +1195,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = first.line.com.First1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

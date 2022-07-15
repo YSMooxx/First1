@@ -43,11 +43,11 @@ class YXTabBarContrller: UITabBarController {
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as!String
         let vcClass = NSClassFromString(namespace+"."+YClass)!as!UIViewController.Type
         let navigationVC = UINavigationController(rootViewController: vcClass.init())
-        addChildViewController(navigationVC)
+        addChild(navigationVC)
         
         navigationVC.title = YTitle
         
-        addChildViewController(navigationVC)
+        addChild(navigationVC)
         
     }
     
