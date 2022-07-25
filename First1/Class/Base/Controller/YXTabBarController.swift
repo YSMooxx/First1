@@ -19,7 +19,7 @@ class YXTabBarContrller: UITabBarController {
     
     func setupUI() {
         
-        self.tabBar.barTintColor=UIColor.gray
+        self.tabBar.barTintColor=UIColor.white
         
         let tabBarAppearance = UITabBarAppearance()
                tabBarAppearance.shadowColor = .clear
@@ -52,7 +52,8 @@ class YXTabBarContrller: UITabBarController {
         print(YImage)
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as!String
         let vcClass = NSClassFromString(namespace+"."+YClass)!as!UIViewController.Type
-        let navigationVC = UINavigationController(rootViewController: vcClass.init())
+        
+        let navigationVC = YXNavigationController(rootViewController: vcClass.init())
         addChild(navigationVC)
         
         navigationVC.title = YTitle

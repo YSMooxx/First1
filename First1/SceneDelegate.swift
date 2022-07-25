@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         self.window?.backgroundColor = .white
-        let tab = UINavigationController(rootViewController: YXTabBarContrller())
+        let tab = YXTabBarContrller.init()
         self.window?.rootViewController = tab;
     }
 

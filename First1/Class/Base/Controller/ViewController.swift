@@ -37,8 +37,6 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(DelegateController(), animated: true)
     }
-    
-    
 
 }
 
