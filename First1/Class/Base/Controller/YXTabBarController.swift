@@ -12,13 +12,23 @@ class YXTabBarContrller: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         AddChileVCWithArray()
         
     }
     
     func setupUI() {
         
+        self.tabBar.barTintColor=UIColor.gray
         
+        let tabBarAppearance = UITabBarAppearance()
+               tabBarAppearance.shadowColor = .clear
+               tabBarAppearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+               
+               UITabBar.appearance().standardAppearance = tabBarAppearance
+               if #available(iOS 15, *) {
+                   UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+               }
         
     }
     
