@@ -17,5 +17,6 @@ class YXNavigationController: UINavigationController {
     func setupUI() {
         
         self.navigationBar.backgroundColor = UIColor.red
+        
     }
 }
