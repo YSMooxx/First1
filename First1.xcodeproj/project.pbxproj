@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		164F8D984B10D24E1A073187 /* Pods_First1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C838D5304B81524E70AA9FD /* Pods_First1.framework */; };
 		6C9B4F4DBA0A90F366D5FC28 /* Pods_First1_First1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */; };
+		D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650B528A0B312004A43EE /* YXMessegeController.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
@@ -144,6 +145,7 @@
 		55DBCC07F4AAF0CF2FA568E7 /* Pods-First1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1.debug.xcconfig"; path = "Target Support Files/Pods-First1/Pods-First1.debug.xcconfig"; sourceTree = "<group>"; };
 		8868DAC80127AF90597D6E65 /* Pods-First1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.debug.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First1_First1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52650B528A0B312004A43EE /* YXMessegeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMessegeController.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 		D5CDEF8F283CC6AA00468664 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D52650B528A0B312004A43EE /* YXMessegeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -930,6 +933,7 @@
 			files = (
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
+				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
