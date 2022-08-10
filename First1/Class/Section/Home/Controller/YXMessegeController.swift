@@ -11,7 +11,13 @@ class YXMessegeController: UITableViewController {
     
     override func viewDidLoad() {
         
+        test()
+    }
+    
+    func test() {
         
+        let myString = "Hello,World!"
+        print(myString)
     }
     
 }
