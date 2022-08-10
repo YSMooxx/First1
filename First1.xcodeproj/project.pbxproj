@@ -10,6 +10,7 @@
 		164F8D984B10D24E1A073187 /* Pods_First1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C838D5304B81524E70AA9FD /* Pods_First1.framework */; };
 		6C9B4F4DBA0A90F366D5FC28 /* Pods_First1_First1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */; };
 		D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650B528A0B312004A43EE /* YXMessegeController.swift */; };
+		D52650C528A3994D004A43EE /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* TestController.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
@@ -146,6 +147,7 @@
 		8868DAC80127AF90597D6E65 /* Pods-First1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.debug.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First1_First1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52650B528A0B312004A43EE /* YXMessegeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMessegeController.swift; sourceTree = "<group>"; };
+		D52650C428A3994D004A43EE /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -286,6 +288,38 @@
 				535FDC06A436DA89B92C00C1 /* Pods_First1Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D52650BC28A39925004A43EE /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				D52650BD28A39925004A43EE /* Controller */,
+				D52650BE28A39925004A43EE /* Model */,
+				D52650BF28A39925004A43EE /* View */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		D52650BD28A39925004A43EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D52650C428A3994D004A43EE /* TestController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D52650BE28A39925004A43EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D52650BF28A39925004A43EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D57F685328309B8400647F08 /* Tool */ = {
@@ -579,6 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				D5CDEF8E283CC6AA00468664 /* Home */,
+				D52650BC28A39925004A43EE /* Test */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -934,6 +969,7 @@
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
+				D52650C528A3994D004A43EE /* TestController.swift in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
