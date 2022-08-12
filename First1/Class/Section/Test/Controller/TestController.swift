@@ -11,7 +11,7 @@ class TestController: UIViewController {
     
     override func viewDidLoad() {
         
-        test3()
+        test5()
     }
     
     //Hello,World
@@ -68,6 +68,32 @@ class TestController: UIViewController {
         let site = "http://www.runoob.com"
 
         print("\(name)的官网地址为：\(site)")
+    }
+    
+    func test4() {
+        
+        var myString:String?
+
+        myString = "Hello, Swift!"
+
+        if myString != nil {
+            print(myString!)
+        }else{
+           print("myString 值为 nil")
+        }
+    }
+    
+    func test5() {
+        
+        let myString:String! = "Hello, Swift!"
+        let cat: String = myString
+//        myString = "Hello, Swift!"
+        print(cat)
+        if myString != nil {
+           print(myString)
+        }else{
+           print("myString 值为 nil")
+        }
     }
     
 }
