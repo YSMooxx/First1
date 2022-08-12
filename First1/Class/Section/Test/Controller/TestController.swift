@@ -6,12 +6,26 @@
 //
 
 import UIKit
+import WebKit
 
-class TestController: UIViewController {
+class TestController: UIViewController,WKUIDelegate {
+    
+    var webView: WKWebView!
+    
+    override func loadView() {
+        
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero,configuration: webConfiguration)
+        webView.uiDelegate = self
+        
+        view = webView
+    }
     
     override func viewDidLoad() {
         
-        test5()
+        let url = URL(string:"http://www.djy-es.com")
+        let request = URLRequest(url: url!)
+        webView.load(request)
     }
     
     //Hello,World
@@ -70,6 +84,7 @@ class TestController: UIViewController {
         print("\(name)的官网地址为：\(site)")
     }
     
+    //强制解析
     func test4() {
         
         var myString:String?
@@ -83,17 +98,12 @@ class TestController: UIViewController {
         }
     }
     
+    //自动解析
     func test5() {
         
-        let myString:String! = "Hello, Swift!"
-        let cat: String = myString
-//        myString = "Hello, Swift!"
-        print(cat)
-        if myString != nil {
-           print(myString)
-        }else{
-           print("myString 值为 nil")
-        }
+        let defaulAddress:String = "dddd"
+        print(defaulAddress)
+        
     }
     
 }
