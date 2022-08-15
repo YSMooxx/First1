@@ -6,26 +6,12 @@
 //
 
 import UIKit
-import WebKit
 
-class TestController: UIViewController,WKUIDelegate {
-    
-    var webView: WKWebView!
-    
-    override func loadView() {
-        
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero,configuration: webConfiguration)
-        webView.uiDelegate = self
-        
-        view = webView
-    }
+class TestController: UIViewController {
     
     override func viewDidLoad() {
         
-        let url = URL(string:"http://www.djy-es.com")
-        let request = URLRequest(url: url!)
-        webView.load(request)
+        test5()
     }
     
     //Hello,World

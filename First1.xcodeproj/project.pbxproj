@@ -11,7 +11,7 @@
 		6C9B4F4DBA0A90F366D5FC28 /* Pods_First1_First1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */; };
 		D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650B528A0B312004A43EE /* YXMessegeController.swift */; };
 		D52650C528A3994D004A43EE /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* TestController.swift */; };
-		D52650CD28A642FE004A43EE /* TestWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebView.swift */; };
+		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
@@ -149,7 +149,7 @@
 		B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First1_First1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52650B528A0B312004A43EE /* YXMessegeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMessegeController.swift; sourceTree = "<group>"; };
 		D52650C428A3994D004A43EE /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
-		D52650CC28A642FE004A43EE /* TestWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebView.swift; sourceTree = "<group>"; };
+		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -306,7 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				D52650C428A3994D004A43EE /* TestController.swift */,
-				D52650CC28A642FE004A43EE /* TestWebView.swift */,
+				D52650CC28A642FE004A43EE /* TestWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -978,7 +978,7 @@
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */,
-				D52650CD28A642FE004A43EE /* TestWebView.swift in Sources */,
+				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
 				D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */,
 			);
