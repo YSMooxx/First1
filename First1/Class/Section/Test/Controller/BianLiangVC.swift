@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestController: UIViewController {
+class BianLiangVC: UIViewController {
     
     override func viewDidLoad() {
         
@@ -91,5 +91,6 @@ class TestController: UIViewController {
         print(defaulAddress)
         
     }
+    
     
 }

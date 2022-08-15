@@ -10,7 +10,7 @@
 		164F8D984B10D24E1A073187 /* Pods_First1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C838D5304B81524E70AA9FD /* Pods_First1.framework */; };
 		6C9B4F4DBA0A90F366D5FC28 /* Pods_First1_First1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */; };
 		D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650B528A0B312004A43EE /* YXMessegeController.swift */; };
-		D52650C528A3994D004A43EE /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* TestController.swift */; };
+		D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* BianLiangVC.swift */; };
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
@@ -90,6 +90,9 @@
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
 		D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF97283CC72300468664 /* YXTabBarController.swift */; };
 		D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */; };
+		D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */; };
+		D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */; };
+		D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */; };
 		E1E3B7E1368ACF1A20CB0B20 /* Pods_First1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535FDC06A436DA89B92C00C1 /* Pods_First1Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,7 +151,7 @@
 		8868DAC80127AF90597D6E65 /* Pods-First1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.debug.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First1_First1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52650B528A0B312004A43EE /* YXMessegeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMessegeController.swift; sourceTree = "<group>"; };
-		D52650C428A3994D004A43EE /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +253,9 @@
 		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
 		D5CDEF97283CC72300468664 /* YXTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXTabBarController.swift; sourceTree = "<group>"; };
 		D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNavigationController.swift; sourceTree = "<group>"; };
+		D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangLiangVC.swift; sourceTree = "<group>"; };
+		D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMianLiangVC.swift; sourceTree = "<group>"; };
+		D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YunSuanFuVC.swift; sourceTree = "<group>"; };
 		E7D7D03D340E34F12C9A97FA /* Pods-First1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.release.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,8 +311,11 @@
 		D52650BD28A39925004A43EE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D52650C428A3994D004A43EE /* TestController.swift */,
 				D52650CC28A642FE004A43EE /* TestWebViewController.swift */,
+				D52650C428A3994D004A43EE /* BianLiangVC.swift */,
+				D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */,
+				D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */,
+				D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -970,12 +979,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
+				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
-				D52650C528A3994D004A43EE /* TestController.swift in Sources */,
+				D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
+				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
+				D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */,
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,
