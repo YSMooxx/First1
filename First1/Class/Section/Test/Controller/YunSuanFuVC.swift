@@ -11,7 +11,7 @@ class YunSuanFuVC:UIViewController {
     
     override func viewDidLoad() {
         
-        test4()
+        test7()
     }
     
     //算数符
@@ -67,5 +67,55 @@ class YunSuanFuVC:UIViewController {
         print("A || B 结果为：\(A || B)")
         print("!A 结果为：\(!A)")
         print("!B 结果为：\(!B)")
+    }
+    
+    //赋值运算
+    func test5() {
+        
+        let A = 10
+        let B = 20
+        var C = 100
+
+        C = A + B
+        print("C 结果为：\(C)")
+
+        C += A
+        print("C 结果为：\(C)")
+
+        C -= A
+        print("C 结果为：\(C)")
+
+        C *= A
+        print("C 结果为：\(C)")
+
+        C /= A
+        print("C 结果为：\(C)")
+    }
+    
+    //区间运算符
+    func test6() {
+        
+        print("闭区间运算符:")
+        for index in 1...5 {
+            print("\(index) * 5 = \(index * 5)")
+        }
+
+        print("半开区间运算符:")
+        for index in 1..<5 {
+            print("\(index) * 5 = \(index * 5)")
+        }
+    }
+    
+    //其他运算符
+    func test7() {
+        
+        let A = 1
+        let B = 2
+        let C = true
+        let D = false
+        print("-A 的值为：\(-A)")
+        print("A + B 的值为：\(A + B)")
+        print("三元运算：\(C ? A : B )")
+        print("三元运算：\(D ? A : B )")
     }
 }
