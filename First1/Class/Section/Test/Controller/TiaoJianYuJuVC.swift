@@ -89,16 +89,16 @@ class TiaoJianYuJuVC:UIViewController {
 
         switch index {
            case 100  :
-              index+=1
+              index+=2
               print( "index 的值为 100")
            case 10,15  :
-              index+=1
+              index+=2
               print( "index 的值为 10 或 15")
            case 5  :
-              index+=1
+              index+=2
               print( "index 的值为 5")
            default :
-              index+=1
+              index+=2
               print( "默认 case")
         }
     }
