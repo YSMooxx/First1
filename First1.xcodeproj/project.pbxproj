@@ -95,6 +95,7 @@
 		D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */; };
 		D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5A328AF68F3008639E2 /* XunHuanVC.swift */; };
 		D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5A928AF73C7008639E2 /* TiaoJianYuJuVC.swift */; };
+		D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5AD28B35919008639E2 /* ZiFuChuanVC.swift */; };
 		E1E3B7E1368ACF1A20CB0B20 /* Pods_First1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535FDC06A436DA89B92C00C1 /* Pods_First1Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -260,6 +261,7 @@
 		D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YunSuanFuVC.swift; sourceTree = "<group>"; };
 		D5FEF5A328AF68F3008639E2 /* XunHuanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XunHuanVC.swift; sourceTree = "<group>"; };
 		D5FEF5A928AF73C7008639E2 /* TiaoJianYuJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiaoJianYuJuVC.swift; sourceTree = "<group>"; };
+		D5FEF5AD28B35919008639E2 /* ZiFuChuanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiFuChuanVC.swift; sourceTree = "<group>"; };
 		E7D7D03D340E34F12C9A97FA /* Pods-First1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.release.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +324,7 @@
 				D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */,
 				D5FEF5A328AF68F3008639E2 /* XunHuanVC.swift */,
 				D5FEF5A928AF73C7008639E2 /* TiaoJianYuJuVC.swift */,
+				D5FEF5AD28B35919008639E2 /* ZiFuChuanVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -988,6 +991,7 @@
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
+				D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */,
 				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
 				D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
