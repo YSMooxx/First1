@@ -96,6 +96,8 @@
 		D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5A328AF68F3008639E2 /* XunHuanVC.swift */; };
 		D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5A928AF73C7008639E2 /* TiaoJianYuJuVC.swift */; };
 		D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5AD28B35919008639E2 /* ZiFuChuanVC.swift */; };
+		D5FEF5BA28B4A56A008639E2 /* ZiFuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5B928B4A56A008639E2 /* ZiFuVC.swift */; };
+		D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF5BC28B4AE1F008639E2 /* ShuZuVC.swift */; };
 		E1E3B7E1368ACF1A20CB0B20 /* Pods_First1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535FDC06A436DA89B92C00C1 /* Pods_First1Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -262,6 +264,8 @@
 		D5FEF5A328AF68F3008639E2 /* XunHuanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XunHuanVC.swift; sourceTree = "<group>"; };
 		D5FEF5A928AF73C7008639E2 /* TiaoJianYuJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiaoJianYuJuVC.swift; sourceTree = "<group>"; };
 		D5FEF5AD28B35919008639E2 /* ZiFuChuanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiFuChuanVC.swift; sourceTree = "<group>"; };
+		D5FEF5B928B4A56A008639E2 /* ZiFuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiFuVC.swift; sourceTree = "<group>"; };
+		D5FEF5BC28B4AE1F008639E2 /* ShuZuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuZuVC.swift; sourceTree = "<group>"; };
 		E7D7D03D340E34F12C9A97FA /* Pods-First1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.release.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +329,8 @@
 				D5FEF5A328AF68F3008639E2 /* XunHuanVC.swift */,
 				D5FEF5A928AF73C7008639E2 /* TiaoJianYuJuVC.swift */,
 				D5FEF5AD28B35919008639E2 /* ZiFuChuanVC.swift */,
+				D5FEF5B928B4A56A008639E2 /* ZiFuVC.swift */,
+				D5FEF5BC28B4AE1F008639E2 /* ShuZuVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1000,8 +1006,10 @@
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
 				D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */,
 				D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */,
+				D5FEF5BA28B4A56A008639E2 /* ZiFuVC.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */,
+				D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */,
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
 				D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */,
