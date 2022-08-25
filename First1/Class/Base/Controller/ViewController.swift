@@ -13,15 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        say("11123")
-        say2("HaRi2")
-        say3()
-        showArray(array: [1,2,3,4])
-        var arr:Array<Int> = [23, 34, 56, 15, 8]
-        bubbleSort(array: &arr, cmp: cmp)
-        showArray(array: arr)
-        bubbleSort1(array: &arr, cmp: cmp)
-        showArray(array: arr)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
