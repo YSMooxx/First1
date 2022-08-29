@@ -11,7 +11,7 @@ class BiBaoVC:UIViewController {
     
     override func viewDidLoad() {
     
-        test2()
+        test3()
     }
     
     //语法
@@ -36,6 +36,16 @@ class BiBaoVC:UIViewController {
         }
         let reversed = names.sorted(by: backwards)
 
+        print(reversed)
+    }
+    
+    //尾随闭包
+    func test3() {
+        
+        let names = ["AT", "AE", "D", "S", "BE"]
+
+        //尾随闭包
+        let reversed = names.sorted() { $0 > $1 }
         print(reversed)
     }
 }
