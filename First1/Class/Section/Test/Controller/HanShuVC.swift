@@ -19,7 +19,6 @@ class HanShuVC:UIViewController {
          print(ShuXuArray1(array: [1,-2,-6,7,9,3]))
          print(YiXuArray1(array: [1,-2,-6,7,9,3,3]))
         */
-        
         print(calcDecrement(forDecrement: 30)())
     }
     
