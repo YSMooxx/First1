@@ -29,7 +29,7 @@ class MeiJuVC:UIViewController {
     func test1() {
         
         var weekDay = DaysofaWeek.THURSDAY
-        weekDay = .THURSDAY
+        weekDay = .Saturday
         print(weekDay)
     }
     
@@ -63,5 +63,6 @@ class MeiJuVC:UIViewController {
         
         let yearMonth = Month.May.rawValue
         print("数字月份为: \(yearMonth)。")
+        print(Month.September.rawValue)
     }
 }
