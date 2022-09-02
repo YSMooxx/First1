@@ -16,6 +16,9 @@
 		D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFB828B85CB10013DB2A /* BiBaoVC.swift */; };
 		D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */; };
 		D590AFC828BDF98F0013DB2A /* JieGouTiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */; };
+		D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFCD28BDFF920013DB2A /* LeiVC.swift */; };
+		D590AFD028BE018C0013DB2A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFCF28BE018C0013DB2A /* Student.swift */; };
+		D590AFD428C18DB10013DB2A /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFD328C18DB10013DB2A /* SampleClass.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
 		D5B6D9472823AF2400481169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9462823AF2400481169 /* ViewController.swift */; };
@@ -167,6 +170,9 @@
 		D590AFB828B85CB10013DB2A /* BiBaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiBaoVC.swift; sourceTree = "<group>"; };
 		D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiJuVC.swift; sourceTree = "<group>"; };
 		D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieGouTiVC.swift; sourceTree = "<group>"; };
+		D590AFCD28BDFF920013DB2A /* LeiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeiVC.swift; sourceTree = "<group>"; };
+		D590AFCF28BE018C0013DB2A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		D590AFD328C18DB10013DB2A /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B6D9442823AF2400481169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 				D590AFB828B85CB10013DB2A /* BiBaoVC.swift */,
 				D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */,
 				D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */,
+				D590AFCD28BDFF920013DB2A /* LeiVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,6 +360,8 @@
 		D52650BE28A39925004A43EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D590AFCF28BE018C0013DB2A /* Student.swift */,
+				D590AFD328C18DB10013DB2A /* SampleClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1013,6 +1022,7 @@
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
+				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
 				D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */,
 				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
@@ -1020,8 +1030,10 @@
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
 				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
+				D590AFD028BE018C0013DB2A /* Student.swift in Sources */,
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
 				D5FEF5CB28B60E94008639E2 /* HanShuVC.swift in Sources */,
+				D590AFD428C18DB10013DB2A /* SampleClass.swift in Sources */,
 				D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */,
 				D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */,
 				D5FEF5BA28B4A56A008639E2 /* ZiFuVC.swift in Sources */,
