@@ -13,6 +13,9 @@
 		D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* BianLiangVC.swift */; };
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
+		D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */; };
+		D58B32AE28C3853E00627117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9482823AF2400481169 /* Main.storyboard */; };
+		D58B32B828C387A900627117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58B32B728C387A900627117 /* Assets.xcassets */; };
 		D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFB828B85CB10013DB2A /* BiBaoVC.swift */; };
 		D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */; };
 		D590AFC828BDF98F0013DB2A /* JieGouTiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */; };
@@ -24,13 +27,10 @@
 		D590AFDE28C1F5770013DB2A /* FangFaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFDD28C1F5770013DB2A /* FangFaVC.swift */; };
 		D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFF728C2F9620013DB2A /* SVGVC.swift */; };
 		D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B00328C305CD0013DB2A /* SVGKitTool.swift */; };
+		D590B00E28C33A560013DB2A /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D590B00D28C33A550013DB2A /* MessageVC.m */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
 		D5B6D9472823AF2400481169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9462823AF2400481169 /* ViewController.swift */; };
-		D5B6D94A2823AF2400481169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9482823AF2400481169 /* Main.storyboard */; };
-		D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D94B2823AF2400481169 /* First1.xcdatamodeld */; };
-		D5B6D94F2823AF2700481169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D94E2823AF2700481169 /* Assets.xcassets */; };
-		D5B6D9522823AF2700481169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */; };
 		D5B6D95D2823AF2800481169 /* First1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D95C2823AF2800481169 /* First1Tests.swift */; };
 		D5B6D9672823AF2800481169 /* First1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9662823AF2800481169 /* First1UITests.swift */; };
 		D5B6D9692823AF2800481169 /* First1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */; };
@@ -186,6 +186,7 @@
 		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
+		D58B32B728C387A900627117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D590AFB828B85CB10013DB2A /* BiBaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiBaoVC.swift; sourceTree = "<group>"; };
 		D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiJuVC.swift; sourceTree = "<group>"; };
 		D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieGouTiVC.swift; sourceTree = "<group>"; };
@@ -197,14 +198,14 @@
 		D590AFDD28C1F5770013DB2A /* FangFaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangFaVC.swift; sourceTree = "<group>"; };
 		D590AFF728C2F9620013DB2A /* SVGVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGVC.swift; sourceTree = "<group>"; };
 		D590B00328C305CD0013DB2A /* SVGKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGKitTool.swift; sourceTree = "<group>"; };
-		D590B00528C336750013DB2A /* First-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First-Bridging-Header.h"; sourceTree = "<group>"; };
+		D590B00B28C339250013DB2A /* MessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
+		D590B00C28C33A550013DB2A /* First1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First1-Bridging-Header.h"; sourceTree = "<group>"; };
+		D590B00D28C33A550013DB2A /* MessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B6D9442823AF2400481169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5B6D9462823AF2400481169 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5B6D9492823AF2400481169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D5B6D94C2823AF2400481169 /* First1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = First1.xcdatamodel; sourceTree = "<group>"; };
-		D5B6D94E2823AF2700481169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5B6D9512823AF2700481169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5B6D9532823AF2700481169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5B6D9582823AF2800481169 /* First1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = First1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -458,6 +459,48 @@
 			path = ThirdTool;
 			sourceTree = "<group>";
 		};
+		D590B00628C338EA0013DB2A /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				D590B00728C338EA0013DB2A /* Section */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		D590B00728C338EA0013DB2A /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				D590B00828C338EA0013DB2A /* Controller */,
+				D590B00928C338EA0013DB2A /* Model */,
+				D590B00A28C338EA0013DB2A /* View */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		D590B00828C338EA0013DB2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D590B00B28C339250013DB2A /* MessageVC.h */,
+				D590B00D28C33A550013DB2A /* MessageVC.m */,
+				D590B00C28C33A550013DB2A /* First1-Bridging-Header.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D590B00928C338EA0013DB2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D590B00A28C338EA0013DB2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D5B6D9362823AF2400481169 = {
 			isa = PBXGroup;
 			children = (
@@ -487,11 +530,9 @@
 				D5B6D9422823AF2400481169 /* AppDelegate.swift */,
 				D5B6D9442823AF2400481169 /* SceneDelegate.swift */,
 				D5B6D9482823AF2400481169 /* Main.storyboard */,
-				D5B6D94E2823AF2700481169 /* Assets.xcassets */,
+				D58B32B728C387A900627117 /* Assets.xcassets */,
 				D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */,
 				D5B6D9532823AF2700481169 /* Info.plist */,
-				D5B6D94B2823AF2400481169 /* First1.xcdatamodeld */,
-				D590B00528C336750013DB2A /* First-Bridging-Header.h */,
 			);
 			path = First1;
 			sourceTree = "<group>";
@@ -519,6 +560,7 @@
 				D5B6D9782823B18800481169 /* Base */,
 				D5CDEF8D283CC6AA00468664 /* Section */,
 				D57F685328309B8400647F08 /* Tool */,
+				D590B00628C338EA0013DB2A /* OC */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -575,8 +617,8 @@
 		D5B6D97E2823B24500481169 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B6D9DE2823B24600481169 /* Alamofire */,
-				D590AFE928C2F16A0013DB2A /* CocoaLumberjack */,
+				D5B6D9DE2823B24600481169 /* Alamofire.framework */,
+				D590AFE928C2F16A0013DB2A /* CocoaLumberjack.framework */,
 				D5B6D9E02823B24600481169 /* Pods-First1 */,
 				D5B6D9E22823B24600481169 /* Pods-First1-First1UITests */,
 				D5B6D9E42823B24600481169 /* Pods-First1Tests */,
@@ -899,10 +941,9 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D590AFE928C2F16A0013DB2A /* CocoaLumberjack */ = {
+		D590AFE928C2F16A0013DB2A /* CocoaLumberjack.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = CocoaLumberjack;
 			path = CocoaLumberjack.framework;
 			remoteRef = D590AFE828C2F16A0013DB2A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -914,10 +955,9 @@
 			remoteRef = D590AFEA28C2F16A0013DB2A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D5B6D9DE2823B24600481169 /* Alamofire */ = {
+		D5B6D9DE2823B24600481169 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = Alamofire;
 			path = Alamofire.framework;
 			remoteRef = D5B6D9DD2823B24600481169 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -953,9 +993,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B6D9522823AF2700481169 /* LaunchScreen.storyboard in Resources */,
-				D5B6D94F2823AF2700481169 /* Assets.xcassets in Resources */,
-				D5B6D94A2823AF2400481169 /* Main.storyboard in Resources */,
+				D58B32AE28C3853E00627117 /* Main.storyboard in Resources */,
+				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
+				D58B32B828C387A900627117 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,7 +1152,6 @@
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
-				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
 				D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */,
@@ -1138,6 +1177,7 @@
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
 				D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */,
+				D590B00E28C33A560013DB2A /* MessageVC.m in Sources */,
 				D590AFC828BDF98F0013DB2A /* JieGouTiVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1356,6 +1396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NL8A4FJ48B;
@@ -1374,6 +1415,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = first.line.com.First1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "First1/Class/OC/Section/Controller/First1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wstrict-prototypes";
@@ -1386,6 +1429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NL8A4FJ48B;
@@ -1404,6 +1448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = first.line.com.First1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "First1/Class/OC/Section/Controller/First1-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wstrict-prototypes";
@@ -1530,19 +1575,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D5B6D94B2823AF2400481169 /* First1.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D5B6D94C2823AF2400481169 /* First1.xcdatamodel */,
-			);
-			currentVersion = D5B6D94C2823AF2400481169 /* First1.xcdatamodel */;
-			path = First1.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D5B6D9372823AF2400481169 /* Project object */;
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SVGKit
 
 class YXTabBarContrller: UITabBarController {
     
