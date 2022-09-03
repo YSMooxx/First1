@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVGKit
 
 class YXTabBarContrller: UITabBarController {
     
@@ -34,7 +35,7 @@ class YXTabBarContrller: UITabBarController {
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"FangFaVC","YTitle":"方法","YImage":"","YSelImage":""],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"","YSelImage":""],["YClass":"BianLiangVC","YTitle":"变量","YImage":"","YSelImage":""],["YClass":"ViewController","YTitle":"我的","YImage":"","YSelImage":""]]
+        let VCArray : NSArray = [["YClass":"SVGVC","YTitle":"SVG","YImage":"tabbar_bill_normal","YSelImage":"tabbar_bill_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"","YSelImage":""],["YClass":"BianLiangVC","YTitle":"变量","YImage":"","YSelImage":""],["YClass":"ViewController","YTitle":"我的","YImage":"","YSelImage":""]]
         
         for controller in VCArray {
             
@@ -48,8 +49,10 @@ class YXTabBarContrller: UITabBarController {
         let YClass:String = dic["YClass"] ?? ""
         let YTitle:String = dic["YTitle"] ?? ""
         let YImage:String = dic["YImage"] ?? ""
-
+        let YSelImage:String = dic["YSelImage"] ?? ""
+        
         print(YImage)
+        print(YSelImage)
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as!String
         let vcClass = NSClassFromString(namespace+"."+YClass)!as!UIViewController.Type
         

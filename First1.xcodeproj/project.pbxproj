@@ -22,6 +22,8 @@
 		D590AFDA28C1DCEE0013DB2A /* ShuXing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFD928C1DCEE0013DB2A /* ShuXing.swift */; };
 		D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFDB28C1DD4B0013DB2A /* ShuXingVC.swift */; };
 		D590AFDE28C1F5770013DB2A /* FangFaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFDD28C1F5770013DB2A /* FangFaVC.swift */; };
+		D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFF728C2F9620013DB2A /* SVGVC.swift */; };
+		D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B00328C305CD0013DB2A /* SVGKitTool.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
 		D5B6D9472823AF2400481169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9462823AF2400481169 /* ViewController.swift */; };
@@ -113,6 +115,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D590AFE828C2F16A0013DB2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5B6D97D2823B24500481169 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C261436D14052AE3C35F240BCD155CAC;
+			remoteInfo = CocoaLumberjack;
+		};
+		D590AFEA28C2F16A0013DB2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5B6D97D2823B24500481169 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8437BE58881E63196CF1F80191B3E2F;
+			remoteInfo = SVGKit;
+		};
 		D5B6D9592823AF2800481169 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5B6D9372823AF2400481169 /* Project object */;
@@ -179,6 +195,9 @@
 		D590AFD928C1DCEE0013DB2A /* ShuXing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuXing.swift; sourceTree = "<group>"; };
 		D590AFDB28C1DD4B0013DB2A /* ShuXingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuXingVC.swift; sourceTree = "<group>"; };
 		D590AFDD28C1F5770013DB2A /* FangFaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangFaVC.swift; sourceTree = "<group>"; };
+		D590AFF728C2F9620013DB2A /* SVGVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGVC.swift; sourceTree = "<group>"; };
+		D590B00328C305CD0013DB2A /* SVGKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGKitTool.swift; sourceTree = "<group>"; };
+		D590B00528C336750013DB2A /* First-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B6D9442823AF2400481169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -385,6 +404,7 @@
 		D57F685328309B8400647F08 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D590AFFC28C305B80013DB2A /* ThirdTool */,
 				D57F685428309B8400647F08 /* Controller */,
 			);
 			path = Tool;
@@ -396,6 +416,46 @@
 				D57F685928309BB200647F08 /* CommotTool.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D590AFED28C2F93D0013DB2A /* Test2 */ = {
+			isa = PBXGroup;
+			children = (
+				D590AFEE28C2F93D0013DB2A /* Controller */,
+				D590AFEF28C2F93D0013DB2A /* Model */,
+				D590AFF028C2F93D0013DB2A /* View */,
+			);
+			path = Test2;
+			sourceTree = "<group>";
+		};
+		D590AFEE28C2F93D0013DB2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D590AFF728C2F9620013DB2A /* SVGVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D590AFEF28C2F93D0013DB2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D590AFF028C2F93D0013DB2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D590AFFC28C305B80013DB2A /* ThirdTool */ = {
+			isa = PBXGroup;
+			children = (
+				D590B00328C305CD0013DB2A /* SVGKitTool.swift */,
+			);
+			path = ThirdTool;
 			sourceTree = "<group>";
 		};
 		D5B6D9362823AF2400481169 = {
@@ -431,6 +491,7 @@
 				D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */,
 				D5B6D9532823AF2700481169 /* Info.plist */,
 				D5B6D94B2823AF2400481169 /* First1.xcdatamodeld */,
+				D590B00528C336750013DB2A /* First-Bridging-Header.h */,
 			);
 			path = First1;
 			sourceTree = "<group>";
@@ -514,10 +575,12 @@
 		D5B6D97E2823B24500481169 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B6D9DE2823B24600481169 /* Alamofire.framework */,
+				D5B6D9DE2823B24600481169 /* Alamofire */,
+				D590AFE928C2F16A0013DB2A /* CocoaLumberjack */,
 				D5B6D9E02823B24600481169 /* Pods-First1 */,
 				D5B6D9E22823B24600481169 /* Pods-First1-First1UITests */,
 				D5B6D9E42823B24600481169 /* Pods-First1Tests */,
+				D590AFEB28C2F16A0013DB2A /* SVGKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -674,6 +737,7 @@
 			children = (
 				D5CDEF8E283CC6AA00468664 /* Home */,
 				D52650BC28A39925004A43EE /* Test */,
+				D590AFED28C2F93D0013DB2A /* Test2 */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -835,9 +899,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D5B6D9DE2823B24600481169 /* Alamofire.framework */ = {
+		D590AFE928C2F16A0013DB2A /* CocoaLumberjack */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
+			name = CocoaLumberjack;
+			path = CocoaLumberjack.framework;
+			remoteRef = D590AFE828C2F16A0013DB2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D590AFEB28C2F16A0013DB2A /* SVGKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SVGKit.framework;
+			remoteRef = D590AFEA28C2F16A0013DB2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5B6D9DE2823B24600481169 /* Alamofire */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = Alamofire;
 			path = Alamofire.framework;
 			remoteRef = D5B6D9DD2823B24600481169 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1030,6 +1110,7 @@
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
+				D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
 				D5B6D94D2823AF2400481169 /* First1.xcdatamodeld in Sources */,
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
@@ -1041,6 +1122,7 @@
 				D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */,
 				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
+				D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */,
 				D590AFDA28C1DCEE0013DB2A /* ShuXing.swift in Sources */,
 				D590AFD028BE018C0013DB2A /* Student.swift in Sources */,
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
@@ -1202,13 +1284,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WARNING_CFLAGS = "-Wstrict-prototypes";
 			};
 			name = Debug;
 		};
@@ -1256,13 +1339,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "-Wstrict-prototypes";
 			};
 			name = Release;
 		};
@@ -1292,6 +1376,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wstrict-prototypes";
 			};
 			name = Debug;
 		};
@@ -1321,6 +1406,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wstrict-prototypes";
 			};
 			name = Release;
 		};

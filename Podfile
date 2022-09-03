@@ -8,6 +8,7 @@ target 'First1' do
   # Pods for First1
 
      pod 'Alamofire', '~> 5.6.1'
+     pod 'SVGKit', '~> 3.0.0'
 
   target 'First1Tests' do
     inherit! :search_paths
