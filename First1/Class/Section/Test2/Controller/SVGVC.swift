@@ -14,15 +14,17 @@ class SVGVC : UIViewController {
     override func viewDidLoad() {
     
 //        setupUI2()
+        
+        self.view.backgroundColor = UIColor.coloWithHex(hexStr: "C71585")
         setupUI()
     }
     
     //设置SVG图片
     func setupUI() {
         
-        let svgImage:UIImage = SVGKImage.init(named: "baobiao").uiImage
+        let svgImage:SVGKImage = SVGKImage.init(named: "biaoqian")
         
-        let imageView:UIImageView = UIImageView.init(image: svgImage)
+        let imageView:UIView = SVGKFastImageView.init(svgkImage: svgImage)
         
         imageView.frame = CGRect(x: 0, y: 0, width: 500, height: 500)
         
@@ -31,23 +33,15 @@ class SVGVC : UIViewController {
     
     func setupUI2() {
         
+        var  image:UIImage = UIImage.init(named: "tabbar_bill_normal")!
         
-//        let image1:UIImage = UIImage.init(named: "biaoqian")!
-//        let image1:UIImage = MessageVC.image(withName: "tabbar_bill_normal")!
+        image = image.isRoundCorner(radius: 50, byRoundingCorners: UIRectCorner.allCorners, imageSize: image.size) ?? UIImage()
         
-//        let image1:UIImage = UIImage.init(named: "tabbar_bill_selected", in: Bundle.main, with: UIImage.Configuration)
-        
-        let image1:UIImage = MessageVC.image(withName: "shebei")
-        
-        let imageView:UIImageView = UIImageView.init(image: image1)
+        let imageView:UIImageView = UIImageView.init(image: image)
         
         imageView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         
         self.view.addSubview(imageView)
-    }
-    
-    func setupUI3() {
-        
         
     }
     

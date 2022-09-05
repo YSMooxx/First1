@@ -15,7 +15,6 @@
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */; };
 		D58B32AE28C3853E00627117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9482823AF2400481169 /* Main.storyboard */; };
-		D58B32B828C387A900627117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58B32B728C387A900627117 /* Assets.xcassets */; };
 		D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFB828B85CB10013DB2A /* BiBaoVC.swift */; };
 		D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */; };
 		D590AFC828BDF98F0013DB2A /* JieGouTiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */; };
@@ -101,6 +100,10 @@
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
 		D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF97283CC72300468664 /* YXTabBarController.swift */; };
 		D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */; };
+		D5FA19E128C57EE700B83CE0 /* biaoqian.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E028C57EE700B83CE0 /* biaoqian.svg */; };
+		D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */; };
+		D5FA19E628C5948400B83CE0 /* UIImage+SVGKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E528C5948400B83CE0 /* UIImage+SVGKit.swift */; };
+		D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */; };
 		D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */; };
 		D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */; };
 		D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */; };
@@ -186,7 +189,6 @@
 		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
-		D58B32B728C387A900627117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D590AFB828B85CB10013DB2A /* BiBaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiBaoVC.swift; sourceTree = "<group>"; };
 		D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiJuVC.swift; sourceTree = "<group>"; };
 		D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieGouTiVC.swift; sourceTree = "<group>"; };
@@ -298,6 +300,10 @@
 		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
 		D5CDEF97283CC72300468664 /* YXTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXTabBarController.swift; sourceTree = "<group>"; };
 		D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNavigationController.swift; sourceTree = "<group>"; };
+		D5FA19E028C57EE700B83CE0 /* biaoqian.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = biaoqian.svg; sourceTree = "<group>"; };
+		D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5FA19E528C5948400B83CE0 /* UIImage+SVGKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SVGKit.swift"; sourceTree = "<group>"; };
+		D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangLiangVC.swift; sourceTree = "<group>"; };
 		D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMianLiangVC.swift; sourceTree = "<group>"; };
 		D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YunSuanFuVC.swift; sourceTree = "<group>"; };
@@ -528,9 +534,9 @@
 			children = (
 				D5B6D9772823B18800481169 /* Class */,
 				D5B6D9422823AF2400481169 /* AppDelegate.swift */,
+				D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */,
 				D5B6D9442823AF2400481169 /* SceneDelegate.swift */,
 				D5B6D9482823AF2400481169 /* Main.storyboard */,
-				D58B32B728C387A900627117 /* Assets.xcassets */,
 				D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */,
 				D5B6D9532823AF2700481169 /* Info.plist */,
 			);
@@ -559,8 +565,10 @@
 			children = (
 				D5B6D9782823B18800481169 /* Base */,
 				D5CDEF8D283CC6AA00468664 /* Section */,
+				D5FA19E428C5939700B83CE0 /* Category */,
 				D57F685328309B8400647F08 /* Tool */,
 				D590B00628C338EA0013DB2A /* OC */,
+				D5FA19DF28C57EE700B83CE0 /* SVG */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -816,6 +824,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D5FA19DF28C57EE700B83CE0 /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				D5FA19E028C57EE700B83CE0 /* biaoqian.svg */,
+			);
+			path = SVG;
+			sourceTree = "<group>";
+		};
+		D5FA19E428C5939700B83CE0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D5FA19E528C5948400B83CE0 /* UIImage+SVGKit.swift */,
+				D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		D87B3412698D13B98A285641 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,7 +1020,8 @@
 			files = (
 				D58B32AE28C3853E00627117 /* Main.storyboard in Resources */,
 				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
-				D58B32B828C387A900627117 /* Assets.xcassets in Resources */,
+				D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */,
+				D5FA19E128C57EE700B83CE0 /* biaoqian.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,6 +1175,8 @@
 				D590AFDE28C1F5770013DB2A /* FangFaVC.swift in Sources */,
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */,
+				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
+				D5FA19E628C5948400B83CE0 /* UIImage+SVGKit.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,

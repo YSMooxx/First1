@@ -6,14 +6,3 @@
 //
 
 import Foundation
-import SVGKit
-
-func svgWithName(name:String,size:CGSize) ->(UIImage){
-    
-    return MessageVC.svgImage(withName: name, andSize: size)
-}
-
-func svgWithNameAndCG(name:String,CG:CGFloat) {
-    
-
-}
