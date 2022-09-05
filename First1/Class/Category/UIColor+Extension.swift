@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     
     //string转16进制
-    class func coloWithHex(hexStr:String) -> UIColor {
+    class func colorWithHex(hexStr:String) -> UIColor {
         
         coloWithHex(hexStr: hexStr, alpha: 1)
     }
@@ -55,5 +55,17 @@ extension UIColor {
 
         return UIColor.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: CGFloat(alpha))
         
+    }
+    
+    //主色调
+    class func zhuColor() -> UIColor{
+        
+        return colorWithHex(hexStr: "#F0F8FF")
+    }
+    
+    //副色调
+    class func fuColor() -> UIColor{
+        
+        return colorWithHex(hexStr: "#444444")
     }
 }

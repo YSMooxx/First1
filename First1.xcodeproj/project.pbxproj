@@ -25,7 +25,6 @@
 		D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFDB28C1DD4B0013DB2A /* ShuXingVC.swift */; };
 		D590AFDE28C1F5770013DB2A /* FangFaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFDD28C1F5770013DB2A /* FangFaVC.swift */; };
 		D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFF728C2F9620013DB2A /* SVGVC.swift */; };
-		D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B00328C305CD0013DB2A /* SVGKitTool.swift */; };
 		D590B00E28C33A560013DB2A /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D590B00D28C33A550013DB2A /* MessageVC.m */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
@@ -102,8 +101,10 @@
 		D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */; };
 		D5FA19E128C57EE700B83CE0 /* biaoqian.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E028C57EE700B83CE0 /* biaoqian.svg */; };
 		D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */; };
-		D5FA19E628C5948400B83CE0 /* UIImage+SVGKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E528C5948400B83CE0 /* UIImage+SVGKit.swift */; };
+		D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */; };
 		D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */; };
+		D5FA19EC28C6053C00B83CE0 /* UIView+SVGKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */; };
+		D5FA19F328C619B800B83CE0 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19F128C619B800B83CE0 /* UIImage+Extension.m */; };
 		D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */; };
 		D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */; };
 		D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */; };
@@ -199,7 +200,6 @@
 		D590AFDB28C1DD4B0013DB2A /* ShuXingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuXingVC.swift; sourceTree = "<group>"; };
 		D590AFDD28C1F5770013DB2A /* FangFaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangFaVC.swift; sourceTree = "<group>"; };
 		D590AFF728C2F9620013DB2A /* SVGVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGVC.swift; sourceTree = "<group>"; };
-		D590B00328C305CD0013DB2A /* SVGKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGKitTool.swift; sourceTree = "<group>"; };
 		D590B00B28C339250013DB2A /* MessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
 		D590B00C28C33A550013DB2A /* First1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First1-Bridging-Header.h"; sourceTree = "<group>"; };
 		D590B00D28C33A550013DB2A /* MessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
@@ -302,8 +302,11 @@
 		D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNavigationController.swift; sourceTree = "<group>"; };
 		D5FA19E028C57EE700B83CE0 /* biaoqian.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = biaoqian.svg; sourceTree = "<group>"; };
 		D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D5FA19E528C5948400B83CE0 /* UIImage+SVGKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SVGKit.swift"; sourceTree = "<group>"; };
+		D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SVGKit.swift"; sourceTree = "<group>"; };
+		D5FA19F128C619B800B83CE0 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		D5FA19F228C619B800B83CE0 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangLiangVC.swift; sourceTree = "<group>"; };
 		D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMianLiangVC.swift; sourceTree = "<group>"; };
 		D5FEF59E28AA3865008639E2 /* YunSuanFuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YunSuanFuVC.swift; sourceTree = "<group>"; };
@@ -460,7 +463,6 @@
 		D590AFFC28C305B80013DB2A /* ThirdTool */ = {
 			isa = PBXGroup;
 			children = (
-				D590B00328C305CD0013DB2A /* SVGKitTool.swift */,
 			);
 			path = ThirdTool;
 			sourceTree = "<group>";
@@ -468,6 +470,7 @@
 		D590B00628C338EA0013DB2A /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				D5FA19F028C619B800B83CE0 /* Category */,
 				D590B00728C338EA0013DB2A /* Section */,
 			);
 			path = OC;
@@ -835,8 +838,18 @@
 		D5FA19E428C5939700B83CE0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D5FA19E528C5948400B83CE0 /* UIImage+SVGKit.swift */,
+				D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */,
 				D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */,
+				D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D5FA19F028C619B800B83CE0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D5FA19F228C619B800B83CE0 /* UIImage+Extension.h */,
+				D5FA19F128C619B800B83CE0 /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1176,9 +1189,8 @@
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */,
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
-				D5FA19E628C5948400B83CE0 /* UIImage+SVGKit.swift in Sources */,
+				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
-				D590B00428C305CD0013DB2A /* SVGKitTool.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
@@ -1188,6 +1200,7 @@
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
 				D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */,
 				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
+				D5FA19F328C619B800B83CE0 /* UIImage+Extension.m in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,
 				D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */,
 				D590AFDA28C1DCEE0013DB2A /* ShuXing.swift in Sources */,
@@ -1199,6 +1212,7 @@
 				D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */,
 				D5FEF5BA28B4A56A008639E2 /* ZiFuVC.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
+				D5FA19EC28C6053C00B83CE0 /* UIView+SVGKit.swift in Sources */,
 				D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */,
 				D5FEF5C428B5B8AD008639E2 /* ZiDianVC.swift in Sources */,
 				D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */,
