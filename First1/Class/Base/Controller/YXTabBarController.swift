@@ -12,6 +12,7 @@ class YXTabBarContrller: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         AddChileVCWithArray(array: VCArray)
         
         let dic = ["title":"12378","name":"ddd"]
@@ -19,22 +20,35 @@ class YXTabBarContrller: UITabBarController {
         print(dic)
         
         print(dic)
+=======
+        setupUI()
+        AddChileVCWithArray()
+>>>>>>> develop
         
     }
     
     func setupUI() {
         
+        self.tabBar.barTintColor=UIColor.white
         
+        let tabBarAppearance = UITabBarAppearance()
+               tabBarAppearance.shadowColor = .clear
+               tabBarAppearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+               
+               UITabBar.appearance().standardAppearance = tabBarAppearance
+               if #available(iOS 15, *) {
+                   UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+               }
         
     }
     
-    var VCArray : NSArray = [["YClass":"FirstController1","YTitle":"消息","YImage":"","YSelImage":"",],["YClass":"DelegateController","YTitle":"代理","YImage":"","YSelImage":"",]]
-    
-    func AddChileVCWithArray(array:NSArray) {
+    func AddChileVCWithArray() {
         
-        for s in array {
+        let VCArray : NSArray = [["YClass":"SVGVC","YTitle":"SVG","YImage":"tabbar_bill_normal","YSelImage":"tabbar_bill_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"","YSelImage":""],["YClass":"BianLiangVC","YTitle":"变量","YImage":"","YSelImage":""],["YClass":"ViewController","YTitle":"我的","YImage":"","YSelImage":""]]
+        
+        for controller in VCArray {
             
-            AddChileVCWithDic(dic: s as! Dictionary<String, String>)
+            AddChileVCWithDic(dic: controller as! Dictionary<String, String>)
         }
         
     }
@@ -42,10 +56,24 @@ class YXTabBarContrller: UITabBarController {
     func AddChileVCWithDic(dic:Dictionary<String,String>) {
         
         let YClass:String = dic["YClass"] ?? ""
+        let YTitle:String = dic["YTitle"] ?? ""
+        let YImage:String = dic["YImage"] ?? ""
+        let YSelImage:String = dic["YSelImage"] ?? ""
         
-        print(YClass)
+        print(YImage)
+        print(YSelImage)
+        let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as!String
+        let vcClass = NSClassFromString(namespace+"."+YClass)!as!UIViewController.Type
+        
+        let navigationVC = YXNavigationController(rootViewController: vcClass.init())
+        addChild(navigationVC)
+        
+        navigationVC.title = YTitle
+        
+        addChild(navigationVC)
         
     }
     
     
 }
+

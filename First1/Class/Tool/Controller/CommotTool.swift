@@ -7,63 +7,43 @@
 
 import Foundation
 
-let say:(String) -> Void = {
-    (name: String) -> Void in
-    print("hello \(name)")
-    print("___________________________")
-}
-
-let say2:(String) -> Void = {
-    (name: String) -> Void in
-    print("hi \(name)")
-}
-
-let say3:() ->Void = {
-    print("hello xiaohange")
-}
-
-func showArray(array:[Int]) {
-    for num in array {
-        print("\(num)")
-    }
-}
-
-let cmp = {
-    (a: Int, b:Int) ->Int in
-    if a > b{
-        return 1
-    }else if a < b
-    {
-        return -1
-    }else
-    {
-        return 0
-    }
-}
-
-func bubbleSort(array : inout [Int], cmp: (Int, Int) -> Int){
-    for _ in 0..<array.count {
-        for j in 0..<(array.count - 1) {
-            if array[j] > array[j + 1] {
-                let temp = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = temp
+//顺序排列
+func ShuXuArray(nums: [Int]) -> ([Int]) {
+    var a = nums
+    let n = a.count
+    for i in 0..<n {
+        for j in 0..<(n - 1 - i) {
+            if a[j] > a[j + 1] {
+                a.swapAt(j, j + 1)
             }
         }
     }
+    
+    return a
 }
 
-func bubbleSort1(array : inout [Int], cmp: (Int, Int) -> Int){
-    for _ in 0..<array.count {
-        for j in 0..<(array.count - 1) {
-            if array[j] < array[j + 1] {
-                let temp = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = temp
+//逆序排列
+func NiXuArray(nums: [Int]) -> ([Int]) {
+    var a = nums
+    let n = a.count
+    for i in 0..<n {
+        for j in 0..<(n - 1 - i) {
+            if a[j] < a[j + 1] {
+                a.swapAt(j, j + 1)
             }
         }
     }
+    
+    return a
 }
+
+//除法闭包
+let divide = {(val1: Int, val2: Int) -> Int in
+   return val1 / val2
+}
+
+
+
 
 
 

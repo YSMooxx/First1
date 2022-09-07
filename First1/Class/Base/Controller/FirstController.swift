@@ -7,11 +7,17 @@
 
 import UIKit
 
-class FirstController: UIViewController {
+class FirstController: UITableViewController {
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        setupUI()
+    }
+    
+    func setupUI() {
+        
+        self.view.backgroundColor = UIColor.white
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
