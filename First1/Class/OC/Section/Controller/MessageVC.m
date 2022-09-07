@@ -11,8 +11,6 @@
 
 #import "SVGKit.h"
 
-#import "UIImage+Extension.h"
-
 @interface MessageVC ()
 
 @end

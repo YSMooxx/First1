@@ -35,7 +35,7 @@ class SVGVC : UIViewController {
     func setupUI1() {
         
         
-        let image1:UIImage = UIImage.svgWithName(name: "biaoqian", size: CGSize(width: 300, height: 300), color: UIColor.colorWithHex(hexStr: "ADFF2F"))
+        let image1:UIImage = UIImage.svgWithName(name: "baobiao", size: CGSize(width: 300, height: 300), color: UIColor.colorWithHex(hexStr: "ADFF2F"))
         
         let imageView :UIImageView = UIImageView.init(image: image1)
         
@@ -60,14 +60,8 @@ class SVGVC : UIViewController {
     //桥接OC变色
     func changeColor() {
         
-        
-        let image2:UIImage = UIImage.svgImageNamed("biaoqian", size: CGSize(width: 300, height: 300), tintColor: UIColor.colorWithHex(hexStr: "00ff00"))
-        
-        let imageView :UIImageView = UIImageView.init(image: image2)
-        
-        imageView.frame = CGRect(x: 50, y: 50, width: 300, height: 300)
-        
-        self.view.addSubview(imageView)
+        self.view.backgroundColor = MessageVC.changeColor()
+       
     }
     
     
