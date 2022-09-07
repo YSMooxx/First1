@@ -4,6 +4,8 @@
 
 project.xcworkspace
 .xcuserstate
+.xcuserstate?
+**/.xcuserstate
 .xcuserdata
 UserInterfaceState.xcuserstate
 project.xcworkspace/
