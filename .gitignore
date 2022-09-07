@@ -3,6 +3,7 @@
 .DS_Store?
 
 project.xcworkspace
+xcuserstate/
 .xcuserstate
 .xcuserstate?
 **/.xcuserstate
@@ -11,4 +12,3 @@ UserInterfaceState.xcuserstate
 project.xcworkspace/
 xcuserdata/
 UserInterface.xcuserstate
-.plist
