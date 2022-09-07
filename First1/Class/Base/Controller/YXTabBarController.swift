@@ -14,7 +14,7 @@ class YXTabBarContrller: UITabBarController {
         
         AddChileVCWithArray(array: VCArray)
         
-        let dic = ["title":"1237","name":"ddd"]
+        let dic = ["title":"12378","name":"ddd"]
 
         print(dic)
         
