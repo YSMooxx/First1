@@ -22,7 +22,7 @@ class FirstController: UITableViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        self.dismiss(animated: false);
+        self.dismiss(animated: false)
     }
     
 }

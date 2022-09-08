@@ -11,11 +11,31 @@ class ZIMianLiangVC:UIViewController {
     
     override func viewDidLoad() {
         
-        test1()
-        test2()
-        test3()
-        test4()
-        test5()
+//        test1()
+//        test2()
+//        test3()
+//        test4()
+//        test5()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        read()
+        read1()
+    }
+    
+    func read1() {
+        
+        print("name的值:\(userDef.name!)")
+        print("num的值:\(userDef.num!)")
+    }
+    
+    func read() {
+        
+        let phone : String = Account.share().phone
+        
+        print(phone)
     }
     
     //Swift 字面量
