@@ -34,7 +34,7 @@ class YXTabBarContrller: UITabBarController {
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"UserDefaultsVC","YTitle":"UserDefaults","YImage":"tabbar_bill_normal","YSelImage":"tabbar_bill_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"","YSelImage":""],["YClass":"BianLiangVC","YTitle":"变量","YImage":"","YSelImage":""],["YClass":"ViewController","YTitle":"我的","YImage":"","YSelImage":""]]
+        let VCArray : NSArray = [["YClass":"SwiftUIVC","YTitle":"UI","YImage":"tabbar_bill_normal","YSelImage":"tabbar_bill_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"","YSelImage":""],["YClass":"BianLiangVC","YTitle":"变量","YImage":"","YSelImage":""],["YClass":"ViewController","YTitle":"我的","YImage":"","YSelImage":""]]
         
         for controller in VCArray {
             

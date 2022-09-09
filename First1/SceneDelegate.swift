@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        
+        
         self.window?.backgroundColor = .white
         let tab = YXTabBarContrller.init()
         self.window?.rootViewController = tab;
