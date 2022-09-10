@@ -20,21 +20,14 @@ class YXTabBarContrller: UITabBarController {
     func setupUI() {
         
         self.tabBar.barTintColor=UIColor.white
-        
-        let tabBarAppearance = UITabBarAppearance()
-               tabBarAppearance.shadowColor = .clear
-               tabBarAppearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
-               
-               UITabBar.appearance().standardAppearance = tabBarAppearance
-               if #available(iOS 15, *) {
-                   UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-               }
+        self.tabBar.tintColor = UIColor.colorWithHex(hexStr: "#d4237a")
+        self.tabBar.isTranslucent = false
         
     }
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"SwiftUIVC","YTitle":"UI","YImage":"tabbar_bill_normal","YSelImage":"tabbar_bill_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"","YSelImage":""],["YClass":"BianLiangVC","YTitle":"变量","YImage":"","YSelImage":""],["YClass":"ViewController","YTitle":"我的","YImage":"","YSelImage":""]]
+        let VCArray : NSArray = [["YClass":"SwiftUIVC","YTitle":"UI","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"BianLiangVC","YTitle":"变量","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"ViewController","YTitle":"我的","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
         
         for controller in VCArray {
             
@@ -56,7 +49,10 @@ class YXTabBarContrller: UITabBarController {
         let vcClass = NSClassFromString(namespace+"."+YClass)!as!UIViewController.Type
         
         let navigationVC = YXNavigationController(rootViewController: vcClass.init())
-        addChild(navigationVC)
+        
+        navigationVC.tabBarItem.image = UIImage.svgWithName(name: YImage, size: CGSize(width: 26, height: 26))
+        
+        navigationVC.tabBarItem.selectedImage = UIImage.svgWithName(name: YSelImage, size: CGSize(width: 26, height: 26), color: UIColor.colorWithHex(hexStr: "#d4237a"))
         
         navigationVC.title = YTitle
         
