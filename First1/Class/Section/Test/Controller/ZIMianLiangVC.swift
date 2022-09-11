@@ -37,9 +37,7 @@ class ZIMianLiangVC:UIViewController {
     
     func read() {
         
-        let phone : String = Account.share().phone
-        
-        print(phone)
+    
     }
     
     //Swift 字面量

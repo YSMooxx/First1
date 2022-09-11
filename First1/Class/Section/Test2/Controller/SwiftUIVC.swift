@@ -13,7 +13,8 @@ class SwiftUIVC:BaseViewController {
     
     override func viewDidLoad() {
         
-        addSubView1()
+//        addSubView1()
+        addSubView2()
     }
     
     //添加子view
@@ -31,4 +32,22 @@ class SwiftUIVC:BaseViewController {
             make.centerX.equalToSuperview()
         }
     }
+    
+    //添加子view2
+    func addSubView2() {
+        
+        let sView:UIImage = UIImage.svgWithName(name: "quanbu", size: CGSize(width: 150, height: 150), color: UIColor.colorWithHex(hexStr: "#20894D"))
+        
+        let imageView:UIImageView = UIImageView.init(image: sView)
+        
+        self.view.addSubview(imageView)
+        
+        imageView.snp.makeConstraints { make in
+            
+            make.top.equalTo(150)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+
 }

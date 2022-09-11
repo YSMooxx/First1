@@ -19,9 +19,10 @@ class YXTabBarContrller: UITabBarController {
     
     func setupUI() {
         
-        self.tabBar.barTintColor=UIColor.white
+        self.tabBar.barTintColor=UIColor.coloWithHex(hexStr: "#ff0000", alpha: 0.5)
+        self.tabBar.backgroundColor = UIColor.coloWithHex(hexStr: "#f8f8f8", alpha: 0.8)
         self.tabBar.tintColor = UIColor.colorWithHex(hexStr: "#d4237a")
-        self.tabBar.isTranslucent = false
+//        self.tabBar.isTranslucent = false
         
     }
     
@@ -52,7 +53,7 @@ class YXTabBarContrller: UITabBarController {
         
         navigationVC.tabBarItem.image = UIImage.svgWithName(name: YImage, size: CGSize(width: 26, height: 26))
         
-        navigationVC.tabBarItem.selectedImage = UIImage.svgWithName(name: YSelImage, size: CGSize(width: 26, height: 26), color: UIColor.colorWithHex(hexStr: "#d4237a"))
+        navigationVC.tabBarItem.selectedImage = UIImage.svgWithName(name: YSelImage, size: CGSize(width: 26, height: 26))
         
         navigationVC.title = YTitle
         
