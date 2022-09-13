@@ -33,6 +33,7 @@ class tabViewVC:UITableViewController {
         
         titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
         titleText.text = "tablview"
+        titleText.sizeToFit()
         titleText.textColor = UIColor.white
         navigationItem.titleView = titleText
     }
@@ -47,11 +48,9 @@ class tabViewVC:UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: listCellID, for: indexPath) as! ListCell
         
-        let model:ListModel = ListModel.init(name: "嘻嘻哈哈", icon: "123")
+        let model:ListModel = ListModel.init(name: "user", icon: "123")
         
         cell.model = model
-        
-        cell.contentView.backgroundColor = UIColor.colorWithHex(hexStr: "#EED71A")
         
         return cell
     }

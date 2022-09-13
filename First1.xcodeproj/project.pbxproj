@@ -27,7 +27,6 @@
 		D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */; };
 		D558F53528CF279500964016 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53428CF279500964016 /* ListCell.swift */; };
 		D558F53828CF2CD600964016 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53728CF2CD600964016 /* ListModel.swift */; };
-		D56A9DF228CE243800918299 /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A9DF128CE243800918299 /* SwiftUI.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */; };
 		D58B32AE28C3853E00627117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9482823AF2400481169 /* Main.storyboard */; };
@@ -46,7 +45,6 @@
 		D59E04BA28C9E2A200F5C0AF /* UserDefaultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E04B928C9E2A200F5C0AF /* UserDefaultsVC.swift */; };
 		D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E04BD28C9E73D00F5C0AF /* UserDef.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
-		D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9442823AF2400481169 /* SceneDelegate.swift */; };
 		D5B6D9472823AF2400481169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9462823AF2400481169 /* ViewController.swift */; };
 		D5B6D95D2823AF2800481169 /* First1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D95C2823AF2800481169 /* First1Tests.swift */; };
 		D5B6D9672823AF2800481169 /* First1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9662823AF2800481169 /* First1UITests.swift */; };
@@ -118,7 +116,6 @@
 		D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewVC.swift; sourceTree = "<group>"; };
 		D558F53428CF279500964016 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		D558F53728CF2CD600964016 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		D56A9DF128CE243800918299 /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
 		D590AFB828B85CB10013DB2A /* BiBaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiBaoVC.swift; sourceTree = "<group>"; };
 		D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiJuVC.swift; sourceTree = "<group>"; };
@@ -139,7 +136,6 @@
 		D59E04BD28C9E73D00F5C0AF /* UserDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDef.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5B6D9442823AF2400481169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5B6D9462823AF2400481169 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5B6D9492823AF2400481169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5B6D9512823AF2700481169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -320,7 +316,6 @@
 				D59E04B928C9E2A200F5C0AF /* UserDefaultsVC.swift */,
 				D51C314328CB25F1001B813F /* SwiftUIVC.swift */,
 				D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */,
-				D56A9DF128CE243800918299 /* SwiftUI.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,7 +393,6 @@
 				D5B6D9772823B18800481169 /* Class */,
 				D5B6D9422823AF2400481169 /* AppDelegate.swift */,
 				D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */,
-				D5B6D9442823AF2400481169 /* SceneDelegate.swift */,
 				D5B6D9482823AF2400481169 /* Main.storyboard */,
 				D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */,
 				D5B6D9532823AF2700481169 /* Info.plist */,
@@ -814,7 +808,6 @@
 				D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */,
 				D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */,
 				D5FEF5BA28B4A56A008639E2 /* ZiFuVC.swift in Sources */,
-				D56A9DF228CE243800918299 /* SwiftUI.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D51C314228CB236F001B813F /* Hong.swift in Sources */,
 				D5FA19EC28C6053C00B83CE0 /* UIView+SVGKit.swift in Sources */,
@@ -824,7 +817,6 @@
 				D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */,
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
-				D5B6D9452823AF2400481169 /* SceneDelegate.swift in Sources */,
 				D590B00E28C33A560013DB2A /* MessageVC.m in Sources */,
 				D51C314428CB25F1001B813F /* SwiftUIVC.swift in Sources */,
 				D590AFC828BDF98F0013DB2A /* JieGouTiVC.swift in Sources */,
@@ -933,7 +925,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -988,7 +980,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

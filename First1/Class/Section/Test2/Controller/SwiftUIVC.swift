@@ -36,7 +36,7 @@ class SwiftUIVC:BaseViewController {
     //添加子view2
     func addSubView2() {
         
-        let sView:UIImage = UIImage.svgWithName(name: "quanbu", size: CGSize(width: 150, height: 150), color: UIColor.colorWithHex(hexStr: "#20894D"))
+        let sView:UIImage = UIImage.svgWithName(name: "baobiao", size: CGSize(width: 250, height: 250), color: UIColor.colorWithHex(hexStr: "#20894D"))
         
         let imageView:UIImageView = UIImageView.init(image: sView)
         
