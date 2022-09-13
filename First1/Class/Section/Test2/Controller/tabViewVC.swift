@@ -12,15 +12,29 @@ private let listCellID = "listCellID"
 
 class tabViewVC:UITableViewController {
     
-    let array:NSArray = ["1","2","4","6","3","5","8"]
+    let array: [Any] = [["name":"user1","height":64,"icon":"tabbar_bill_normal","explain":"这是一个人"],["name":"user2","height":100,"icon":"tabbar_bill_selected","explain":"这是不是个人"],["name":"user3","height":200,"icon":"tabbar_bill_selected","explain":"这是不是个人"],["name1":"user4","height":200,"icon":"tabbar_bill_selected","explain":"这是不是个人"]]
     
     var titleText = UILabel()
+    
+    var modelArray:[Any]!{
+        
+        didSet {
+            
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         
         setupUI()
         setupNav()
+        
+        let jsonString:String = JsonUtil.getJSONStringFromArray(array:array)
+        
+        modelArray = JsonUtil.jsonArrayToModel(jsonString, ListModel.self) as! [ListModel]
+        
     }
+    
     
     //setupUI
     func setupUI () {
@@ -29,6 +43,7 @@ class tabViewVC:UITableViewController {
         tableView.register(ListCell.self, forCellReuseIdentifier: listCellID)
     }
     
+    //setupNav
     func setupNav() {
         
         titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
@@ -41,16 +56,14 @@ class tabViewVC:UITableViewController {
     //UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return array.count
+        return modelArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: listCellID, for: indexPath) as! ListCell
         
-        let model:ListModel = ListModel.init(name: "user", icon: "123")
-        
-        cell.model = model
+        cell.model = modelArray[indexPath.row] as? ListModel
         
         return cell
     }
@@ -58,7 +71,9 @@ class tabViewVC:UITableViewController {
     //UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 44
+        let model = modelArray[indexPath.row] as? ListModel
+        
+        return model?.height ?? 10
     }
     
     

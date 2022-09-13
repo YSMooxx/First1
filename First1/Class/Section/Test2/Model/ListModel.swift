@@ -8,14 +8,11 @@
 import Foundation
 
 
-class ListModel:NSObject {
+class ListModel:BaseModel {
     
     var name:String = ""
     var icon:String = ""
+    var height:CGFloat = 44
+    var explain:String = ""
     
-    init(name:String,icon:String) {
-        
-        self.name = name
-        self.icon = icon
-    }
 }

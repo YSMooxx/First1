@@ -11,6 +11,9 @@ import UIKit
 class ListCell:UITableViewCell {
     
     var label:UILabel = UILabel.init()
+    var label1:UILabel = UILabel.init()
+    var line:UIView = UIView.init()
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -29,36 +32,58 @@ class ListCell:UITableViewCell {
         
         selectionStyle = UITableViewCell.SelectionStyle.none
         contentView.backgroundColor = UIColor.colorWithHex(hexStr: "#EED71A")
+        
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = UIColor.colorWithHex(hexStr: "#EA517F")
+        
+        label1.font = UIFont.systemFont(ofSize: 16)
+        label1.textColor = UIColor.colorWithHex(hexStr: "#000000")
+        
+        line.backgroundColor = UIColor.gray
+        
     }
     
     //addView
     func addView() {
         
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = UIColor.colorWithHex(hexStr: "#EA517F")
-        
         contentView.addSubview(label)
+        contentView.addSubview(label1)
+        contentView.addSubview(line)
     }
     
     override func layoutSubviews() {
         
         label.snp.makeConstraints { make in
             
-            make.centerX.equalToSuperview()
+            make.left.equalToSuperview()
             make.centerY.equalToSuperview()
         }
+        
+        label1.snp.makeConstraints { make in
+            
+            make.right.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
+        line.snp.makeConstraints { make in
+            
+            make.width.equalToSuperview()
+            make.height.equalTo(0.5)
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+        
     }
     
     var model:ListModel? {
         
         didSet {
             
-//            textLabel?.text = model?.name
             label.text = model?.name
+            label1.text = model?.explain
             label.sizeToFit()
+            label1.sizeToFit()
         }
     }
-    
-    
     
 }
