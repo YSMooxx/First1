@@ -14,5 +14,6 @@ class ListModel:BaseModel {
     var icon:String = ""
     var height:CGFloat = 44
     var explain:String = ""
+    var color:String = "#f8f8f8"
     
 }

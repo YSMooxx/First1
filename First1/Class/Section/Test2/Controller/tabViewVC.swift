@@ -12,7 +12,7 @@ private let listCellID = "listCellID"
 
 class tabViewVC:UITableViewController {
     
-    let array: [Any] = [["name":"user1","height":64,"icon":"tabbar_bill_normal","explain":"这是一个人"],["name":"user2","height":100,"icon":"tabbar_bill_selected","explain":"这是不是个人"],["name":"user3","height":200,"icon":"tabbar_bill_selected","explain":"这是不是个人"],["name1":"user4","height":200,"icon":"tabbar_bill_selected","explain":"这是不是个人"]]
+    let array: [Any] = [["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"]]
     
     var titleText = UILabel()
     
@@ -39,7 +39,6 @@ class tabViewVC:UITableViewController {
     //setupUI
     func setupUI () {
         
-        tableView.backgroundColor = UIColor.colorWithHex(hexStr: "#DAA45A")
         tableView.register(ListCell.self, forCellReuseIdentifier: listCellID)
     }
     
@@ -47,9 +46,8 @@ class tabViewVC:UITableViewController {
     func setupNav() {
         
         titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
-        titleText.text = "tablview"
+        titleText.text = "消息"
         titleText.sizeToFit()
-        titleText.textColor = UIColor.white
         navigationItem.titleView = titleText
     }
     

@@ -23,6 +23,9 @@
 		D51C315A28CCA973001B813F /* Leftbar_mine_selected.svg in Resources */ = {isa = PBXBuildFile; fileRef = D51C315228CCA973001B813F /* Leftbar_mine_selected.svg */; };
 		D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D183628D0747C00321B1B /* JsonUtil.swift */; };
 		D51D183A28D0751800321B1B /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D183928D0751800321B1B /* BaseModel.swift */; };
+		D51D183D28D1BAC700321B1B /* zhantu.svg in Resources */ = {isa = PBXBuildFile; fileRef = D51D183C28D1BAC700321B1B /* zhantu.svg */; };
+		D51D184028D1BECC00321B1B /* nvIcon.svg in Resources */ = {isa = PBXBuildFile; fileRef = D51D183E28D1BECB00321B1B /* nvIcon.svg */; };
+		D51D184128D1BECC00321B1B /* nanIcon.svg in Resources */ = {isa = PBXBuildFile; fileRef = D51D183F28D1BECC00321B1B /* nanIcon.svg */; };
 		D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650B528A0B312004A43EE /* YXMessegeController.swift */; };
 		D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* BianLiangVC.swift */; };
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
@@ -114,6 +117,9 @@
 		D51C315228CCA973001B813F /* Leftbar_mine_selected.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Leftbar_mine_selected.svg; sourceTree = "<group>"; };
 		D51D183628D0747C00321B1B /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		D51D183928D0751800321B1B /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		D51D183C28D1BAC700321B1B /* zhantu.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = zhantu.svg; sourceTree = "<group>"; };
+		D51D183E28D1BECB00321B1B /* nvIcon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = nvIcon.svg; sourceTree = "<group>"; };
+		D51D183F28D1BECC00321B1B /* nanIcon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = nanIcon.svg; sourceTree = "<group>"; };
 		D52650B528A0B312004A43EE /* YXMessegeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMessegeController.swift; sourceTree = "<group>"; };
 		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
@@ -512,6 +518,9 @@
 		D5FA231928C86A1D00B83CE0 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
+				D51D183F28D1BECC00321B1B /* nanIcon.svg */,
+				D51D183E28D1BECB00321B1B /* nvIcon.svg */,
+				D51D183C28D1BAC700321B1B /* zhantu.svg */,
 				D51C314D28CCA973001B813F /* Leftbar_cloud_selected.svg */,
 				D51C315128CCA973001B813F /* Leftbar_cloud_unselected.svg */,
 				D51C315028CCA973001B813F /* Leftbar_index_selected.svg */,
@@ -655,6 +664,7 @@
 				D51C315528CCA973001B813F /* Leftbar_cloud_selected.svg in Resources */,
 				D51C315328CCA973001B813F /* Leftbar_shop_unselected.svg in Resources */,
 				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
+				D51D184028D1BECC00321B1B /* nvIcon.svg in Resources */,
 				D51C315628CCA973001B813F /* Leftbar_index_unselected.svg in Resources */,
 				D5FA231D28C86A1E00B83CE0 /* baobiao.svg in Resources */,
 				D51C315728CCA973001B813F /* Leftbar_shop_selected.svg in Resources */,
@@ -662,8 +672,10 @@
 				D5FA231C28C86A1E00B83CE0 /* biaoqian.svg in Resources */,
 				D51C315928CCA973001B813F /* Leftbar_cloud_unselected.svg in Resources */,
 				D51C314A28CCA80A001B813F /* quanbu.svg in Resources */,
+				D51D184128D1BECC00321B1B /* nanIcon.svg in Resources */,
 				D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */,
 				D51C315828CCA973001B813F /* Leftbar_index_selected.svg in Resources */,
+				D51D183D28D1BAC700321B1B /* zhantu.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

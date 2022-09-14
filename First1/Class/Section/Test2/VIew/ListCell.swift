@@ -13,6 +13,7 @@ class ListCell:UITableViewCell {
     var label:UILabel = UILabel.init()
     var label1:UILabel = UILabel.init()
     var line:UIView = UIView.init()
+    var iconImage:UIImageView = UIImageView.init()
     
     
     required init?(coder: NSCoder) {
@@ -30,16 +31,15 @@ class ListCell:UITableViewCell {
     //setupUI
     func setupUI() {
         
-        selectionStyle = UITableViewCell.SelectionStyle.none
-        contentView.backgroundColor = UIColor.colorWithHex(hexStr: "#EED71A")
+        selectionStyle = UITableViewCell.SelectionStyle.gray
         
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.colorWithHex(hexStr: "#EA517F")
         
-        label1.font = UIFont.systemFont(ofSize: 16)
-        label1.textColor = UIColor.colorWithHex(hexStr: "#000000")
+        label1.font = UIFont.systemFont(ofSize: 13)
+        label1.textColor = UIColor.colorWithHex(hexStr: "#B2BBBE")
         
-        line.backgroundColor = UIColor.gray
+        line.backgroundColor = UIColor.colorWithHex(hexStr: "#FFEC3F")
         
     }
     
@@ -48,26 +48,36 @@ class ListCell:UITableViewCell {
         
         contentView.addSubview(label)
         contentView.addSubview(label1)
+        contentView.addSubview(iconImage)
         contentView.addSubview(line)
     }
     
     override func layoutSubviews() {
         
+        
+        iconImage.snp.makeConstraints { make in
+            
+            make.left.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(10)
+            make.width.equalTo(44)
+            make.height.equalTo(44)
+        }
+        
         label.snp.makeConstraints { make in
             
-            make.left.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.left.equalTo(iconImage.snp.right).offset(10)
+            make.top.equalTo(iconImage).offset(2)
         }
         
         label1.snp.makeConstraints { make in
             
-            make.right.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.left.equalTo(iconImage.snp.right).offset(10)
+            make.bottom.equalTo(iconImage).offset(-2)
         }
         
         line.snp.makeConstraints { make in
             
-            make.width.equalToSuperview()
+            make.width.equalTo(ScreenW - 64)
             make.height.equalTo(0.5)
             make.bottom.equalToSuperview()
             make.right.equalToSuperview()
@@ -80,9 +90,15 @@ class ListCell:UITableViewCell {
         didSet {
             
             label.text = model?.name
+            label.textColor = UIColor.colorWithHex(hexStr: model?.color ?? "#EA517F")
             label1.text = model?.explain
             label.sizeToFit()
             label1.sizeToFit()
+            
+            let image:UIImage = UIImage.svgWithName(name: model?.icon ?? "zhanwei", size: CGSize(width: 44, height: 44)) 
+            
+            iconImage.image = image
+            
         }
     }
     
