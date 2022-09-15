@@ -6,7 +6,8 @@ target 'First1' do
   use_frameworks!
 
   # Pods for First1
-     
+
+     pod 'Alamofire', '~> 5.0.0'     
      pod 'SVGKit', '~> 3.0.0'
      pod 'SnapKit','~> 5.6.0'
      pod 'HandyJSON', '~> 5.0.1'

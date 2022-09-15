@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.5)
   - CocoaLumberjack (3.7.4):
     - CocoaLumberjack/Core (= 3.7.4)
   - CocoaLumberjack/Core (3.7.4)
@@ -8,23 +9,26 @@ PODS:
     - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0)
   - HandyJSON (~> 5.0.1)
   - SnapKit (~> 5.6.0)
   - SVGKit (~> 3.0.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - CocoaLumberjack
     - HandyJSON
     - SnapKit
     - SVGKit
 
 SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
 
-PODFILE CHECKSUM: 7aa07c5982b3d7049fd9b0afebf71761fbbe84af
+PODFILE CHECKSUM: befb4d0f926f087aeb80bd9416b6f55a15e564d3
 
 COCOAPODS: 1.11.3
