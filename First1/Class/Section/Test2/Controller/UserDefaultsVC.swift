@@ -12,7 +12,7 @@ class UserDefaultsVC : UIViewController {
     
     override func viewDidLoad() {
         
-//        save1()
+        save1()
 //        read1()
     }
     
@@ -36,16 +36,16 @@ class UserDefaultsVC : UIViewController {
     //save1
     func save1() {
         
-        userDef.name = "咬卵匠"
+        UserDef.userDef.name = "咬卵匠"
         
-        userDef.num = "250"
+        UserDef.userDef.num = "250"
         
         UserDef.saveUserDefToSandBox()
     }
     
     func read1() {
         
-        print("name的值:\(userDef.name!)")
-        print("num的值:\(userDef.num!)")
+        print("name的值:\(UserDef.userDef.name!)")
+        print("num的值:\(UserDef.userDef.num!)")
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-var userDef : UserDef = UserDef.init()
+//var userDef : UserDef = UserDef.init()
 
 class UserDef:NSObject {
     
@@ -24,6 +24,15 @@ class UserDef:NSObject {
         self.wRatio = defaults.value(forKey: "wRatio") as? CGFloat ?? 1
         self.hRatio = defaults.value(forKey: "hRatio") as? CGFloat ?? 1
         
+    }
+    
+    public class var userDef : UserDef{
+        
+        struct Static {
+            static let instance :UserDef = UserDef()
+        }
+        
+        return Static.instance
     }
     
     class func saveUserDefToSandBox() {

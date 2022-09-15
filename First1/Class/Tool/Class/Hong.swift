@@ -11,11 +11,11 @@ import SnapKit
 
 var ScreenW:CGFloat = ScreenWf()
 
-var RScreenW:CGFloat = userDef.wRatio * ScreenWf() / 375
+var RScreenW:CGFloat = UserDef.userDef.wRatio * ScreenWf() / 375
 
 var ScreenH:CGFloat = ScreenHf()
 
-var RScreenH:CGFloat = userDef.hRatio * ScreenHf() / 667
+var RScreenH:CGFloat = UserDef.userDef.hRatio * ScreenHf() / 667
 
 func ScreenHf() -> CGFloat {
     
