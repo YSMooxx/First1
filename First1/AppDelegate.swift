@@ -56,6 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(#line,#function)
     }
+    
+    func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+        
+    }
 
     // MARK: UISceneSession Lifecycle
 
