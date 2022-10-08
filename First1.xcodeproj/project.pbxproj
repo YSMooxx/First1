@@ -62,6 +62,7 @@
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
 		D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF97283CC72300468664 /* YXTabBarController.swift */; };
 		D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */; };
+		D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */; };
 		D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */; };
 		D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */; };
 		D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */; };
@@ -167,6 +168,7 @@
 		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
 		D5CDEF97283CC72300468664 /* YXTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXTabBarController.swift; sourceTree = "<group>"; };
 		D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNavigationController.swift; sourceTree = "<group>"; };
+		D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShengMingVC.swift; sourceTree = "<group>"; };
 		D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				D51C314328CB25F1001B813F /* SwiftUIVC.swift */,
 				D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */,
 				D51D184C28D34BAE00321B1B /* TestHttpVC.swift */,
+				D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
+				D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */,
 				D51D183A28D0751800321B1B /* BaseModel.swift in Sources */,
 				D59E04B828C9E25200F5C0AF /* Account.m in Sources */,
 				D558F53828CF2CD600964016 /* ListModel.swift in Sources */,

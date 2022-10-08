@@ -13,8 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
+    //
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print(#line,#function)
+        return true
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        print(#line,#function)
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
         window?.backgroundColor = .white
@@ -22,6 +28,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tab
         // Override point for customization after application launch.
         return true
+    }
+    
+   
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        print(#line,#function)
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        
+        print(#line,#function)
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        
+        print(#line,#function)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        
+        print(#line,#function)
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        
+        print(#line,#function)
     }
 
     // MARK: UISceneSession Lifecycle
