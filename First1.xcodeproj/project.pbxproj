@@ -34,6 +34,12 @@
 		D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* BianLiangVC.swift */; };
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
 		D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */; };
+		D5377FCB290FA28800E4A620 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCA290FA28800E4A620 /* BaseView.swift */; };
+		D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */; };
+		D5377FCF290FA2FB00E4A620 /* MVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCE290FA2FB00E4A620 /* MVVMController.swift */; };
+		D5377FD1290FA32F00E4A620 /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FD0290FA32F00E4A620 /* MVVMViewModel.swift */; };
+		D5377FD3290FA35300E4A620 /* MVVMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FD2290FA35300E4A620 /* MVVMView.swift */; };
+		D5377FD5290FA84900E4A620 /* MVVMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FD4290FA84900E4A620 /* MVVMModel.swift */; };
 		D558F53528CF279500964016 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53428CF279500964016 /* ListCell.swift */; };
 		D558F53828CF2CD600964016 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53728CF2CD600964016 /* ListModel.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
@@ -133,6 +139,12 @@
 		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewVC.swift; sourceTree = "<group>"; };
+		D5377FCA290FA28800E4A620 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D5377FCE290FA2FB00E4A620 /* MVVMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMController.swift; sourceTree = "<group>"; };
+		D5377FD0290FA32F00E4A620 /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
+		D5377FD2290FA35300E4A620 /* MVVMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMView.swift; sourceTree = "<group>"; };
+		D5377FD4290FA84900E4A620 /* MVVMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMModel.swift; sourceTree = "<group>"; };
 		D558F53428CF279500964016 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		D558F53728CF2CD600964016 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
@@ -230,6 +242,9 @@
 			isa = PBXGroup;
 			children = (
 				D51C314628CB2EFE001B813F /* Controller */,
+				D5377FC5290FA1CB00E4A620 /* Model */,
+				D5377FC6290FA1CB00E4A620 /* View */,
+				D5377FC7290FA1CB00E4A620 /* ViewModel */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -245,7 +260,6 @@
 		D51D183828D074FC00321B1B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D51D183928D0751800321B1B /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +314,73 @@
 				D590AFD928C1DCEE0013DB2A /* ShuXing.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D5377FC0290FA19100E4A620 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FC1290FA19100E4A620 /* ViewModel */,
+				D5377FC2290FA19100E4A620 /* Controller */,
+				D5377FC3290FA19100E4A620 /* Model */,
+				D5377FC4290FA19100E4A620 /* View */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		D5377FC1290FA19100E4A620 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FD0290FA32F00E4A620 /* MVVMViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5377FC2290FA19100E4A620 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FCE290FA2FB00E4A620 /* MVVMController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5377FC3290FA19100E4A620 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FD4290FA84900E4A620 /* MVVMModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5377FC4290FA19100E4A620 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FD2290FA35300E4A620 /* MVVMView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5377FC5290FA1CB00E4A620 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D51D183928D0751800321B1B /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5377FC6290FA1CB00E4A620 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FCA290FA28800E4A620 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5377FC7290FA1CB00E4A620 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D558F53328CF277F00964016 /* VIew */ = {
@@ -507,6 +588,7 @@
 				D5CDEF8E283CC6AA00468664 /* Home */,
 				D52650BC28A39925004A43EE /* Test */,
 				D590AFED28C2F93D0013DB2A /* Test2 */,
+				D5377FC0290FA19100E4A620 /* MVVM */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -829,6 +911,7 @@
 				D59E04BA28C9E2A200F5C0AF /* UserDefaultsVC.swift in Sources */,
 				D590AFDE28C1F5770013DB2A /* FangFaVC.swift in Sources */,
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
+				D5377FCB290FA28800E4A620 /* BaseView.swift in Sources */,
 				D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */,
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
@@ -839,8 +922,10 @@
 				D51D183A28D0751800321B1B /* BaseModel.swift in Sources */,
 				D59E04B828C9E25200F5C0AF /* Account.m in Sources */,
 				D558F53828CF2CD600964016 /* ListModel.swift in Sources */,
+				D5377FD3290FA35300E4A620 /* MVVMView.swift in Sources */,
 				D51C314828CB2F24001B813F /* BaseViewController.swift in Sources */,
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
+				D5377FD5290FA84900E4A620 /* MVVMModel.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
 				D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */,
 				D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */,
@@ -858,17 +943,20 @@
 				D51D184D28D34BAE00321B1B /* TestHttpVC.swift in Sources */,
 				D51D184828D3479600321B1B /* NetManager+Extension.swift in Sources */,
 				D51D184628D31FFD00321B1B /* NetManager.swift in Sources */,
+				D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */,
 				D5CDEF98283CC72300468664 /* YXTabBarController.swift in Sources */,
 				D5FEF5CB28B60E94008639E2 /* HanShuVC.swift in Sources */,
 				D590AFD428C18DB10013DB2A /* SampleClass.swift in Sources */,
 				D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */,
 				D5FEF5A428AF68F3008639E2 /* XunHuanVC.swift in Sources */,
 				D5FEF5BA28B4A56A008639E2 /* ZiFuVC.swift in Sources */,
+				D5377FCF290FA2FB00E4A620 /* MVVMController.swift in Sources */,
 				D5B6DA2E2824018300481169 /* FirstController.swift in Sources */,
 				D51C314228CB236F001B813F /* Hong.swift in Sources */,
 				D5FA19EC28C6053C00B83CE0 /* UIView+SVGKit.swift in Sources */,
 				D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */,
 				D5FEF5C428B5B8AD008639E2 /* ZiDianVC.swift in Sources */,
+				D5377FD1290FA32F00E4A620 /* MVVMViewModel.swift in Sources */,
 				D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */,
 				D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */,
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,

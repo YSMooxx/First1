@@ -28,7 +28,7 @@ class YXTabBarContrller: UITabBarController {
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"TestWebViewController","YTitle":"web","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"tabViewVC","YTitle":"tabview","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"ZIMianLiangVC","YTitle":"字面量","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"TestHttpVC","YTitle":"http","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
+        let VCArray : NSArray = [["YClass":"TestWebViewController","YTitle":"web","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"tabViewVC","YTitle":"tabview","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"MVVMController","YTitle":"MVVM","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"TestHttpVC","YTitle":"http","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
         
         for controller in VCArray {
             
