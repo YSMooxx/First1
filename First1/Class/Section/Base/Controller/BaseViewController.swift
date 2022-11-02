@@ -12,6 +12,11 @@ class BaseViewController:UIViewController {
     
     override func viewDidLoad() {
     
+        setupUI()
+    }
+    
+    func setupUI() {
+        
         
     }
 }

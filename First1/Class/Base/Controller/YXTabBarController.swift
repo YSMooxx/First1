@@ -19,7 +19,7 @@ class YXTabBarContrller: UITabBarController {
     
     func setupUI() {
         
-        self.tabBar.barTintColor=UIColor.coloWithHex(hexStr: "#ff0000", alpha: 0.5)
+//        self.tabBar.barTintColor=UIColor.coloWithHex(hexStr: "#ff0000", alpha: 0.5)
         self.tabBar.backgroundColor = UIColor.coloWithHex(hexStr: "#f8f8f8", alpha: 0.8)
         self.tabBar.tintColor = UIColor.colorWithHex(hexStr: "#d4237a")
 //        self.tabBar.isTranslucent = false
@@ -28,7 +28,7 @@ class YXTabBarContrller: UITabBarController {
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"BianLiangVC","YTitle":"web","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"tabViewVC","YTitle":"tabview","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"MVVMController","YTitle":"MVVM","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"TestHttpVC","YTitle":"http","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
+        let VCArray : NSArray = [["YClass":"BianLiangVC","YTitle":"web","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"tabViewVC","YTitle":"tabview","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"MVVMController","YTitle":"MVVM","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"MVVM2Controller","YTitle":"MVVM2","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
         
         for controller in VCArray {
             

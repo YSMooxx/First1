@@ -11,14 +11,14 @@ class BianLiangVC: UIViewController {
     
     override func viewDidLoad() {
         
-        test5()
+        test()
     }
     
     //Hello,World
     func test() {
         
-        let myString = "Hello,World!"
-        print(myString)
+        print(RW)
+        print(RH)
     }
     //数据类型1
     func test1() {

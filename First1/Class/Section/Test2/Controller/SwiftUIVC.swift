@@ -26,9 +26,9 @@ class SwiftUIVC:BaseViewController {
         
         sView.snp.makeConstraints { make in
             
-            make.width.equalTo(100 * RScreenW)
-            make.height.equalTo(100 * RScreenH)
-            make.top.equalTo(100 * RScreenH)
+            make.width.equalTo(100 * RScreenW())
+            make.height.equalTo(100 * RScreenH())
+            make.top.equalTo(100 * RScreenH())
             make.centerX.equalToSuperview()
         }
     }

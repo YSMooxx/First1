@@ -9,20 +9,21 @@ import Foundation
 import UIKit
 import SnapKit
 
-var ScreenW:CGFloat = ScreenWf()
 
-var RScreenW:CGFloat = UserDef.userDef.wRatio * ScreenWf() / 375
+let ScreenW:CGFloat = UIScreen.main.bounds.size.width
 
-var ScreenH:CGFloat = ScreenHf()
+let ScreenH:CGFloat = UIScreen.main.bounds.size.height
 
-var RScreenH:CGFloat = UserDef.userDef.hRatio * ScreenHf() / 667
+let RW:CGFloat = RScreenW()
 
-func ScreenHf() -> CGFloat {
-    
-    return UIScreen.main.bounds.size.height
+let RH:CGFloat = RScreenH()
+
+func RScreenW() -> CGFloat {
+
+    return ScreenW / 375
 }
 
-func ScreenWf() -> CGFloat {
+func RScreenH() -> CGFloat {
     
-    return UIScreen.main.bounds.size.width
+    return ScreenH / 667
 }

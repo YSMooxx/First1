@@ -12,12 +12,7 @@ class MVVMController:BaseViewController {
     
     let mView:MVVMView = MVVMView.init(frame: UIScreen.main.bounds)
     
-    override func viewDidLoad() {
-    
-        setupUI()
-    }
-    
-    func setupUI() {
+    override func setupUI() {
         
         let model:MVVMModel = MVVMModel.init()
         model.name = "xiaoyang"
@@ -27,4 +22,5 @@ class MVVMController:BaseViewController {
         mView.ViewModel = Vmodel
         self.view = mView
     }
+    
 }
