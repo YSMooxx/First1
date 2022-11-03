@@ -40,6 +40,7 @@
 		D5377FD1290FA32F00E4A620 /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FD0290FA32F00E4A620 /* MVVMViewModel.swift */; };
 		D5377FD3290FA35300E4A620 /* MVVMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FD2290FA35300E4A620 /* MVVMView.swift */; };
 		D5377FD5290FA84900E4A620 /* MVVMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FD4290FA84900E4A620 /* MVVMModel.swift */; };
+		D553C8FA29135C2C006475A8 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */; };
 		D558F53528CF279500964016 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53428CF279500964016 /* ListCell.swift */; };
 		D558F53828CF2CD600964016 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53728CF2CD600964016 /* ListModel.swift */; };
 		D56E81EA29124A2900587A03 /* MVVM2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81E929124A2900587A03 /* MVVM2Controller.swift */; };
@@ -151,6 +152,7 @@
 		D5377FD0290FA32F00E4A620 /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
 		D5377FD2290FA35300E4A620 /* MVVMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMView.swift; sourceTree = "<group>"; };
 		D5377FD4290FA84900E4A620 /* MVVMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMModel.swift; sourceTree = "<group>"; };
+		D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		D558F53428CF279500964016 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		D558F53728CF2CD600964016 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		D56E81E929124A2900587A03 /* MVVM2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2Controller.swift; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 				D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */,
 				D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */,
 				D51D184728D3479600321B1B /* NetManager+Extension.swift */,
+				D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */,
 				D5B6D9472823AF2400481169 /* ViewController.swift in Sources */,
 				D558F53528CF279500964016 /* ListCell.swift in Sources */,
+				D553C8FA29135C2C006475A8 /* UITabBar+Extension.swift in Sources */,
 				D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */,
 				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,

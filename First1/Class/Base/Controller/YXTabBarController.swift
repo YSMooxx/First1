@@ -14,7 +14,6 @@ class YXTabBarContrller: UITabBarController {
         
         setupUI()
         AddChileVCWithArray()
-        
     }
     
     func setupUI() {

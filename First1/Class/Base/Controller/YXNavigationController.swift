@@ -20,6 +20,7 @@ class YXNavigationController: UINavigationController {
     
         titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
         titleText.text = "消息"
+        titleText.textColor = UIColor.black
         titleText.sizeToFit()
         navigationItem.titleView = titleText
     }

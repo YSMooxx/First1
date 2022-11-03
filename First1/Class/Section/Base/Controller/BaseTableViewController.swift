@@ -12,8 +12,8 @@ class BaseTableViewController:UITableViewController {
     override func viewDidLoad() {
         
         setupUI()
-        getdate()
-        setupUI()
+        getDate()
+        setupNav()
     }
     
     func setupUI() {
@@ -21,7 +21,7 @@ class BaseTableViewController:UITableViewController {
         
     }
     
-    func getdate() {
+    func getDate() {
         
         
     }

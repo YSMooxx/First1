@@ -32,7 +32,8 @@
 
 +(UIColor*)changeColor {
     
-    return [[UIColor alloc] initWithRed:200 green:13 blue:44 alpha:1];
+    return [UIColor orangeColor];
+    
 }
 
 + (UIImage *)svgImageWithName:(NSString *)name andSize:(CGSize)size {

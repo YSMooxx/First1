@@ -13,9 +13,12 @@ private let MVVM2ListCell2ID = "MVVM2ListCell2"
 
 class MVVM2Controller:BaseTableViewController{
     
+    var titleText = UILabel()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        MessageVC.changeColor()
     }
     
     var array:NSMutableArray = NSMutableArray.init()
@@ -30,12 +33,18 @@ class MVVM2Controller:BaseTableViewController{
     
     override func setupNav() {
         
-        self.navigationController?.setValue("MVVM", forKeyPath: "titleText.text")
+        titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
+        titleText.text = "MVVM"
+        titleText.sizeToFit()
+        navigationItem.titleView = titleText
+        
     }
     
-    override func getdate() {
+    override func getDate() {
         
         let jsonString:String = JsonUtil.getJSONStringFromArray(array:array2)
+        
+        print(jsonString)
         
         let array3:[Any] = JsonUtil.jsonArrayToModel(jsonString, MVVM2Model.self) as! [MVVM2Model]
         

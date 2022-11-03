@@ -39,7 +39,7 @@ class MVVM2ListCell1:UITableViewCell {
         label1.textColor = UIColor.colorWithHex(hexStr: "#B2BBBE")
         
         line.backgroundColor = UIColor.colorWithHex(hexStr: "#FFEC3F")
-        
+        backgroundColor = MessageVC.changeColor()
     }
     
     //addView
