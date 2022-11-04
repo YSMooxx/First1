@@ -30,7 +30,7 @@ class MVVM2ListCell1:UITableViewCell {
     //setupUI
     func setupUI() {
         
-        selectionStyle = UITableViewCell.SelectionStyle.gray
+        selectionStyle = UITableViewCell.SelectionStyle.none
         
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.colorWithHex(hexStr: "#EA517F")
@@ -39,7 +39,7 @@ class MVVM2ListCell1:UITableViewCell {
         label1.textColor = UIColor.colorWithHex(hexStr: "#B2BBBE")
         
         line.backgroundColor = UIColor.colorWithHex(hexStr: "#FFEC3F")
-        backgroundColor = MessageVC.changeColor()
+        backgroundColor = UIColor.colorWithHex(hexStr: "#8ABCD1")
     }
     
     //addView
