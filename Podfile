@@ -8,7 +8,7 @@ target 'First1' do
   # Pods for First1
 
      pod 'Alamofire', '~> 5.0.0'     
-     pod 'SVGKit', '~> 3.0.0'
+     pod 'SVGKit', '~> 3.0.0',:inhibit_warnings => true
      pod 'SnapKit','~> 5.6.0'
      pod 'HandyJSON', '~> 5.0.1'
 
