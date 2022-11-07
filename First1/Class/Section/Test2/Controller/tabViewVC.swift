@@ -45,6 +45,12 @@ class tabViewVC:BaseTableViewController {
     override func setupNav() {
         
         title = "消息"
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "back"), for: UIBarMetrics.default)
     }
     
     //UITableViewDataSource
@@ -75,8 +81,6 @@ class tabViewVC:BaseTableViewController {
         let vc : MVVM2Controller = MVVM2Controller.init()
         
         vc.title = "MVVM2"
-        
-        navigationController?.pushViewController(vc, animated: true)
         
     }
     

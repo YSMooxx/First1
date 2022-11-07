@@ -42,7 +42,6 @@ class ListCell:UITableViewCell {
         
         line.backgroundColor = UIColor.colorWithHex(hexStr: "#FFEC3F")
         
-        
     }
     
     //addView

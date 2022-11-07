@@ -12,13 +12,22 @@ class BianLiangVC: BaseViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+    }
+    
+    override func setupUI() {
         
-        test()
+        view.backgroundColor = .blue
     }
     
     override func setupNav() {
         
         title = "首页"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

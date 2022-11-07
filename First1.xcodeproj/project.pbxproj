@@ -34,6 +34,7 @@
 		D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* BianLiangVC.swift */; };
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
 		D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */; };
+		D53043B7291900AE0001D39B /* navback.svg in Resources */ = {isa = PBXBuildFile; fileRef = D53043B6291900AE0001D39B /* navback.svg */; };
 		D5377FCB290FA28800E4A620 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCA290FA28800E4A620 /* BaseView.swift */; };
 		D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */; };
 		D5377FCF290FA2FB00E4A620 /* MVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCE290FA2FB00E4A620 /* MVVMController.swift */; };
@@ -146,6 +147,7 @@
 		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewVC.swift; sourceTree = "<group>"; };
+		D53043B6291900AE0001D39B /* navback.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = navback.svg; sourceTree = "<group>"; };
 		D5377FCA290FA28800E4A620 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D5377FCE290FA2FB00E4A620 /* MVVMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMController.swift; sourceTree = "<group>"; };
@@ -688,6 +690,7 @@
 				D51D183E28D1BECB00321B1B /* nvIcon.svg */,
 				D51D183C28D1BAC700321B1B /* zhantu.svg */,
 				D51C314D28CCA973001B813F /* Leftbar_cloud_selected.svg */,
+				D53043B6291900AE0001D39B /* navback.svg */,
 				D51C315128CCA973001B813F /* Leftbar_cloud_unselected.svg */,
 				D51C315028CCA973001B813F /* Leftbar_index_selected.svg */,
 				D51C314E28CCA973001B813F /* Leftbar_index_unselected.svg */,
@@ -832,6 +835,7 @@
 				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
 				D51D184028D1BECC00321B1B /* nvIcon.svg in Resources */,
 				D51C315628CCA973001B813F /* Leftbar_index_unselected.svg in Resources */,
+				D53043B7291900AE0001D39B /* navback.svg in Resources */,
 				D5FA231D28C86A1E00B83CE0 /* baobiao.svg in Resources */,
 				D51C315728CCA973001B813F /* Leftbar_shop_selected.svg in Resources */,
 				D51C315428CCA973001B813F /* Leftbar_mine_unselected.svg in Resources */,
