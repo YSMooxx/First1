@@ -26,7 +26,6 @@ class MVVM2Controller:BaseTableViewController{
         
         tableView.register(MVVM2ListCell1.self, forCellReuseIdentifier: MVVM2ListCell1ID)
         tableView.register(MVVM2ListCell2.self, forCellReuseIdentifier: MVVM2ListCell2ID)
-        tableView.backgroundColor = .green
         
     }
     

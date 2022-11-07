@@ -50,7 +50,9 @@ class tabViewVC:BaseTableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-//        navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "back"), for: UIBarMetrics.default)
+        let nav:YXNavigationController = self.navigationController as! YXNavigationController
+        
+        nav.setBarStyleWithStyle(style: UIStatusBarStyle.default)
     }
     
     //UITableViewDataSource

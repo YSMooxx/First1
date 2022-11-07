@@ -17,7 +17,7 @@ class BianLiangVC: BaseViewController {
     
     override func setupUI() {
         
-        view.backgroundColor = .blue
+        
     }
     
     override func setupNav() {
@@ -27,6 +27,9 @@ class BianLiangVC: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        let nav:YXNavigationController = self.navigationController as! YXNavigationController
+        
+        nav.setBarStyleWithStyle(style: UIStatusBarStyle.lightContent)
         
     }
     
