@@ -12,6 +12,10 @@ class MVVMController:BaseViewController {
     
     let mView:MVVMView = MVVMView.init(frame: UIScreen.main.bounds)
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func setupUI() {
         
         let model:MVVMModel = MVVMModel.init()
@@ -22,5 +26,11 @@ class MVVMController:BaseViewController {
         mView.ViewModel = Vmodel
         self.view = mView
     }
+    
+    override func setupNav() {
+        
+        title = "业务"
+    }
+
     
 }

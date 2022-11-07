@@ -13,9 +13,16 @@ class BaseViewController:UIViewController {
     override func viewDidLoad() {
     
         setupUI()
+        setupNav()
+        
     }
     
     func setupUI() {
+        
+        
+    }
+    
+    func setupNav() {
         
         
     }

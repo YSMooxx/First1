@@ -31,7 +31,8 @@ class ListCell:UITableViewCell {
     //setupUI
     func setupUI() {
         
-        selectionStyle = UITableViewCell.SelectionStyle.gray
+        selectedBackgroundView = UIView.init()
+        selectedBackgroundView?.backgroundColor = mColorA
         
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.colorWithHex(hexStr: "#EA517F")
@@ -40,6 +41,7 @@ class ListCell:UITableViewCell {
         label1.textColor = UIColor.colorWithHex(hexStr: "#B2BBBE")
         
         line.backgroundColor = UIColor.colorWithHex(hexStr: "#FFEC3F")
+        
         
     }
     
@@ -54,6 +56,7 @@ class ListCell:UITableViewCell {
     
     override func layoutSubviews() {
         
+        selectedBackgroundView?.frame = self.bounds
         
         iconImage.snp.makeConstraints { make in
             

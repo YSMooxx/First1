@@ -7,11 +7,28 @@
 
 import UIKit
 
-class BianLiangVC: UIViewController {
+class BianLiangVC: BaseViewController {
     
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         test()
+    }
+    
+    override func setupNav() {
+        
+        title = "首页"
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+        let vc : tabViewVC = tabViewVC.init()
+        
+        vc.title = "下一页"
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     //Hello,World

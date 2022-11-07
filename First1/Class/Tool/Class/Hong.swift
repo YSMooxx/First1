@@ -14,6 +14,10 @@ let ScreenW:CGFloat = UIScreen.main.bounds.size.width
 
 let ScreenH:CGFloat = UIScreen.main.bounds.size.height
 
+let mColor:UIColor = UIColor.colorWithHex(hexStr: "#41AF9B")
+
+let mColorA:UIColor = UIColor.coloWithHex(hexStr: "#41AF9B", alpha: 0.5)
+
 let RW:CGFloat = RScreenW()
 
 let RH:CGFloat = RScreenH()

@@ -21,12 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print(#line,#function)
-        window = UIWindow.init(frame: UIScreen.main.bounds)
         
+        window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         let tab = YXTabBarContrller.init()
         window?.rootViewController = tab
-        // Override point for customization after application launch.
+        window?.makeKeyAndVisible()
+        
         return true
     }
     

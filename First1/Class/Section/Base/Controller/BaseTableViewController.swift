@@ -14,6 +14,7 @@ class BaseTableViewController:UITableViewController {
         setupUI()
         getDate()
         setupNav()
+        
     }
     
     func setupUI() {

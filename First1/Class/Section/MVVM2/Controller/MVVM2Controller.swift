@@ -13,12 +13,9 @@ private let MVVM2ListCell2ID = "MVVM2ListCell2"
 
 class MVVM2Controller:BaseTableViewController{
     
-    var titleText = UILabel()
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        MessageVC.changeColor()
     }
     
     var array:NSMutableArray = NSMutableArray.init()
@@ -29,14 +26,12 @@ class MVVM2Controller:BaseTableViewController{
         
         tableView.register(MVVM2ListCell1.self, forCellReuseIdentifier: MVVM2ListCell1ID)
         tableView.register(MVVM2ListCell2.self, forCellReuseIdentifier: MVVM2ListCell2ID)
+        
     }
     
     override func setupNav() {
         
-        titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
-        titleText.text = "MVVM"
-        titleText.sizeToFit()
-        navigationItem.titleView = titleText
+        title = "我的"
         
     }
     

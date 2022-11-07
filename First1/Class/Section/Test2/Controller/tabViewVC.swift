@@ -10,7 +10,7 @@ import UIKit
 
 private let listCellID = "listCellID"
 
-class tabViewVC:UITableViewController {
+class tabViewVC:BaseTableViewController {
     
     let array: [Any] = [["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"]]
     
@@ -26,8 +26,7 @@ class tabViewVC:UITableViewController {
     
     override func viewDidLoad() {
         
-        setupUI()
-        setupNav()
+        super.viewDidLoad()
         
         let jsonString:String = JsonUtil.getJSONStringFromArray(array:array)
         
@@ -37,18 +36,15 @@ class tabViewVC:UITableViewController {
     
     
     //setupUI
-    func setupUI () {
+    override func setupUI () {
         
         tableView.register(ListCell.self, forCellReuseIdentifier: listCellID)
     }
     
     //setupNav
-    func setupNav() {
+    override func setupNav() {
         
-        titleText.frame = CGRect(x: 0, y: 0, width: 80, height: 30)
-        titleText.text = "消息"
-        titleText.sizeToFit()
-        navigationItem.titleView = titleText
+        title = "消息"
     }
     
     //UITableViewDataSource
@@ -72,6 +68,16 @@ class tabViewVC:UITableViewController {
         let model = modelArray[indexPath.row] as? ListModel
         
         return model?.height ?? 10
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc : MVVM2Controller = MVVM2Controller.init()
+        
+        vc.title = "MVVM2"
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     
