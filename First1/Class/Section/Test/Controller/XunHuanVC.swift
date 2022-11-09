@@ -12,6 +12,8 @@ class XunHuanVC :UIViewController {
     override func viewDidLoad() {
         
         test7()
+        
+        view.backgroundColor = .white
     }
     
     //for in 循环1

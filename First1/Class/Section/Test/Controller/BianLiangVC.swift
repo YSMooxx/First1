@@ -20,25 +20,18 @@ class BianLiangVC: BaseViewController {
         
     }
     
-    override func setupNav() {
-        
-        title = "首页"
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         
-        let nav:YXNavigationController = self.navigationController as! YXNavigationController
-        
-        nav.setBarStyleWithStyle(style: UIStatusBarStyle.lightContent)
+//        let nav:YXNavigationController = self.navigationController as! YXNavigationController
+//
+//        nav.style = .Default
         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
-        let vc : tabViewVC = tabViewVC.init()
-        
-        vc.title = "下一页"
+        let vc : LeiVC = LeiVC.init()
         
         navigationController?.pushViewController(vc, animated: true)
     }

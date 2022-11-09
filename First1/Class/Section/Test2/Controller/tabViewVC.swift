@@ -44,15 +44,15 @@ class tabViewVC:BaseTableViewController {
     //setupNav
     override func setupNav() {
         
-        title = "消息"
+
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let nav:YXNavigationController = self.navigationController as! YXNavigationController
+        let vc:BaseNavigationController = self.navigationController as! BaseNavigationController
         
-        nav.setBarStyleWithStyle(style: UIStatusBarStyle.default)
+        vc.setBarStyleWithStyle(style: UIStatusBarStyle.default)
     }
     
     //UITableViewDataSource
@@ -83,6 +83,8 @@ class tabViewVC:BaseTableViewController {
         let vc : MVVM2Controller = MVVM2Controller.init()
         
         vc.title = "MVVM2"
+        
+        navigationController?.pushViewController(vc, animated: true)
         
     }
     

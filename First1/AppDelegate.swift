@@ -21,12 +21,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print(#line,#function)
-        
+    
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        let tab = YXTabBarContrller.init()
+        let tab = BaseTabBarContrller.init()
         window?.rootViewController = tab
         window?.makeKeyAndVisible()
+        
+        if #available(iOS 13.0, *) {
+            
+            let set:NSSet = UIApplication.shared.connectedScenes as NSSet
+            
+            let windScene:UIWindowScene = set.anyObject() as! UIWindowScene
+            
+            print("iOS13---------")
+            print(windScene.statusBarManager?.statusBarFrame.height ?? 0)
+            
+            statusBarHeight = windScene.statusBarManager?.statusBarFrame.height ?? 0
+            
+            navHeight = statusBarHeight + 44
+        }else {
+            
+            print("iOS11----------")
+            print(UIApplication.shared.statusBarFrame.size.height)
+            
+            statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+            
+            navHeight = statusBarHeight + 44
+        }
         
         return true
     }

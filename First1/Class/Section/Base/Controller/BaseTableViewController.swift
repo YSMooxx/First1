@@ -11,10 +11,12 @@ class BaseTableViewController:UITableViewController {
     
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
+        
         setupUI()
         getDate()
         setupNav()
-        
     }
     
     func setupUI() {
@@ -31,4 +33,5 @@ class BaseTableViewController:UITableViewController {
         
         
     }
+
 }

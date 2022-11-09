@@ -27,10 +27,4 @@ class MVVMController:BaseViewController {
         self.view = mView
     }
     
-    override func setupNav() {
-        
-        title = "业务"
-    }
-
-    
 }
