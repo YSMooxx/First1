@@ -1,24 +1,28 @@
 //
-//  BaseTableViewController.swift
+//  BaseNavTableViewController.swift
 //  First1
 //
-//  Created by New on 2022/11/2.
+//  Created by New on 2022/11/8.
 //
 
+import Foundation
 import UIKit
 
-private let Cell1ID = "CellID"
+private let CellID = "CellID"
 
-class BaseTableViewController:UITableViewController{
+class BaseTableViewController:UIViewController {
     
-    override func viewDidLoad()
+    let titleView:NavTitleView = NavTitleView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight))
     
-    {
+    let tableView:UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH))
+    
+    override func viewDidLoad() {
+    
         super.viewDidLoad()
         
-        setupDefault()
-        
         setupUI()
+        
+        setupDefault()
         
         getDate()
     }
@@ -27,6 +31,19 @@ class BaseTableViewController:UITableViewController{
         
         view.backgroundColor = .white
         
+        view.addSubview(tableView)
+        
+        tableView.delegate = self
+        
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
+        
+        view.addSubview(self.titleView)
+        
+        titleView.delegate = self
     }
     
     func setupUI() {
@@ -38,6 +55,57 @@ class BaseTableViewController:UITableViewController{
         
         
     }
-
-
+    
 }
+
+extension BaseTableViewController:UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return tableView.dequeueReusableCell(withIdentifier: CellID) ?? UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellID)
+    }
+    
+}
+
+extension BaseTableViewController:UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 44
+    }
+    
+}
+
+extension BaseTableViewController:NavTitleViewDelegate {
+    
+    func didBackButton() {
+        
+        let count : Int = navigationController?.children.count ?? 0
+        
+        if(count > 1) {
+            
+            navigationController?.popViewController(animated: true)
+        }
+    }
+}
+
+extension BaseTableViewController:UIScrollViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        
+    }
+    
+}
+
+

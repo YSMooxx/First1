@@ -33,12 +33,16 @@ class BaseViewController:UIViewController {
         titleView.delegate = self
     }
     
-    override func viewWillLayoutSubviews() {
+    func setupUI() {
         
-        super.viewWillLayoutSubviews()
+        
     }
     
-    func setupUI() {
+}
+
+extension BaseViewController:UIScrollViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
         
     }

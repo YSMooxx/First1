@@ -10,7 +10,7 @@ import UIKit
 
 private let listCellID = "listCellID"
 
-class tabViewVC:BaseNavTableViewController {
+class tabViewVC:BaseTableViewController {
     
     let array: [Any] = [["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"]]
     
@@ -71,14 +71,14 @@ class tabViewVC:BaseNavTableViewController {
     }
     
     //UITableViewDelegate
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let model = modelArray[indexPath.row] as? ListModel
         
         return model?.height ?? 10
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
     }

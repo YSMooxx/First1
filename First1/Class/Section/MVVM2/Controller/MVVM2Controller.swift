@@ -11,7 +11,7 @@ import UIKit
 private let MVVM2ListCell1ID = "MVVM2ListCell1"
 private let MVVM2ListCell2ID = "MVVM2ListCell2"
 
-class MVVM2Controller:BaseNavTableViewController{
+class MVVM2Controller:BaseTableViewController{
     
     override func viewDidLoad() {
         
@@ -45,8 +45,6 @@ class MVVM2Controller:BaseNavTableViewController{
     override func getDate() {
         
         let jsonString:String = JsonUtil.getJSONStringFromArray(array:array2)
-        
-        print(jsonString)
         
         let array3:[Any] = JsonUtil.jsonArrayToModel(jsonString, MVVM2Model.self) as! [MVVM2Model]
         
@@ -89,7 +87,7 @@ class MVVM2Controller:BaseNavTableViewController{
     
     
     //UITableViewDelegate
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let VM:MVVM2ViewModel = array[indexPath.row] as! MVVM2ViewModel
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NavTest3:BaseNavTableViewController {
+class NavTest3:BaseTableViewController {
     
     override func viewDidLoad() {
         

@@ -8,6 +8,23 @@
 import UIKit
 import Foundation
 
+private var top:CGFloat {
+    
+    get {
+        
+        var a : CGFloat = 0
+        
+        if statusBarHeight > 20 {
+            
+            a = statusBarHeight / 2 - ((statusBarHeight - 44) / 2)
+        }else {
+            
+            a = statusBarHeight / 2
+        }
+        
+        return a
+    }
+}
 
 protocol NavTitleViewDelegate : NSObjectProtocol {
     
@@ -35,15 +52,16 @@ class NavTitleView:BaseView {
     
     
     
-    func setupUI() {
+    private func setupUI() {
         
         backgroundColor = mColor
         isUserInteractionEnabled = true
         titleLabel.textColor = .white
-        titleLabel.font = UIFont.systemFont(ofSize: 18)
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
         leftBtn .addTarget(self, action:#selector(changTitle), for: UIControl.Event.touchUpInside)
-        leftBtn.setTitle("返回", for: UIControl.State.normal)
         leftBtn.setTitleColor(.black, for: UIControl.State.normal)
+        leftBtn.setImage(UIImage.svgWithName(name: "back2", size: CGSize(width: 32, height: 30)), for: UIControl.State.normal)
+        leftBtn.sizeToFit()
     }
     
     @objc func changTitle() {
@@ -51,7 +69,7 @@ class NavTitleView:BaseView {
         delegate?.didBackButton()
     }
     
-    func addSubview1() {
+    private func addSubview1() {
         
         addSubview(titleLabel)
         addSubview(leftBtn)
@@ -71,6 +89,13 @@ class NavTitleView:BaseView {
         }
     }
     
+    
+    func changColor() {
+        
+        
+        
+    }
+    
     override func layoutSubviews() {
         
         super.layoutSubviews()
@@ -78,13 +103,14 @@ class NavTitleView:BaseView {
         titleLabel.snp.makeConstraints { make in
             
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(statusBarHeight / 2)
+            make.centerY.equalToSuperview().offset(top)
         }
         
         leftBtn.snp.makeConstraints { make in
             
-            make.left.equalToSuperview().offset(15)
-            make.centerY.equalToSuperview().offset(statusBarHeight / 2)
+            make.left.equalToSuperview().offset(10)
+            make.centerY.equalToSuperview().offset(top)
         }
+    
     }
 }
