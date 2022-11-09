@@ -40,7 +40,7 @@ class NavTitleView:BaseView {
         backgroundColor = mColor
         isUserInteractionEnabled = true
         titleLabel.textColor = .white
-        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
         leftBtn .addTarget(self, action:#selector(changTitle), for: UIControl.Event.touchUpInside)
         leftBtn.setTitle("返回", for: UIControl.State.normal)
         leftBtn.setTitleColor(.black, for: UIControl.State.normal)
@@ -57,7 +57,7 @@ class NavTitleView:BaseView {
         addSubview(leftBtn)
     }
     
-    var model:NavTitleModel? {
+    var model:NavTitleModel! {
         
         didSet {
             
@@ -66,6 +66,8 @@ class NavTitleView:BaseView {
             backgroundColor = model?.backColor
             titleLabel.sizeToFit()
             leftBtn.isHidden = model?.backBtnHidden ?? true
+            
+            self.isHidden = model.viewHideen
         }
     }
     

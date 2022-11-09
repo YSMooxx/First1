@@ -17,11 +17,11 @@ class Test2:BaseViewController {
     
     override func setupUI() {
         
-        let mode:NavTitleModel = titleView?.model ?? NavTitleModel()
+        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
         
         mode.title = "消息"
         
-        titleView?.model = mode
+        titleView.model = mode
     }
     
     override func viewWillAppear(_ animated: Bool) {

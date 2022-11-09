@@ -11,7 +11,7 @@ import UIKit
 private let MVVM2ListCell1ID = "MVVM2ListCell1"
 private let MVVM2ListCell2ID = "MVVM2ListCell2"
 
-class MVVM2Controller:BaseTableViewController{
+class MVVM2Controller:BaseNavTableViewController{
     
     override func viewDidLoad() {
         
@@ -26,6 +26,13 @@ class MVVM2Controller:BaseTableViewController{
         
         tableView.register(MVVM2ListCell1.self, forCellReuseIdentifier: MVVM2ListCell1ID)
         tableView.register(MVVM2ListCell2.self, forCellReuseIdentifier: MVVM2ListCell2ID)
+        
+        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
+        mode.title = "我的"
+        mode.titleColor = .black
+        mode.backColor = UIColor.coloWithHex(hexStr: "ffffff", alpha: 0)
+        mode.viewHideen = true
+        titleView.model = mode
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,11 +40,6 @@ class MVVM2Controller:BaseTableViewController{
         let nav:BaseNavigationController = self.navigationController as! BaseNavigationController
         
         nav.setBarStyleWithStyle(style: UIStatusBarStyle.default)
-    }
-    
-    override func setupNav() {
-        
-        
     }
     
     override func getDate() {
@@ -87,7 +89,7 @@ class MVVM2Controller:BaseTableViewController{
     
     
     //UITableViewDelegate
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let VM:MVVM2ViewModel = array[indexPath.row] as! MVVM2ViewModel
         

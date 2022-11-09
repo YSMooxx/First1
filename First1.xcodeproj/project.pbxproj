@@ -73,7 +73,6 @@
 		D5B3E0D3291A03E50071E3EA /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3E0D1291A03E50071E3EA /* Test2.swift */; };
 		D5B3E0D4291A03E50071E3EA /* Test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3E0D2291A03E50071E3EA /* Test1.swift */; };
 		D5B3E0D6291A1E010071E3EA /* BaseNavTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3E0D5291A1E010071E3EA /* BaseNavTableViewController.swift */; };
-		D5B3E0D9291A29B50071E3EA /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3E0D8291A29B50071E3EA /* BaseNavController.swift */; };
 		D5B3E0DB291A2A700071E3EA /* NavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3E0DA291A2A700071E3EA /* NavTitleView.swift */; };
 		D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9422823AF2400481169 /* AppDelegate.swift */; };
 		D5B6D95D2823AF2800481169 /* First1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D95C2823AF2800481169 /* First1Tests.swift */; };
@@ -196,7 +195,6 @@
 		D5B3E0D1291A03E50071E3EA /* Test2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
 		D5B3E0D2291A03E50071E3EA /* Test1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test1.swift; sourceTree = "<group>"; };
 		D5B3E0D5291A1E010071E3EA /* BaseNavTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavTableViewController.swift; sourceTree = "<group>"; };
-		D5B3E0D8291A29B50071E3EA /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		D5B3E0DA291A2A700071E3EA /* NavTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTitleView.swift; sourceTree = "<group>"; };
 		D5B6D93F2823AF2400481169 /* First1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9422823AF2400481169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 				D51C314728CB2F24001B813F /* BaseViewController.swift */,
 				D56E81F72912604A00587A03 /* BaseTableViewController.swift */,
 				D5B3E0D5291A1E010071E3EA /* BaseNavTableViewController.swift */,
-				D5B3E0D8291A29B50071E3EA /* BaseNavController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1081,7 +1078,6 @@
 				D51C314228CB236F001B813F /* Hong.swift in Sources */,
 				D5278A2A291B496300874956 /* NavTest3.swift in Sources */,
 				D5FA19EC28C6053C00B83CE0 /* UIView+SVGKit.swift in Sources */,
-				D5B3E0D9291A29B50071E3EA /* BaseNavController.swift in Sources */,
 				D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */,
 				D5FEF5C428B5B8AD008639E2 /* ZiDianVC.swift in Sources */,
 				D5377FD1290FA32F00E4A620 /* MVVMViewModel.swift in Sources */,

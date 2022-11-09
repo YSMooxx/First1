@@ -10,50 +10,93 @@ import UIKit
 
 private let CellID = "CellID"
 
-class BaseNavTableViewController:BaseTableViewController {
+class BaseNavTableViewController:UIViewController, UITableViewDelegate {
+    
+    let titleView:NavTitleView = NavTitleView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight))
+    
+    let tableView:UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH))
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+        setupUI()
+        
+        setupDefault()
+        
+        getDate()
     }
     
-    override func setupUI() {
+    func setupDefault() {
         
-        self.tableView.backgroundColor = UIColor.blue
+        view.backgroundColor = .white
+        
+        view.addSubview(tableView)
+        
+        tableView.delegate = self
+        
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
+        
+        view.addSubview(self.titleView)
+        
+        titleView.delegate = self
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        let sectionHeaderHeight:CGFloat = navHeight
-        
-        if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
-            
-            scrollView.contentInset = UIEdgeInsets(top: -scrollView.contentOffset.y, left: 0, bottom: 0, right: 0)
-        } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
-            
-            scrollView.contentInset = UIEdgeInsets(top: -sectionHeaderHeight, left: 0, bottom: 0, right: 0)
-        }
+    func setupUI() {
         
         
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func getDate() {
+        
+        
+    }
+    
+}
+
+extension BaseNavTableViewController:UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return navHeight
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let view:UIView = UIView.init(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight))
-        
-        view.backgroundColor = mColor
-        
-        return view
+        return tableView.dequeueReusableCell(withIdentifier: CellID) ?? UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellID)
     }
     
 }
+
+extension BaseNavigationController:UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 44
+    }
+    
+}
+
+extension BaseNavTableViewController:NavTitleViewDelegate {
+    
+    func didBackButton() {
+        
+        let count : Int = navigationController?.children.count ?? 0
+        
+        if(count > 1) {
+            
+            navigationController?.popViewController(animated: true)
+        }
+    }
+}
+
+

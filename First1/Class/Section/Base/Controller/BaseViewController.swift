@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class BaseViewController:UIViewController,NavTitleViewDelegate {
+class BaseViewController:UIViewController {
     
-    var titleView:NavTitleView? = nil
+    let titleView:NavTitleView = NavTitleView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight))
     
     override func viewDidLoad()
     
@@ -26,20 +26,26 @@ class BaseViewController:UIViewController,NavTitleViewDelegate {
         
         view.backgroundColor = .white
         
-        let titleView1:NavTitleView = NavTitleView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight))
+        titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
         
-        titleView = titleView1
+        view.addSubview(titleView)
         
-        view.addSubview(titleView!)
+        titleView.delegate = self
+    }
+    
+    override func viewWillLayoutSubviews() {
         
-        titleView?.delegate = self
-        
+        super.viewWillLayoutSubviews()
     }
     
     func setupUI() {
         
         
     }
+    
+}
+
+extension BaseViewController:NavTitleViewDelegate {
     
     func didBackButton() {
         
@@ -50,7 +56,6 @@ class BaseViewController:UIViewController,NavTitleViewDelegate {
             navigationController?.popViewController(animated: true)
         }
     }
-    
 }
 
 

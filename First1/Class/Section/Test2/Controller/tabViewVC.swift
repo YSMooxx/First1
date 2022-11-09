@@ -10,7 +10,7 @@ import UIKit
 
 private let listCellID = "listCellID"
 
-class tabViewVC:BaseTableViewController {
+class tabViewVC:BaseNavTableViewController {
     
     let array: [Any] = [["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"]]
     
@@ -39,20 +39,20 @@ class tabViewVC:BaseTableViewController {
     override func setupUI () {
         
         tableView.register(ListCell.self, forCellReuseIdentifier: listCellID)
-    }
-    
-    //setupNav
-    override func setupNav() {
         
+        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
+        mode.title = "业务"
+        mode.titleColor = .white
+        mode.backColor = UIColor.coloWithHex(hexStr: "#FF7500", alpha: 1)
+        titleView.model = mode
+    }
 
-        
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         
         let vc:BaseNavigationController = self.navigationController as! BaseNavigationController
         
-        vc.setBarStyleWithStyle(style: UIStatusBarStyle.default)
+        vc.setBarStyleWithStyle(style: UIStatusBarStyle.lightContent)
     }
     
     //UITableViewDataSource
@@ -71,20 +71,15 @@ class tabViewVC:BaseTableViewController {
     }
     
     //UITableViewDelegate
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let model = modelArray[indexPath.row] as? ListModel
         
         return model?.height ?? 10
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc : MVVM2Controller = MVVM2Controller.init()
-        
-        vc.title = "MVVM2"
-        
-        navigationController?.pushViewController(vc, animated: true)
         
     }
     

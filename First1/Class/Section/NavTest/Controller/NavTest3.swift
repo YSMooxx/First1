@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NavTest3:BaseViewController {
+class NavTest3:BaseNavTableViewController {
     
     override func viewDidLoad() {
         
@@ -16,14 +16,14 @@ class NavTest3:BaseViewController {
     
     override func setupUI() {
         
-        let mode:NavTitleModel = titleView?.model ?? NavTitleModel()
+        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
         
         mode.title = "详情"
         mode.titleColor = .black
         mode.backColor = UIColor.colorWithHex(hexStr: "#f8f8f8")
         mode.backBtnHidden = false
         
-        titleView?.model = mode
+        titleView.model = mode
     }
     
     override func viewWillAppear(_ animated: Bool) {

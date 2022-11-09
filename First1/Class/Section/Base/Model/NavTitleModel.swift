@@ -14,5 +14,6 @@ class NavTitleModel:BaseModel {
     var titleColor:UIColor = .white
     var backColor:UIColor = mColor
     var backBtnHidden:Bool = true
+    var viewHideen:Bool = false
     
 }

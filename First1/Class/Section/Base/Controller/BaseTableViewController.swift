@@ -7,16 +7,26 @@
 
 import UIKit
 
-class BaseTableViewController:UITableViewController {
+private let Cell1ID = "CellID"
+
+class BaseTableViewController:UITableViewController{
     
-    override func viewDidLoad() {
-        
+    override func viewDidLoad()
+    
+    {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
+        
+        setupDefault()
         
         setupUI()
+        
         getDate()
-        setupNav()
+    }
+    
+    func setupDefault() {
+        
+        view.backgroundColor = .white
+        
     }
     
     func setupUI() {
@@ -28,10 +38,6 @@ class BaseTableViewController:UITableViewController {
         
         
     }
-    
-    func setupNav() {
-        
-        
-    }
+
 
 }

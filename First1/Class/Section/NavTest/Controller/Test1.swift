@@ -20,11 +20,11 @@ class Test1:BaseViewController {
     
     override func setupUI() {
         
-        let mode:NavTitleModel = titleView?.model ?? NavTitleModel()
+        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
         
         mode.title = "首页"
         
-        titleView?.model = mode
+        titleView.model = mode
         
         bottomView = UIView()
         
