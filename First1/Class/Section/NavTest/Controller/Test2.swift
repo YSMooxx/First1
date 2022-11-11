@@ -17,19 +17,14 @@ class Test2:BaseViewController {
     
     override func setupUI() {
         
+        model.statusBarStyle = .lightContent
+        
         let mode:NavTitleModel = titleView.model ?? NavTitleModel()
         
         mode.title = "消息"
         mode.backColor = "#2775B6"
         
         titleView.model = mode
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        let nav:BaseNavigationController = self.navigationController as! BaseNavigationController
-        
-        nav.setBarStyleWithStyle(style: UIStatusBarStyle.lightContent)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

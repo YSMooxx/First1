@@ -42,7 +42,12 @@ class BaseViewController:UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let nav:BaseNavigationController = self.navigationController as! BaseNavigationController
+        changBarStyleWithStyle()
+    }
+    
+    func changBarStyleWithStyle() {
+        
+        let nav:BaseNavigationController = self.navigationController as? BaseNavigationController ?? BaseNavigationController()
         
         nav.setBarStyleWithStyle(style: model.statusBarStyle)
     }

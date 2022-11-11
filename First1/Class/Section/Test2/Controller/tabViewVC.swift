@@ -32,6 +32,7 @@ class tabViewVC:BaseTableViewController {
         titleView.model = sModel
         
         tableView.register(ListCell.self, forCellReuseIdentifier: listCellID)
+        tableView.showsVerticalScrollIndicator = false
         
     }
     

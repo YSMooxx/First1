@@ -69,16 +69,16 @@ class NavTitleView:BaseView {
     
     func setDateDefault() {
         
-        titleLabel.text = model.title
-        titleLabel.textColor = UIColor.coloWithHex(hexStr: model.titleColor, alpha: model.aplha)
-        backgroundColor = UIColor.coloWithHex(hexStr: model.backColor, alpha: model.aplha)
+        titleLabel.text = model?.title
+        titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "", alpha: model?.aplha ?? 1)
+        backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "", alpha: model?.aplha ?? 1)
         titleLabel.sizeToFit()
-        leftBtn.setImage(UIImage.svgWithName(name: model.backImage, size: CGSize(width: 26, height: 26)), for: UIControl.State.normal)
+        leftBtn.setImage(UIImage.svgWithName(name: model?.backImage ?? "", size: CGSize(width: 26, height: 26)), for: UIControl.State.normal)
         leftBtn.sizeToFit()
         
         self.setNeedsLayout()
         
-        self.isHidden = model.viewHideen
+        self.isHidden = model?.viewHideen ?? true
         
         if (model.vcCount > 1) {
             
@@ -122,8 +122,8 @@ class NavTitleView:BaseView {
             
             isHidden = false
             
-            backgroundColor = UIColor.coloWithHex(hexStr: model.backColor, alpha: Float(bilie))
-            titleLabel.textColor = UIColor.coloWithHex(hexStr: model.titleColor, alpha: Float(bilie))
+            backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "#FFFFFF", alpha: Float(bilie))
+            titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "#FFFFFF", alpha: Float(bilie))
             
             model?.bilie = Float(bilie)
             
@@ -145,9 +145,9 @@ class NavTitleView:BaseView {
             
         }else {
             
-            if self.isHidden != model.viewHideen {
+            if self.isHidden != model?.viewHideen {
                 
-                self.isHidden = model.viewHideen
+                self.isHidden = model?.viewHideen ?? true
             }
         }
         
