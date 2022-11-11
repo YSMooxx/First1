@@ -12,6 +12,8 @@ class LeiVC:UIViewController {
     override func viewDidLoad() {
         
         test2()
+        
+        view.backgroundColor = .white
     }
     
     //

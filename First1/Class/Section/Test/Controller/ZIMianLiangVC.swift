@@ -11,11 +11,33 @@ class ZIMianLiangVC:UIViewController {
     
     override func viewDidLoad() {
         
-        test1()
-        test2()
-        test3()
-        test4()
-        test5()
+//        test1()
+//        test2()
+//        test3()
+//        test4()
+//        test5()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        read()
+        read1()
+    }
+    
+    func read1() {
+        
+        print("name的值:\(UserDef.userDef.name!)")
+        print("num的值:\(UserDef.userDef.num!)")
+        print("wRatio的值:\(UserDef.userDef.wRatio)")
+        print("hRatio的值:\(UserDef.userDef.hRatio)")
+        print(RScreenH)
+        print(RScreenW)
+    }
+    
+    func read() {
+        
+    
     }
     
     //Swift 字面量

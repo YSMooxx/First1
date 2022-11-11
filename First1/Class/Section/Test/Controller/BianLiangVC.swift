@@ -7,18 +7,40 @@
 
 import UIKit
 
-class BianLiangVC: UIViewController {
+class BianLiangVC: BaseViewController {
     
     override func viewDidLoad() {
         
-        test5()
+        super.viewDidLoad()
+
+    }
+    
+    override func setupUI() {
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        let nav:YXNavigationController = self.navigationController as! YXNavigationController
+//
+//        nav.style = .Default
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+        let vc : LeiVC = LeiVC.init()
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     //Hello,World
     func test() {
         
-        let myString = "Hello,World!"
-        print(myString)
+        print(RW)
+        print(RH)
     }
     //数据类型1
     func test1() {

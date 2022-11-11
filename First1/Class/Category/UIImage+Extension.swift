@@ -78,14 +78,24 @@ extension UIImage {
         return svgImage.uiImage
     }
     
+    //创建svg通过名称、尺寸
+    class func svgWithName(name:String,color:UIColor) ->UIImage {
+        
+        let svgImage:SVGKImage = SVGKImage.init(named: name)
+        
+        return svgImage.uiImage.changColorWithcolor(color: color)
+    }
+    
     //创建svg通过名称、尺寸、颜色
     class func svgWithName(name:String,size:CGSize,color:UIColor) -> UIImage {
         
         let svgImage:SVGKImage = SVGKImage.init(named: name)
         
         svgImage.size = size
+       
+        let colorImage:UIImage = svgImage.uiImage
         
-        return svgImage.uiImage.changColorWithcolor(color: color)
+        return colorImage.changColorWithcolor(color: color)
         
     }
 

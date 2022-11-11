@@ -9,8 +9,8 @@ import Foundation
 
 enum sexType {
     
-    case nan
     case nv
+    case nan
 }
 
 class Student {
