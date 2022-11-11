@@ -9,8 +9,6 @@ import UIKit
 
 class Test1:BaseViewController {
     
-    var bottomView:UIView?
-    
     override func viewDidLoad() {
     
         super.viewDidLoad()
@@ -26,24 +24,6 @@ class Test1:BaseViewController {
         
         titleView.model = mode
         
-        bottomView = UIView()
-        
-        bottomView?.backgroundColor = UIColor.orange
-        
-        view.addSubview(bottomView!)
-        
-    }
-    
-    override func viewWillLayoutSubviews() {
-        
-        bottomView?.snp.makeConstraints({ make in
-            
-            make.width.equalTo(ScreenW)
-            make.bottom.equalToSuperview()
-            make.left.equalToSuperview()
-            make.height.equalTo(tabHeight)
-            
-        })
     }
     
     override func viewWillAppear(_ animated: Bool) {

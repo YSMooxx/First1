@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NavTest3:BaseTableViewController {
+class NavTest3:BaseViewController {
     
     override func viewDidLoad() {
         
@@ -16,21 +16,16 @@ class NavTest3:BaseTableViewController {
     
     override func setupUI() {
         
-        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
+        model.statusBarStyle = .default
         
-        mode.title = "详情"
-        mode.titleColor = .black
-        mode.backColor = UIColor.colorWithHex(hexStr: "#f8f8f8")
-        mode.backBtnHidden = false
+        let sMode:NavTitleModel = titleView.model ?? NavTitleModel()
         
-        titleView.model = mode
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        sMode.title = "详情"
+        sMode.titleColor = "#000000"
+        sMode.backColor = "#f8f8f8"
+        sMode.vcCount = navigationController?.children.count ?? 1
         
-        let nav:BaseNavigationController = self.navigationController as! BaseNavigationController
-        
-        nav.setBarStyleWithStyle(style: UIStatusBarStyle.default)
+        titleView.model = sMode
     }
     
 }

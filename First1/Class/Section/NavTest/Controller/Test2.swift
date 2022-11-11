@@ -20,6 +20,7 @@ class Test2:BaseViewController {
         let mode:NavTitleModel = titleView.model ?? NavTitleModel()
         
         mode.title = "消息"
+        mode.backColor = "#2775B6"
         
         titleView.model = mode
     }

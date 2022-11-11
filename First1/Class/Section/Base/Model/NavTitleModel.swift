@@ -10,10 +10,23 @@ import UIKit
 
 class NavTitleModel:BaseModel {
     
+    enum titleViewStyle {
+        
+        case Default
+        case ScrollShow
+        case Other
+    }
+    
     var title:String = "首页"
-    var titleColor:UIColor = .white
-    var backColor:UIColor = mColor
+    var titleColor:String = "#FFFFFF"
+    var backColor:String = "#41AF9B"
     var backBtnHidden:Bool = true
     var viewHideen:Bool = false
+    var aplha:Float = 1
+    var imageHeight:CGFloat = 2 * navHeight
+    var style:titleViewStyle = .Default
+    var vcCount:Int = 1
+    var backImage:String = "back"
+    var bilie:Float = 0
     
 }

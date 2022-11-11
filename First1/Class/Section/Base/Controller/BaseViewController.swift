@@ -12,6 +12,8 @@ class BaseViewController:UIViewController {
     
     let titleView:NavTitleView = NavTitleView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight))
     
+    let model:BaseTableViewModel = BaseTableViewModel()
+    
     override func viewDidLoad()
     
     {
@@ -38,6 +40,13 @@ class BaseViewController:UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let nav:BaseNavigationController = self.navigationController as! BaseNavigationController
+        
+        nav.setBarStyleWithStyle(style: model.statusBarStyle)
+    }
+    
 }
 
 extension BaseViewController:UIScrollViewDelegate {
@@ -51,6 +60,19 @@ extension BaseViewController:UIScrollViewDelegate {
 
 extension BaseViewController:NavTitleViewDelegate {
     
+    func changTopWith(status: Bool) {
+        
+    }
+    
+    
+    
+    func setTableViewWith(top: CGFloat) {
+        
+        
+    }
+    
+    
+    
     func didBackButton() {
         
         let count : Int = navigationController?.children.count ?? 0
@@ -60,6 +82,8 @@ extension BaseViewController:NavTitleViewDelegate {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    
 }
 
 

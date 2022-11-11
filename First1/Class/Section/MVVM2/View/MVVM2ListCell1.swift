@@ -29,8 +29,10 @@ class MVVM2ListCell1:UITableViewCell {
     
     //setupUI
     func setupUI() {
+    
         
-//        selectionStyle = UITableViewCell.SelectionStyle.none
+        selectedBackgroundView = UIView.init()
+        selectedBackgroundView?.backgroundColor = mColorA
         
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.colorWithHex(hexStr: "#EA517F")
@@ -52,6 +54,7 @@ class MVVM2ListCell1:UITableViewCell {
     
     override func layoutSubviews() {
         
+        selectedBackgroundView?.frame = self.bounds
         
         iconImage.snp.makeConstraints { make in
             

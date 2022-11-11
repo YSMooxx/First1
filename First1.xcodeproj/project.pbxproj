@@ -30,6 +30,11 @@
 		D51D184828D3479600321B1B /* NetManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184728D3479600321B1B /* NetManager+Extension.swift */; };
 		D51D184B28D34B5D00321B1B /* TestHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184A28D34B5D00321B1B /* TestHttpTool.swift */; };
 		D51D184D28D34BAE00321B1B /* TestHttpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184C28D34BAE00321B1B /* TestHttpVC.swift */; };
+		D51DA7BA291CA28D0003A723 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */; };
+		D51DA7BF291CC9E60003A723 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DA7BE291CC9E60003A723 /* ImageViewCell.swift */; };
+		D51DA7C4291DD9ED0003A723 /* BaseTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DA7C3291DD9ED0003A723 /* BaseTableViewModel.swift */; };
+		D51DA7C6291E20470003A723 /* back1.svg in Resources */ = {isa = PBXBuildFile; fileRef = D51DA7C5291E20470003A723 /* back1.svg */; };
+		D51DA7C8291E20B70003A723 /* back.svg in Resources */ = {isa = PBXBuildFile; fileRef = D51DA7C7291E20B70003A723 /* back.svg */; };
 		D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650B528A0B312004A43EE /* YXMessegeController.swift */; };
 		D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650C428A3994D004A43EE /* BianLiangVC.swift */; };
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
@@ -78,7 +83,6 @@
 		D5B6D9672823AF2800481169 /* First1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9662823AF2800481169 /* First1UITests.swift */; };
 		D5B6D9692823AF2800481169 /* First1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */; };
 		D5C3D06C291A2E5C00DE1237 /* NavTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */; };
-		D5CCB902291AA6A200EABB16 /* back.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5CCB901291AA6A200EABB16 /* back.svg */; };
 		D5CCB906291AAA1000EABB16 /* back2.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5CCB905291AAA1000EABB16 /* back2.svg */; };
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
 		D5CDEF98283CC72300468664 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF97283CC72300468664 /* BaseTabBarController.swift */; };
@@ -150,6 +154,11 @@
 		D51D184728D3479600321B1B /* NetManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetManager+Extension.swift"; sourceTree = "<group>"; };
 		D51D184A28D34B5D00321B1B /* TestHttpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpTool.swift; sourceTree = "<group>"; };
 		D51D184C28D34BAE00321B1B /* TestHttpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpVC.swift; sourceTree = "<group>"; };
+		D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		D51DA7BE291CC9E60003A723 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		D51DA7C3291DD9ED0003A723 /* BaseTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewModel.swift; sourceTree = "<group>"; };
+		D51DA7C5291E20470003A723 /* back1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = back1.svg; sourceTree = "<group>"; };
+		D51DA7C7291E20B70003A723 /* back.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = back.svg; sourceTree = "<group>"; };
 		D52650B528A0B312004A43EE /* YXMessegeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXMessegeController.swift; sourceTree = "<group>"; };
 		D52650C428A3994D004A43EE /* BianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BianLiangVC.swift; sourceTree = "<group>"; };
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +214,6 @@
 		D5B6D9662823AF2800481169 /* First1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First1UITests.swift; sourceTree = "<group>"; };
 		D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTitleModel.swift; sourceTree = "<group>"; };
-		D5CCB901291AA6A200EABB16 /* back.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = back.svg; sourceTree = "<group>"; };
 		D5CCB905291AAA1000EABB16 /* back2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = back2.svg; sourceTree = "<group>"; };
 		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
 		D5CDEF97283CC72300468664 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -395,6 +403,7 @@
 			children = (
 				D51D183928D0751800321B1B /* BaseModel.swift */,
 				D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */,
+				D51DA7C3291DD9ED0003A723 /* BaseTableViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,6 +481,7 @@
 			children = (
 				D56E81ED2912571600587A03 /* MVVM2ListCell1.swift */,
 				D56E81EF2912572600587A03 /* MVVM2ListCell2.swift */,
+				D51DA7BE291CC9E60003A723 /* ImageViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -722,6 +732,7 @@
 				D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */,
 				D51D184728D3479600321B1B /* NetManager+Extension.swift */,
 				D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */,
+				D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -729,7 +740,8 @@
 		D5FA231928C86A1D00B83CE0 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
-				D5CCB901291AA6A200EABB16 /* back.svg */,
+				D51DA7C7291E20B70003A723 /* back.svg */,
+				D51DA7C5291E20470003A723 /* back1.svg */,
 				D51D183F28D1BECC00321B1B /* nanIcon.svg */,
 				D51D183E28D1BECB00321B1B /* nvIcon.svg */,
 				D51D183C28D1BAC700321B1B /* zhantu.svg */,
@@ -878,6 +890,7 @@
 				D51C315528CCA973001B813F /* Leftbar_cloud_selected.svg in Resources */,
 				D51C315328CCA973001B813F /* Leftbar_shop_unselected.svg in Resources */,
 				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
+				D51DA7C6291E20470003A723 /* back1.svg in Resources */,
 				D51D184028D1BECC00321B1B /* nvIcon.svg in Resources */,
 				D51C315628CCA973001B813F /* Leftbar_index_unselected.svg in Resources */,
 				D53043B7291900AE0001D39B /* navback.svg in Resources */,
@@ -885,13 +898,13 @@
 				D51C315728CCA973001B813F /* Leftbar_shop_selected.svg in Resources */,
 				D51C315428CCA973001B813F /* Leftbar_mine_unselected.svg in Resources */,
 				D5FA231C28C86A1E00B83CE0 /* biaoqian.svg in Resources */,
-				D5CCB902291AA6A200EABB16 /* back.svg in Resources */,
 				D51C315928CCA973001B813F /* Leftbar_cloud_unselected.svg in Resources */,
 				D51C314A28CCA80A001B813F /* quanbu.svg in Resources */,
 				D51D184128D1BECC00321B1B /* nanIcon.svg in Resources */,
 				D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */,
 				D51C315828CCA973001B813F /* Leftbar_index_selected.svg in Resources */,
 				D5CCB906291AAA1000EABB16 /* back2.svg in Resources */,
+				D51DA7C8291E20B70003A723 /* back.svg in Resources */,
 				D51D183D28D1BAC700321B1B /* zhantu.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1028,6 +1041,7 @@
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
+				D51DA7BF291CC9E60003A723 /* ImageViewCell.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
 				D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */,
@@ -1045,6 +1059,7 @@
 				D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */,
 				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
 				D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */,
+				D51DA7C4291DD9ED0003A723 /* BaseTableViewModel.swift in Sources */,
 				D558F53528CF279500964016 /* ListCell.swift in Sources */,
 				D553C8FA29135C2C006475A8 /* UITabBar+Extension.swift in Sources */,
 				D5B3E0CD291A03600071E3EA /* BaseNavigationController.swift in Sources */,
@@ -1064,6 +1079,7 @@
 				D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */,
 				D5CDEF98283CC72300468664 /* BaseTabBarController.swift in Sources */,
 				D5FEF5CB28B60E94008639E2 /* HanShuVC.swift in Sources */,
+				D51DA7BA291CA28D0003A723 /* UIButton+Extension.swift in Sources */,
 				D590AFD428C18DB10013DB2A /* SampleClass.swift in Sources */,
 				D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */,
 				D56E81F02912572600587A03 /* MVVM2ListCell2.swift in Sources */,

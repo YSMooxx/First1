@@ -12,60 +12,53 @@ private let listCellID = "listCellID"
 
 class tabViewVC:BaseTableViewController {
     
-    let array: [Any] = [["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"]]
-    
-    var titleText = UILabel()
-    
-    var modelArray:[Any]!{
-        
-        didSet {
-            
-            tableView.reloadData()
-        }
-    }
+    let subVC:MVVM2Controller = MVVM2Controller()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        let jsonString:String = JsonUtil.getJSONStringFromArray(array:array)
-        
-        modelArray = JsonUtil.jsonArrayToModel(jsonString, ListModel.self) as! [ListModel]
-        
     }
-    
     
     //setupUI
     override func setupUI () {
         
+        model.statusBarStyle = .lightContent
+        
+        let sModel:NavTitleModel = titleView.model ?? NavTitleModel()
+        sModel.title = "业务"
+        sModel.titleColor = "#FFFFFF"
+        sModel.backColor = "#C06F98"
+        
+        titleView.model = sModel
+        
         tableView.register(ListCell.self, forCellReuseIdentifier: listCellID)
         
-        let mode:NavTitleModel = titleView.model ?? NavTitleModel()
-        mode.title = "业务"
-        mode.titleColor = .white
-        mode.backColor = UIColor.coloWithHex(hexStr: "#FF7500", alpha: 1)
-        titleView.model = mode
     }
-
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func getDate() {
         
-        let vc:BaseNavigationController = self.navigationController as! BaseNavigationController
+        let array:[Any] = [["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6"],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F"],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6"],["name":"伟哥","height":64,"icon":"nanIcon","explain":"在哪里","color":"#2775B6"]]
         
-        vc.setBarStyleWithStyle(style: UIStatusBarStyle.lightContent)
+        model.jsonZhuanModelWithTypel(ListModel.self, jsonArray1: array) {
+            
+            tableView.reloadData()
+        }
+        
     }
     
     //UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return modelArray.count
+        return model.subModelArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: listCellID, for: indexPath) as! ListCell
         
-        cell.model = modelArray[indexPath.row] as? ListModel
+        let sModel:ListModel = model.subModelArray[indexPath.row] as! ListModel
+        
+        cell.model = sModel
         
         return cell
     }
@@ -73,14 +66,14 @@ class tabViewVC:BaseTableViewController {
     //UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        let model = modelArray[indexPath.row] as? ListModel
+        let model = model.subModelArray[indexPath.row] as? ListModel
         
         return model?.height ?? 10
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        navigationController?.pushViewController(subVC, animated: true)
     }
     
     

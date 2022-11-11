@@ -7,13 +7,26 @@
 
 import UIKit
 
-class XunHuanVC :UIViewController {
+class XunHuanVC :BaseViewController {
     
     override func viewDidLoad() {
         
-        test7()
+        super.viewDidLoad()
+    }
+    
+    override func setupUI() {
         
-        view.backgroundColor = .white
+        model.statusBarStyle = .lightContent
+        
+        let sMode:NavTitleModel = titleView.model ?? NavTitleModel()
+        
+        sMode.title = "地图"
+        sMode.titleColor = "#FFFFFF"
+        sMode.backColor = "#FF6600"
+        sMode.vcCount = navigationController?.children.count ?? 1
+        sMode.backImage = "back1"
+        
+        titleView.model = sMode
     }
     
     //for in 循环1

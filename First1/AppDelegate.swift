@@ -48,31 +48,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-   
-    
     func applicationDidBecomeActive(_ application: UIApplication) {
         
-        print(#line,#function)
+//        print(#line,#function)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
         
-        print(#line,#function)
+        
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         
-        print(#line,#function)
+        
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         
-        print(#line,#function)
+        
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         
-        print(#line,#function)
+        
     }
     
     func applicationDidReceiveMemoryWarning(_ application: UIApplication) {

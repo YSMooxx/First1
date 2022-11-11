@@ -92,8 +92,10 @@ extension UIImage {
         let svgImage:SVGKImage = SVGKImage.init(named: name)
         
         svgImage.size = size
+       
+        let colorImage:UIImage = svgImage.uiImage
         
-        return svgImage.uiImage.changColorWithcolor(color: color)
+        return colorImage.changColorWithcolor(color: color)
         
     }
 
