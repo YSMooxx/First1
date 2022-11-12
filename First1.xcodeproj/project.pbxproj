@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		164F8D984B10D24E1A073187 /* Pods_First1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C838D5304B81524E70AA9FD /* Pods_First1.framework */; };
 		6C9B4F4DBA0A90F366D5FC28 /* Pods_First1_First1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */; };
+		D504A6AE291FA43A00AB0522 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6AD291FA43A00AB0522 /* BaseCollectionViewController.swift */; };
+		D504A6B3291FA4F600AB0522 /* GouWuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B2291FA4F600AB0522 /* GouWuViewController.swift */; };
+		D504A6B5291FAD5F00AB0522 /* GouWuCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B4291FAD5F00AB0522 /* GouWuCellViewModel.swift */; };
+		D504A6B7291FAD7000AB0522 /* GouWuCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B6291FAD7000AB0522 /* GouWuCellModel.swift */; };
+		D504A6B9291FADBE00AB0522 /* GouWuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B8291FADBE00AB0522 /* GouWuCell.swift */; };
+		D504A6BC291FCA7800AB0522 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6BB291FCA7800AB0522 /* String+Extension.swift */; };
+		D504A6C0291FECB900AB0522 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */; };
+		D504A6C2291FF96C00AB0522 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6C1291FF96C00AB0522 /* WaterFallViewController.swift */; };
 		D51C314228CB236F001B813F /* Hong.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C314128CB236F001B813F /* Hong.swift */; };
 		D51C314428CB25F1001B813F /* SwiftUIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C314328CB25F1001B813F /* SwiftUIVC.swift */; };
 		D51C314828CB2F24001B813F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C314728CB2F24001B813F /* BaseViewController.swift */; };
@@ -133,6 +141,14 @@
 		55DBCC07F4AAF0CF2FA568E7 /* Pods-First1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1.debug.xcconfig"; path = "Target Support Files/Pods-First1/Pods-First1.debug.xcconfig"; sourceTree = "<group>"; };
 		8868DAC80127AF90597D6E65 /* Pods-First1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.debug.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First1_First1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D504A6AD291FA43A00AB0522 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		D504A6B2291FA4F600AB0522 /* GouWuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuViewController.swift; sourceTree = "<group>"; };
+		D504A6B4291FAD5F00AB0522 /* GouWuCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuCellViewModel.swift; sourceTree = "<group>"; };
+		D504A6B6291FAD7000AB0522 /* GouWuCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuCellModel.swift; sourceTree = "<group>"; };
+		D504A6B8291FADBE00AB0522 /* GouWuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuCell.swift; sourceTree = "<group>"; };
+		D504A6BB291FCA7800AB0522 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
+		D504A6C1291FF96C00AB0522 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 		D51C314128CB236F001B813F /* Hong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hong.swift; sourceTree = "<group>"; };
 		D51C314328CB25F1001B813F /* SwiftUIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVC.swift; sourceTree = "<group>"; };
 		D51C314728CB2F24001B813F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +292,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D504A6AF291FA4D900AB0522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D504A6B8291FADBE00AB0522 /* GouWuCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D504A6B0291FA4D900AB0522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D504A6B6291FAD7000AB0522 /* GouWuCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D504A6B1291FA4D900AB0522 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D504A6B4291FAD5F00AB0522 /* GouWuCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D51C314528CB2EFE001B813F /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +332,8 @@
 			children = (
 				D51C314728CB2F24001B813F /* BaseViewController.swift */,
 				D5B3E0D5291A1E010071E3EA /* BaseTableViewController.swift */,
+				D504A6AD291FA43A00AB0522 /* BaseCollectionViewController.swift */,
+				D504A6C1291FF96C00AB0522 /* WaterFallViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,6 +455,7 @@
 			children = (
 				D5377FCA290FA28800E4A620 /* BaseView.swift */,
 				D5B3E0DA291A2A700071E3EA /* NavTitleView.swift */,
+				D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,6 +629,9 @@
 			isa = PBXGroup;
 			children = (
 				D5B3E0D0291A03E50071E3EA /* Controller */,
+				D504A6B0291FA4D900AB0522 /* Model */,
+				D504A6AF291FA4D900AB0522 /* View */,
+				D504A6B1291FA4D900AB0522 /* ViewModel */,
 			);
 			path = NavTest;
 			sourceTree = "<group>";
@@ -596,6 +642,7 @@
 				D5B3E0D2291A03E50071E3EA /* Test1.swift */,
 				D5B3E0D1291A03E50071E3EA /* Test2.swift */,
 				D5278A29291B496300874956 /* NavTest3.swift */,
+				D504A6B2291FA4F600AB0522 /* GouWuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -733,6 +780,7 @@
 				D51D184728D3479600321B1B /* NetManager+Extension.swift */,
 				D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */,
 				D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */,
+				D504A6BB291FCA7800AB0522 /* String+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1038,10 +1086,13 @@
 				D57F685A28309BB300647F08 /* CommotTool.swift in Sources */,
 				D5377FCB290FA28800E4A620 /* BaseView.swift in Sources */,
 				D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */,
+				D504A6BC291FCA7800AB0522 /* String+Extension.swift in Sources */,
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
 				D51DA7BF291CC9E60003A723 /* ImageViewCell.swift in Sources */,
+				D504A6B9291FADBE00AB0522 /* GouWuCell.swift in Sources */,
+				D504A6C2291FF96C00AB0522 /* WaterFallViewController.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
 				D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */,
@@ -1051,6 +1102,7 @@
 				D558F53828CF2CD600964016 /* ListModel.swift in Sources */,
 				D5377FD3290FA35300E4A620 /* MVVMView.swift in Sources */,
 				D51C314828CB2F24001B813F /* BaseViewController.swift in Sources */,
+				D504A6B7291FAD7000AB0522 /* GouWuCellModel.swift in Sources */,
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
 				D5377FD5290FA84900E4A620 /* MVVMModel.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
@@ -1076,6 +1128,7 @@
 				D5B3E0DB291A2A700071E3EA /* NavTitleView.swift in Sources */,
 				D51D184828D3479600321B1B /* NetManager+Extension.swift in Sources */,
 				D51D184628D31FFD00321B1B /* NetManager.swift in Sources */,
+				D504A6C0291FECB900AB0522 /* WaterFallFlowLayout.swift in Sources */,
 				D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */,
 				D5CDEF98283CC72300468664 /* BaseTabBarController.swift in Sources */,
 				D5FEF5CB28B60E94008639E2 /* HanShuVC.swift in Sources */,
@@ -1096,9 +1149,12 @@
 				D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */,
 				D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */,
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,
+				D504A6AE291FA43A00AB0522 /* BaseCollectionViewController.swift in Sources */,
 				D56E81F22912574700587A03 /* MVVM2Model.swift in Sources */,
 				D5B6D9432823AF2400481169 /* AppDelegate.swift in Sources */,
+				D504A6B5291FAD5F00AB0522 /* GouWuCellViewModel.swift in Sources */,
 				D590B00E28C33A560013DB2A /* MessageVC.m in Sources */,
+				D504A6B3291FA4F600AB0522 /* GouWuViewController.swift in Sources */,
 				D56E81EA29124A2900587A03 /* MVVM2Controller.swift in Sources */,
 				D5B3E0C6291A02CC0071E3EA /* UIView+Frame.swift in Sources */,
 				D56E81F629125CE700587A03 /* MVVM2ViewModel.swift in Sources */,

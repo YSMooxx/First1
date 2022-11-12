@@ -14,17 +14,16 @@ class MVVM2ListCell1:UITableViewCell {
     var line:UIView = UIView.init()
     var iconImage:UIImageView = UIImageView.init()
     
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupUI()
         addView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     //setupUI
@@ -92,7 +91,6 @@ class MVVM2ListCell1:UITableViewCell {
             
             label.text = vModel?.model?.name
             label.textColor = UIColor.colorWithHex(hexStr: vModel?.model?.color ?? "#EA517F")
-//            label1.text = vModel?.model?.explain
             label.sizeToFit()
             label1.sizeToFit()
             

@@ -45,6 +45,8 @@ class BaseTableViewController:UIViewController {
         
         tableView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
         
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
+        
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
         
         view.addSubview(self.titleView)
@@ -107,7 +109,6 @@ class BaseTableViewController:UIViewController {
             
         }
     }
-
     
 }
 
@@ -176,7 +177,7 @@ extension BaseTableViewController:UIScrollViewDelegate {
             
             self.titleView.getPointFromScroll(oy: CGFloat(y))
             
-            var offset:CGPoint  = scrollView.contentOffset
+            let offset:CGPoint  = scrollView.contentOffset
             
             if (offset.y <= 0) {
                 

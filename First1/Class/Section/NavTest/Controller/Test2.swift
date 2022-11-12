@@ -29,7 +29,9 @@ class Test2:BaseViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let vc:XunHuanVC = XunHuanVC()
+        let vc:GouWuViewController = GouWuViewController()
+        
+        vc.hidesBottomBarWhenPushed = true
         
         navigationController?.pushViewController(vc, animated: true)
     }

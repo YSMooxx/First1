@@ -74,6 +74,8 @@ class tabViewVC:BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        subVC.hidesBottomBarWhenPushed = true
+        
         navigationController?.pushViewController(subVC, animated: true)
     }
     
