@@ -12,6 +12,12 @@ private let collectionViewCellID = "collectionViewCellID"
 
 class BaseCollectionViewController:UIViewController, WaterFallLayoutDelegate {
     
+    func waterFlowLayoutSection() -> Int {
+    
+        return 1
+    }
+    
+    
     func waterFlowLayout(_ waterFlowLayout: WaterFallFlowLayout, itemHeight indexPath: IndexPath) -> CGFloat {
         
         return 0 
@@ -41,19 +47,12 @@ class BaseCollectionViewController:UIViewController, WaterFallLayoutDelegate {
         let layout = WaterFallFlowLayout()
         layout.delegate = self
 
-        // 设置 collectionview
-//        let  margin: CGFloat = 8
-//        layout.minimumLineSpacing = margin
-//        layout.minimumInteritemSpacing = margin
-//        layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
-
+        collectionView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
         // 注册 Cell
         view.addSubview(collectionView)
-        
-        collectionView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
         
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
         view.addSubview(self.titleView)
@@ -130,6 +129,7 @@ extension BaseCollectionViewController:NavTitleViewDelegate {
     func setTableViewWith(top: CGFloat) {
         
         collectionView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+        
     }
     
     func changTopWith(status: Bool) {

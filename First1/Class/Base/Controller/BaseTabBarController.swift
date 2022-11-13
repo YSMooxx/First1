@@ -17,11 +17,7 @@ class BaseTabBarContrller: UITabBarController {
     }
     
     func setupUI() {
-        
-//        self.tabBar.barTintColor=UIColor.coloWithHex(hexStr: "#ff0000", alpha: 0.5)
-        
-        
-//        self.tabBar.isTranslucent = false
+    
         tabBar.backgroundColor = UIColor.coloWithHex(hexStr: "#f8f8f8", alpha: 1)
         tabBar.tintColor = mColor
         tabBar.shadowImage = UIImage()

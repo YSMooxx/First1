@@ -9,9 +9,17 @@ import Foundation
 
 class GouWuCellViewModel:BaseModel {
     
+    enum Tyle {
+        
+        case Default
+        case TwoLie
+    }
+    
     var imageHeight:CGFloat = 0
     
     var contentHeight:CGFloat = 0
+    
+    var cellTyle:Tyle = .Default
     
     var model:GouWuCellModel? {
         
@@ -26,9 +34,21 @@ class GouWuCellViewModel:BaseModel {
         
         let image:UIImage = UIImage.init(named: model.image) ?? UIImage()
         
-        let  margin: CGFloat = 15
+        let margin: CGFloat = 8
         
-        let w:CGFloat = (ScreenW - 3 * margin) / 2
+        var lie = 1
+        
+        if cellTyle == .Default {
+            
+            lie = 1
+        }else if cellTyle == .TwoLie {
+            
+            lie = 2
+        }
+        
+        let zongMargi:CGFloat =  CGFloat((lie + 1)) * margin
+        
+        let w:CGFloat = (ScreenW - zongMargi) / CGFloat(lie)
         
         imageHeight = (image.size.height * w) / image.size.width
         

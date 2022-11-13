@@ -173,6 +173,14 @@ class NavTitleView:BaseView {
                 
                 
             }
+            
+            if model.backColorClear {
+                
+                backgroundColor = .clear
+            }else {
+                
+                backgroundColor = UIColor.coloWithHex(hexStr: model.backColor, alpha: model.aplha)
+            }
         
         }
     }

@@ -38,4 +38,28 @@ class BaseTableViewModel:BaseModel {
         
     }
     
+    func jsonZhuanModelWithTypel( _ modelType:HandyJSON.Type,jsonArray1:[Any],jsonArray2:[Any],result:(_ array1:[Any],_ array2:[Any])->Void) {
+        
+        let jsonString1:String = JsonUtil.getJSONStringFromArray(array:jsonArray1)
+        
+        let jsonString2:String = JsonUtil.getJSONStringFromArray(array:jsonArray2)
+        
+        let array1:[Any]  = JsonUtil.jsonArrayToModel(jsonString1,modelType.self)
+        
+        let array2:[Any]  = JsonUtil.jsonArrayToModel(jsonString2,modelType.self)
+        
+        for model in array1 {
+            
+            subModelArray.add(model)
+        }
+        
+        for model in array2 {
+            
+            subModelArray2.add(model)
+        }
+        
+        result(array1,array2)
+        
+    }
+    
 }

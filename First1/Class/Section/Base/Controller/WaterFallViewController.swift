@@ -67,6 +67,12 @@ extension WaterFallViewController: UICollectionViewDataSource{
 
 extension WaterFallViewController: WaterFallLayoutDelegate{
     
+    func waterFlowLayoutSection() -> Int {
+        
+        return 2
+    }
+    
+    
     func waterFlowLayout(_ waterFlowLayout: WaterFallFlowLayout, itemHeight indexPath: IndexPath) -> CGFloat {
         
         return CGFloat(arc4random_uniform(150) + 50)

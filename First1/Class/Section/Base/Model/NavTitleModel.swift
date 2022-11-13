@@ -28,5 +28,6 @@ class NavTitleModel:BaseModel {
     var vcCount:Int = 1
     var backImage:String = "back"
     var bilie:Float = 0
+    var backColorClear:Bool = false
     
 }

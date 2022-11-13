@@ -10,6 +10,8 @@ import UIKit
 protocol WaterFallLayoutDelegate: NSObjectProtocol {
     
     func waterFlowLayout(_ waterFlowLayout: WaterFallFlowLayout, itemHeight indexPath: IndexPath) -> CGFloat
+    
+    func waterFlowLayoutSection() -> Int
 }
 
 class WaterFallFlowLayout: UICollectionViewFlowLayout {
@@ -27,15 +29,24 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
     override func prepare() {
         
         super.prepare()
+        
+        //Sectionn
+//        let section = collectionView!.numberOfSections - 1
         // 计算每个 Cell 的宽度
+        
+        cols = delegate?.waterFlowLayoutSection() ?? 1
+        
         let itemWidth = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - minimumInteritemSpacing * CGFloat(cols - 1)) / CGFloat(cols)
+        
         // Cell 数量
         let itemCount = collectionView!.numberOfItems(inSection: 0)
         // 最小高度索引
         var minHeightIndex = 0
         // 遍历 item 计算并缓存属性
         for i in layoutAttributeArray.count ..< itemCount {
+            
             let indexPath = IndexPath(item: i, section: 0)
+            
             let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             // 获取动态高度
             let itemHeight = delegate?.waterFlowLayout(self, itemHeight: indexPath)
