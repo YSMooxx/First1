@@ -12,19 +12,18 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
-    //
+    
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        window = UIWindow.init(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .white
         
         return true
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print(#line,#function)
     
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        
         let tab = BaseTabBarContrller.init()
         window?.rootViewController = tab
         window?.makeKeyAndVisible()

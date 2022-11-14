@@ -34,17 +34,11 @@ class GouWuCellViewModel:BaseModel {
         
         let image:UIImage = UIImage.init(named: model.image) ?? UIImage()
         
-        let margin: CGFloat = 8
+        let margin: CGFloat = 5
         
-        var lie = 1
+        let margin2: CGFloat = 3
         
-        if cellTyle == .Default {
-            
-            lie = 1
-        }else if cellTyle == .TwoLie {
-            
-            lie = 2
-        }
+        let lie = 2
         
         let zongMargi:CGFloat =  CGFloat((lie + 1)) * margin
         
@@ -54,6 +48,6 @@ class GouWuCellViewModel:BaseModel {
         
         let size:CGSize = model.title.getSizeWithWidth(width: w, font: UIFont.systemFont(ofSize: 16))
         
-        contentHeight = size.height + imageHeight
+        contentHeight = size.height + imageHeight + margin2
     }
 }

@@ -8,29 +8,11 @@
 import UIKit
 import Foundation
 
-private var top:CGFloat {
+@objc protocol NavTitleViewDelegate : NSObjectProtocol {
     
-    get {
-        
-        var a : CGFloat = 0
-        
-        if statusBarHeight > 20 {
-            
-            a = statusBarHeight / 2 - ((statusBarHeight - 44) / 2)
-        }else {
-            
-            a = statusBarHeight / 2
-        }
-        
-        return a
-    }
-}
-
-protocol NavTitleViewDelegate : NSObjectProtocol {
-    
-    func didBackButton()
-    func setTableViewWith(top:CGFloat)
-    func changTopWith(status:Bool)
+    @objc optional func didBackButton()  -> Void
+    @objc optional func setTableViewWith(top:CGFloat) -> Void
+    @objc optional func changTopWith(status:Bool) -> Void
 }
 
 class NavTitleView:BaseView {
@@ -40,6 +22,23 @@ class NavTitleView:BaseView {
     var titleLabel:UILabel = UILabel()
     var leftBtn:UIButton = UIButton()
     var sy:CGFloat = 0
+    private var top:CGFloat {
+        
+        get {
+            
+            var a : CGFloat = 0
+            
+            if statusBarHeight > 20 {
+                
+                a = statusBarHeight / 2 - ((statusBarHeight - 44) / 2)
+            }else {
+                
+                a = statusBarHeight / 2
+            }
+            
+            return a
+        }
+    }
     
     override init(frame: CGRect) {
         
@@ -64,7 +63,7 @@ class NavTitleView:BaseView {
     
     @objc func changTitle() {
         
-        delegate?.didBackButton()
+        delegate?.didBackButton?()
     }
     
     func setDateDefault() {
@@ -127,7 +126,7 @@ class NavTitleView:BaseView {
             
             model?.bilie = Float(bilie)
             
-            delegate?.changTopWith(status: true)
+            delegate?.changTopWith?(status: true)
             
         }else if (oy >= (model?.imageHeight ?? 0) - navHeight){
             
@@ -140,7 +139,7 @@ class NavTitleView:BaseView {
                 
                 isHidden = false
                 
-                delegate?.changTopWith(status: false)
+                delegate?.changTopWith?(status: false)
             }
             
         }else {
@@ -164,11 +163,11 @@ class NavTitleView:BaseView {
             case .Default:
                 setDateDefault()
                 addSubviewDefault()
-                delegate?.setTableViewWith(top: 44)
+                delegate?.setTableViewWith?(top: 44)
             case .ScrollShow:
                 setDateDefault()
                 addSubviewDefault()
-                delegate?.setTableViewWith(top: -statusBarHeight)
+                delegate?.setTableViewWith?(top: -statusBarHeight)
             case .Other: break
                 
                 

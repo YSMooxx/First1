@@ -59,7 +59,7 @@ class GouWuCell:UICollectionViewCell {
         imageView.frame = CGRect(x: 0, y: 0, width: self.contentView.frame.size.width, height: vModel?.imageHeight ?? 0)
         
         titleLable.x = 0
-        titleLable.y = vModel?.imageHeight ?? 0
+        titleLable.y = (vModel?.imageHeight ?? 0) + 3
         titleLable.width = self.contentView.frame.size.width
         titleLable.sizeToFit()
         

@@ -111,8 +111,6 @@ extension BaseCollectionViewController:UICollectionViewDelegateFlowLayout {
 }
 
 
-
-
 extension BaseCollectionViewController:NavTitleViewDelegate {
     
     func didBackButton() {
@@ -128,7 +126,6 @@ extension BaseCollectionViewController:NavTitleViewDelegate {
     func setTableViewWith(top: CGFloat) {
         
         collectionView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
-        
     }
     
     func changTopWith(status: Bool) {

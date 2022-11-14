@@ -43,7 +43,6 @@ class ImageViewCell:UITableViewCell {
         let fram:CGRect = CGRect(x: 0, y: y, width: ScreenW, height: vModel?.imageHeight ?? 0)
         
         backImageView.frame = fram
-        
     }
     
     override func layoutSubviews() {
