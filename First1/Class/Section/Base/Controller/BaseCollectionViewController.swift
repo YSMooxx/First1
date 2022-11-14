@@ -13,10 +13,9 @@ private let collectionViewCellID = "collectionViewCellID"
 class BaseCollectionViewController:UIViewController, WaterFallLayoutDelegate {
     
     func waterFlowLayoutSection() -> Int {
-    
+        
         return 1
     }
-    
     
     func waterFlowLayout(_ waterFlowLayout: WaterFallFlowLayout, itemHeight indexPath: IndexPath) -> CGFloat {
         

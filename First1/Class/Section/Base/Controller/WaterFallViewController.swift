@@ -67,6 +67,7 @@ extension WaterFallViewController: UICollectionViewDataSource{
 
 extension WaterFallViewController: WaterFallLayoutDelegate{
     
+    
     func waterFlowLayoutSection() -> Int {
         
         return 2

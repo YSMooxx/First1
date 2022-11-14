@@ -26,12 +26,31 @@ class GouWuViewController:BaseCollectionViewController {
         model.jsonZhuanModelWithTypel(GouWuCellModel.self, jsonArray1: jArray2) {
             
             for sModel2 in model.subModelArray {
-                
+
                 let VM:GouWuCellViewModel = GouWuCellViewModel.init()
                 VM.cellTyle = .TwoLie
                 VM.model = sModel2 as? GouWuCellModel
                 model.subModelArray2.add(VM)
             }
+            
+            let firstM:GouWuCellModel = GouWuCellModel()
+            let firstVM:GouWuCellViewModel = GouWuCellViewModel.init()
+            firstVM.cellTyle = .TwoLie
+            firstM.title = "棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉"
+            firstM.image = "titleimage3"
+            firstVM.model = firstM
+            
+            let secodM:GouWuCellModel = GouWuCellModel()
+            let secodVM:GouWuCellViewModel = GouWuCellViewModel.init()
+            secodVM.cellTyle = .TwoLie
+            secodM.title = "棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉"
+            secodM.image = "titleimage3"
+            secodVM.model = secodM
+            
+//            model.subModelArray2.add(firstvM)
+            
+            model.subModelArray2.insert(firstVM, at: 0)
+            
             
             collectionView.reloadData()
             
@@ -90,6 +109,7 @@ class GouWuViewController:BaseCollectionViewController {
     override func waterFlowLayoutSection() -> Int {
         
         return 2
+        
     }
     
 }

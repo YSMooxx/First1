@@ -30,12 +30,12 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
         
         super.prepare()
         
+        cols = delegate?.waterFlowLayoutSection() ?? 1
+        
         //Sectionn
 //        let section = collectionView!.numberOfSections - 1
         // 计算每个 Cell 的宽度
-        
-        cols = delegate?.waterFlowLayoutSection() ?? 1
-        
+
         let itemWidth = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - minimumInteritemSpacing * CGFloat(cols - 1)) / CGFloat(cols)
         
         // Cell 数量

@@ -9,6 +9,6 @@ import Foundation
 
 class GouWuCellModel:BaseModel {
     
-    let image:String = ""
-    let title:String = ""
+    var image:String = ""
+    var title:String = ""
 }
