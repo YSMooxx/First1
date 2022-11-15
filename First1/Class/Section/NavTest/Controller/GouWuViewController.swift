@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SDWebImage
 
 private let GouWuCellID = "GouWuCell"
 
@@ -38,6 +39,11 @@ class GouWuViewController:BaseCollectionViewController {
     
     override func setupUI() {
         
+        let layout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let  margin: CGFloat = 5
+        layout.minimumLineSpacing = margin
+        layout.minimumInteritemSpacing = margin
+        layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
         collectionView.register(GouWuCell.self, forCellWithReuseIdentifier: GouWuCellID)
         collectionView.showsVerticalScrollIndicator = false
         
@@ -81,7 +87,17 @@ class GouWuViewController:BaseCollectionViewController {
         
         let VM:GouWuCellViewModel = model.subModelArray2[indexPath.row] as! GouWuCellViewModel
         
-        return VM.contentSize.height
+        var height:CGFloat = 60
+        
+        if(VM.contentSize.height <= 0) {
+            
+            height = 60
+        }else {
+            
+            height = VM.contentSize.height
+        }
+        
+        return height
     }
     
     override func waterFlowLayoutSection() -> Int {
@@ -90,31 +106,26 @@ class GouWuViewController:BaseCollectionViewController {
         
     }
     
+    deinit {
+        
+        SDImageCache.shared.clearMemory()
+    }
+    
 }
 
 extension GouWuViewController:GouWuCellViewModelDelegate {
     
     func comGetHeight() {
         
-        print(model.arrayCout,model.jsonArray.count - 1)
-        
-        if(model.arrayCout == model.jsonArray.count - 1) {
+        if(model.arrayCout == model.jsonArray.count) {
             
-            let layout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-            let  margin: CGFloat = 5
-            layout.minimumLineSpacing = margin
-            layout.minimumInteritemSpacing = margin
-            layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
-            
-            collectionView.removeFromSuperview()
-            
-            view.insertSubview(collectionView, belowSubview: titleView)
-            
+            collectionView.reloadData()
         }else {
             
             model.arrayCout = model.arrayCout + 1
         }
-    
+        
     }
+    
 }
 

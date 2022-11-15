@@ -217,4 +217,12 @@ class NavTitleView:BaseView {
             make.centerY.equalToSuperview().offset(top)
         }
     }
+    
+    
+    deinit {
+        
+        
+    }
 }
+
+

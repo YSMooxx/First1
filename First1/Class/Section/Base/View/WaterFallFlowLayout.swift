@@ -32,10 +32,11 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
         
         cols = delegate?.waterFlowLayoutSection() ?? 1
         
-        //Sectionn
-//        let section = collectionView!.numberOfSections - 1
-        // 计算每个 Cell 的宽度
 
+        yArray = Array(repeating: self.sectionInset.top, count: cols)
+        layoutAttributeArray = []
+        maxHeight = 0
+        
         let itemWidth = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - minimumInteritemSpacing * CGFloat(cols - 1)) / CGFloat(cols)
         
         // Cell 数量
@@ -71,6 +72,7 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
             // 更新最短高度列的数据
             yArray[minHeightIndex] = attr.frame.maxY
         }
+        
         maxHeight = yArray.max()! + sectionInset.bottom
 
     }

@@ -50,6 +50,7 @@ class BaseCollectionViewController:UIViewController, WaterFallLayoutDelegate {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
+        view.addSubview(collectionView)
         // 注册 Cell
         
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)

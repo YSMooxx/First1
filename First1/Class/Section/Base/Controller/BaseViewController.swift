@@ -52,6 +52,8 @@ class BaseViewController:UIViewController {
         nav.setBarStyleWithStyle(style: model.statusBarStyle)
     }
     
+    
+    
 }
 
 extension BaseViewController:UIScrollViewDelegate {
@@ -87,6 +89,7 @@ extension BaseViewController:NavTitleViewDelegate {
             navigationController?.popViewController(animated: true)
         }
     }
+    
     
     
 }

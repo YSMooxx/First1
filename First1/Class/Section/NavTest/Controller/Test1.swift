@@ -38,7 +38,7 @@ class Test1:BaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         
-        asyncContcurrent()
+//        asyncContcurrent()
     }
     
     func syncSerial() {

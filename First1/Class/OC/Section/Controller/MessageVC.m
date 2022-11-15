@@ -11,6 +11,8 @@
 
 #import "SVGKit.h"
 
+//#import "SDWebImage/SDWebImage.h"
+
 //#import "SDwebImage.h"
 
 @interface MessageVC ()
@@ -30,6 +32,11 @@
 - (void)setupUi {
     
 
+}
+
+- (void)getFileSiez {
+    
+//    [[SDImageCache sharedImageCache] totalDiskSize];
 }
 
 +(UIColor*)changeColor {
