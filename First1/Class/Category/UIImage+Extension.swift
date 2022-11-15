@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SVGKit
+import SDWebImage
 
 extension UIImage {
     
@@ -97,6 +98,26 @@ extension UIImage {
         
         return colorImage.changColorWithcolor(color: color)
         
+    }
+    
+    class func initWithUrl(urlString:String,result: @escaping (_ image1:UIImage)->Void) {
+        
+        if urlString.isUrlString() {
+            
+            let URl:NSURL = NSURL.init(string: urlString)!
+            
+            SDWebImageManager.shared.loadImage(with: URl as URL, options: SDWebImageOptions.refreshCached) { pro, totle, url in
+                
+                
+            } completed: { imagec, totle, error, cacheType, isTrue, url in
+                
+                if (error == nil) {
+                    
+                    result(imagec ?? UIImage())
+                }
+            }
+        }
+
     }
 
 }

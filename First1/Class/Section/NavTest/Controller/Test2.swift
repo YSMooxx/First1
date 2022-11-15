@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class Test2:BaseViewController {
+    
+    var label:UILabel = UILabel.init(frame: CGRect(x: 100, y: navHeight*3, width: 100, height: 20))
     
     override func viewDidLoad() {
     
@@ -25,6 +28,8 @@ class Test2:BaseViewController {
         mode.backColor = "#2775B6"
         
         titleView.model = mode
+        
+        view.addSubview(label)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

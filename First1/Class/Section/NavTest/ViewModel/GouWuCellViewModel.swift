@@ -7,6 +7,12 @@
 
 import Foundation
 
+@objc protocol GouWuCellViewModelDelegate : NSObjectProtocol {
+    
+    @objc optional func comGetHeight() -> Void
+
+}
+
 class GouWuCellViewModel:BaseModel {
     
     enum Tyle {
@@ -15,9 +21,13 @@ class GouWuCellViewModel:BaseModel {
         case TwoLie
     }
     
+    weak var delegate: GouWuCellViewModelDelegate?
+    
     var imageHeight:CGFloat = 0
     
-    var contentHeight:CGFloat = 0
+    var contentSize:CGSize = CGSize()
+    
+    var image:UIImage = UIImage.init(named: "yuan1")!
     
     var cellTyle:Tyle = .Default
     
@@ -29,10 +39,7 @@ class GouWuCellViewModel:BaseModel {
         }
     }
     
-    
     func getDateWithModel(model:GouWuCellModel) {
-        
-        let image:UIImage = UIImage.init(named: model.image) ?? UIImage()
         
         let margin: CGFloat = 5
         
@@ -44,10 +51,18 @@ class GouWuCellViewModel:BaseModel {
         
         let w:CGFloat = (ScreenW - zongMargi) / CGFloat(lie)
         
-        imageHeight = (image.size.height * w) / image.size.width
+        UIImage.initWithUrl(urlString: model.image) { [weak self] image1 in
+            
+            self?.image = image1
+            
+            self?.imageHeight = (image1.size.height * w) / image1.size.width
+
+            let size:CGSize = self?.model?.title.getSizeWithWidth(width: w, font: UIFont.systemFont(ofSize: 16)) ?? CGSize()
+
+            self?.contentSize = CGSize(width: w, height: size.height + (self?.imageHeight ?? 0) + margin2)
+            
+            self?.delegate?.comGetHeight?()
+        }
         
-        let size:CGSize = model.title.getSizeWithWidth(width: w, font: UIFont.systemFont(ofSize: 16))
-        
-        contentHeight = size.height + imageHeight + margin2
     }
 }

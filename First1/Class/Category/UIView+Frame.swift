@@ -25,21 +25,21 @@ extension UIView {
         }
     }
     
-    var centerX :CGFloat {
-        
-        get {
-            
-            return center.x
-        }
-        
-        set {
-            
-            var point:CGPoint = center
-            point.x = newValue
-            center = point
-            
-        }
-    }
+//    var centerX :CGFloat {
+//
+//        get {
+//
+//            return center.x
+//        }
+//
+//        set {
+//
+//            var point:CGPoint = center
+//            point.x = newValue
+//            center = point
+//
+//        }
+//    }
     
     var y :CGFloat {
         
@@ -57,21 +57,21 @@ extension UIView {
         }
     }
     
-    var centerY :CGFloat {
-        
-        get {
-            
-            return center.y
-        }
-        
-        set {
-            
-            var point:CGPoint = center
-            point.y = newValue
-            center = point
-            
-        }
-    }
+//    var centerY :CGFloat {
+//        
+//        get {
+//            
+//            return center.y
+//        }
+//        
+//        set {
+//            
+//            var point:CGPoint = center
+//            point.y = newValue
+//            center = point
+//            
+//        }
+//    }
     
     var width :CGFloat {
         

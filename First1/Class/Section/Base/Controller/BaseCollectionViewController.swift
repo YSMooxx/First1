@@ -51,7 +51,6 @@ class BaseCollectionViewController:UIViewController, WaterFallLayoutDelegate {
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
         // 注册 Cell
-        view.addSubview(collectionView)
         
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
         view.addSubview(self.titleView)

@@ -15,6 +15,8 @@ class BaseTableViewModel:BaseModel {
     
     var oy:Int = 0
     
+    var arrayCout = 1
+    
     var subModelArray:NSMutableArray = NSMutableArray()
     
     var subModelArray2:NSMutableArray = NSMutableArray()

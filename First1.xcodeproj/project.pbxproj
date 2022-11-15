@@ -94,6 +94,7 @@
 		D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */; };
 		D5CDEF98283CC72300468664 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDEF97283CC72300468664 /* BaseTabBarController.swift */; };
 		D5D5B8D42921D8B1003F686F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B8D32921D8B1003F686F /* ViewController.swift */; };
+		D5D5B8D62921E95C003F686F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B8D52921E95C003F686F /* UIImageView+Extension.swift */; };
 		D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */; };
 		D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */; };
 		D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */; };
@@ -233,6 +234,7 @@
 		D5CDEF83283CB8BE00468664 /* DelegateContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateContrller.swift; sourceTree = "<group>"; };
 		D5CDEF97283CC72300468664 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D5D5B8D32921D8B1003F686F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5D5B8D52921E95C003F686F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNavigationController.swift; sourceTree = "<group>"; };
 		D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShengMingVC.swift; sourceTree = "<group>"; };
 		D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -781,6 +783,7 @@
 				D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */,
 				D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */,
 				D504A6BB291FCA7800AB0522 /* String+Extension.swift */,
+				D5D5B8D52921E95C003F686F /* UIImageView+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1091,6 +1094,7 @@
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
 				D51DA7BF291CC9E60003A723 /* ImageViewCell.swift in Sources */,
+				D5D5B8D62921E95C003F686F /* UIImageView+Extension.swift in Sources */,
 				D504A6B9291FADBE00AB0522 /* GouWuCell.swift in Sources */,
 				D5FEF59F28AA3865008639E2 /* YunSuanFuVC.swift in Sources */,
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,

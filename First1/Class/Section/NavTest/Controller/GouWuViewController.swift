@@ -19,7 +19,7 @@ class GouWuViewController:BaseCollectionViewController {
     
     override func getDate() {
         
-        let jArray2:[Any] = [["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan1"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan2"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan3"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan1"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan2"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan3"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan1"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan2"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan3"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"yuan1"]]
+        let jArray2:[Any] = [["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"]]
         
         model.jsonZhuanModelWithTypel(GouWuCellModel.self, jsonArray1: jArray2) {
             
@@ -27,28 +27,10 @@ class GouWuViewController:BaseCollectionViewController {
 
                 let VM:GouWuCellViewModel = GouWuCellViewModel.init()
                 VM.cellTyle = .TwoLie
+                VM.delegate = self
                 VM.model = sModel2 as? GouWuCellModel
                 model.subModelArray2.add(VM)
             }
-            
-            let firstM:GouWuCellModel = GouWuCellModel()
-            let firstVM:GouWuCellViewModel = GouWuCellViewModel.init()
-            firstVM.cellTyle = .TwoLie
-            firstM.title = "棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉"
-            firstM.image = "yuan1"
-            firstVM.model = firstM
-            
-            let secodM:GouWuCellModel = GouWuCellModel()
-            let secodVM:GouWuCellViewModel = GouWuCellViewModel.init()
-            secodVM.cellTyle = .TwoLie
-            secodM.title = "棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉"
-            secodM.image = "yuan1"
-            secodVM.model = secodM
-            
-            model.subModelArray2.insert(firstVM, at: 0)
-            
-            
-            collectionView.reloadData()
             
         }
         
@@ -58,13 +40,6 @@ class GouWuViewController:BaseCollectionViewController {
         
         collectionView.register(GouWuCell.self, forCellWithReuseIdentifier: GouWuCellID)
         collectionView.showsVerticalScrollIndicator = false
-        
-        let layout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let  margin: CGFloat = 5
-        layout.minimumLineSpacing = margin
-        layout.minimumInteritemSpacing = margin
-        layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
-        
         
         model.statusBarStyle = .default
         
@@ -76,6 +51,13 @@ class GouWuViewController:BaseCollectionViewController {
 
         titleView.model = sMode
         
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let VM:GouWuCellViewModel = model.subModelArray2[indexPath.row] as! GouWuCellViewModel
+        
+        return VM.contentSize
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -99,7 +81,7 @@ class GouWuViewController:BaseCollectionViewController {
         
         let VM:GouWuCellViewModel = model.subModelArray2[indexPath.row] as! GouWuCellViewModel
         
-        return VM.contentHeight
+        return VM.contentSize.height
     }
     
     override func waterFlowLayoutSection() -> Int {
@@ -108,5 +90,31 @@ class GouWuViewController:BaseCollectionViewController {
         
     }
     
+}
+
+extension GouWuViewController:GouWuCellViewModelDelegate {
+    
+    func comGetHeight() {
+        
+        print(model.arrayCout,model.jsonArray.count - 1)
+        
+        if(model.arrayCout == model.jsonArray.count - 1) {
+            
+            let layout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            let  margin: CGFloat = 5
+            layout.minimumLineSpacing = margin
+            layout.minimumInteritemSpacing = margin
+            layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
+            
+            collectionView.removeFromSuperview()
+            
+            view.insertSubview(collectionView, belowSubview: titleView)
+            
+        }else {
+            
+            model.arrayCout = model.arrayCout + 1
+        }
+    
+    }
 }
 

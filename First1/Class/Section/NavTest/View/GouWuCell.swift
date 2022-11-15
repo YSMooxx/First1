@@ -45,7 +45,8 @@ class GouWuCell:UICollectionViewCell {
         
         didSet {
             
-            imageView.image = UIImage.init(named: vModel?.model?.image ?? "")
+//            imageView.setImageWithUrl(urlString: vModel?.model?.image ?? "")
+            imageView.image = vModel?.image
             titleLable.text = vModel?.model?.title
             
             setNeedsLayout()
