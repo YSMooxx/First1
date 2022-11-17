@@ -89,13 +89,13 @@ class MVVM2ListCell2:UITableViewCell {
         
         didSet {
             
-            label.text = vModel?.model?.name
-            label.textColor = UIColor.colorWithHex(hexStr: vModel?.model?.color ?? "#EA517F")
-            label1.text = vModel?.model?.explain
+            label.text = vModel?.subModel?.name
+            label.textColor = UIColor.colorWithHex(hexStr: vModel?.subModel?.color ?? "#EA517F")
+            label1.text = vModel?.subModel?.explain
             label.sizeToFit()
             label1.sizeToFit()
             
-            let image:UIImage = UIImage.svgWithName(name: vModel?.model?.icon ?? "zhanwei", size: CGSize(width: 44, height: 44))
+            let image:UIImage = UIImage.svgWithName(name: vModel?.subModel?.icon ?? "zhanwei", size: CGSize(width: 44, height: 44))
             
             iconImage.image = image
             

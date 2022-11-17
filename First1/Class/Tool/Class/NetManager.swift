@@ -49,8 +49,8 @@ class NetManager {
     public class var defualt : NetManager{
         struct Static {
             static let instance :NetManager = NetManager()
-        }
-        return Static.instance
+    }
+    return Static.instance
 }
     
 var YJBHeaders : HTTPHeaders{

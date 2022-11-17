@@ -9,5 +9,13 @@ import Foundation
 
 class BaseViewModel:NSObject {
     
+    required override init() {
+        
+        super.init()
+    }
     
+    func getdateWithsubModel(vm:BaseModel) {
+        
+        
+    }
 }

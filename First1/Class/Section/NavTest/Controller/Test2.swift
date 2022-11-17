@@ -51,6 +51,15 @@ class Test2:BaseViewController {
         getFileSize()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        HUDManager.shard.dismiss()
+        
+        CacheManager.shard.isCancell = true
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         let vc:GouWuViewController = GouWuViewController()
@@ -62,18 +71,26 @@ class Test2:BaseViewController {
     
     @objc func clearCache() {
         
-        String.clearCache {
+        HUDManager.shard.show()
+        
+        CacheManager.shard.clearCache {
             
             self.getFileSize()
+            
+            HUDManager.shard.dismiss()
         }
         
     }
     
     func getFileSize() {
         
-        String.getCacheSize { size1 in
+        HUDManager.shard.show()
+        
+        CacheManager.shard.getCacheSize { size1 in
             
             self.label.text = size1
+            
+            HUDManager.shard.dismiss()
         }
     }
     

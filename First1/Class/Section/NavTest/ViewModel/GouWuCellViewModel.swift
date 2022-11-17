@@ -10,7 +10,6 @@ import Foundation
 @objc protocol GouWuCellViewModelDelegate : NSObjectProtocol {
     
     @objc optional func comGetHeight() -> Void
-
 }
 
 class GouWuCellViewModel:BaseModel {

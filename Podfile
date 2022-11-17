@@ -13,6 +13,7 @@ target 'First1' do
      pod 'SnapKit','~> 5.6.0'
      pod 'HandyJSON', '~> 5.0.1'
      pod 'SDWebImage', '~> 5.14.1'
+     pod 'SVProgressHUD', '~> 2.2.5'
 
   target 'First1Tests' do
     inherit! :search_paths

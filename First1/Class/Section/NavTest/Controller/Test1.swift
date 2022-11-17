@@ -9,12 +9,15 @@ import UIKit
 
 class Test1:BaseViewController {
     
+    var cancelBtn:UIButton = UIButton()
+    
+    var iscancel:Bool = false
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
     }
-    
     
     override func setupUI() {
         
@@ -26,19 +29,71 @@ class Test1:BaseViewController {
         
         titleView.model = mode
         
-        changBarStyleWithStyle()
+        cancelBtn.addTarget(self, action:#selector(cancelGCD), for: UIControl.Event.touchUpInside)
+        cancelBtn.setTitleColor(.black, for: UIControl.State.normal)
+        cancelBtn.setImage(UIImage.svgWithName(name:"zhantu", size: CGSize(width: 40, height: 40)), for: UIControl.State.normal)
+        cancelBtn.sizeToFit()
+        view.addSubview(cancelBtn)
+    }
+    
+    @objc func cancelGCD() {
+        
+        iscancel = true
+
+    }
+    
+    func start() {
+        
+        self.iscancel = false
+        
+        let queue = DispatchQueue.global()
+        
+        let item = DispatchWorkItem {
+ 
+            for i in 0...6 {
+                
+                Thread.sleep(forTimeInterval: 1)
+                
+                if (self.iscancel) {
+                    
+                    print(self.iscancel)
+                    print("线程2------\(i)\(Thread.current)")
+                    return
+                }else {
+                    print(self.iscancel)
+                    print("线程1------\(i)\(Thread.current)")
+                }
+                
+            }
+        
+        }
+        
+        queue.async(execute: item)
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillLayoutSubviews() {
         
+        super.viewWillLayoutSubviews()
         
+        cancelBtn.snp.makeConstraints { make in
+            
+            make.centerY.centerX.equalToSuperview()
+            
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        
 //        asyncContcurrent()
+        
+        start()
+        
+//        let vc:operationVC = operationVC()
+//
+//        vc.hidesBottomBarWhenPushed = true
+//
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     func syncSerial() {

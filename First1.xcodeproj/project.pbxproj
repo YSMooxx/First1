@@ -47,6 +47,7 @@
 		D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52650CC28A642FE004A43EE /* TestWebViewController.swift */; };
 		D5278A2A291B496300874956 /* NavTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5278A29291B496300874956 /* NavTest3.swift */; };
 		D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */; };
+		D52D53B32924A8C3005AF265 /* operationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52D53B22924A8C3005AF265 /* operationVC.swift */; };
 		D53043B7291900AE0001D39B /* navback.svg in Resources */ = {isa = PBXBuildFile; fileRef = D53043B6291900AE0001D39B /* navback.svg */; };
 		D5377FCB290FA28800E4A620 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCA290FA28800E4A620 /* BaseView.swift */; };
 		D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */; };
@@ -63,6 +64,8 @@
 		D56E81F22912574700587A03 /* MVVM2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81F12912574700587A03 /* MVVM2Model.swift */; };
 		D56E81F629125CE700587A03 /* MVVM2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81F529125CE700587A03 /* MVVM2ViewModel.swift */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
+		D582DE082924C15D00E44425 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D582DE072924C15D00E44425 /* CacheManager.swift */; };
+		D582DE0A2924C56400E44425 /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D582DE092924C56400E44425 /* HUDManager.swift */; };
 		D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9502823AF2700481169 /* LaunchScreen.storyboard */; };
 		D58B32AE28C3853E00627117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B6D9482823AF2400481169 /* Main.storyboard */; };
 		D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFB828B85CB10013DB2A /* BiBaoVC.swift */; };
@@ -101,7 +104,7 @@
 		D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */; };
 		D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */; };
 		D5FA19EC28C6053C00B83CE0 /* UIView+SVGKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */; };
-		D5FA231C28C86A1E00B83CE0 /* biaoqian.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5FA231A28C86A1D00B83CE0 /* biaoqian.svg */; };
+		D5FA231C28C86A1E00B83CE0 /* titleima.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5FA231A28C86A1D00B83CE0 /* titleima.svg */; };
 		D5FA231D28C86A1E00B83CE0 /* baobiao.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5FA231B28C86A1D00B83CE0 /* baobiao.svg */; };
 		D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */; };
 		D5FEF59D28AA2F27008639E2 /* ZIMianLiangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */; };
@@ -180,6 +183,7 @@
 		D52650CC28A642FE004A43EE /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		D5278A29291B496300874956 /* NavTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTest3.swift; sourceTree = "<group>"; };
 		D52B8BC728CE128B0014D4E2 /* tabViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewVC.swift; sourceTree = "<group>"; };
+		D52D53B22924A8C3005AF265 /* operationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operationVC.swift; sourceTree = "<group>"; };
 		D53043B6291900AE0001D39B /* navback.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = navback.svg; sourceTree = "<group>"; };
 		D5377FCA290FA28800E4A620 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D5377FCC290FA2BE00E4A620 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		D56E81F12912574700587A03 /* MVVM2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2Model.swift; sourceTree = "<group>"; };
 		D56E81F529125CE700587A03 /* MVVM2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2ViewModel.swift; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
+		D582DE072924C15D00E44425 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		D582DE092924C56400E44425 /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
 		D590AFB828B85CB10013DB2A /* BiBaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiBaoVC.swift; sourceTree = "<group>"; };
 		D590AFC028BCAC7F0013DB2A /* MeiJuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiJuVC.swift; sourceTree = "<group>"; };
 		D590AFC728BDF98F0013DB2A /* JieGouTiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieGouTiVC.swift; sourceTree = "<group>"; };
@@ -241,7 +247,7 @@
 		D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SVGKit.swift"; sourceTree = "<group>"; };
-		D5FA231A28C86A1D00B83CE0 /* biaoqian.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = biaoqian.svg; sourceTree = "<group>"; };
+		D5FA231A28C86A1D00B83CE0 /* titleima.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = titleima.svg; sourceTree = "<group>"; };
 		D5FA231B28C86A1D00B83CE0 /* baobiao.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = baobiao.svg; sourceTree = "<group>"; };
 		D5FEF59628AA2769008639E2 /* ChangLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangLiangVC.swift; sourceTree = "<group>"; };
 		D5FEF59C28AA2F27008639E2 /* ZIMianLiangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMianLiangVC.swift; sourceTree = "<group>"; };
@@ -488,8 +494,8 @@
 		D56E81E4291249E700587A03 /* MVVM2 */ = {
 			isa = PBXGroup;
 			children = (
-				D56E81E5291249E700587A03 /* ViewModle */,
 				D56E81E6291249E700587A03 /* Controller */,
+				D56E81E5291249E700587A03 /* ViewModle */,
 				D56E81E7291249E700587A03 /* Model */,
 				D56E81E8291249E700587A03 /* View */,
 			);
@@ -615,6 +621,8 @@
 				D51C314128CB236F001B813F /* Hong.swift */,
 				D51D183628D0747C00321B1B /* JsonUtil.swift */,
 				D51D184528D31FFD00321B1B /* NetManager.swift */,
+				D582DE072924C15D00E44425 /* CacheManager.swift */,
+				D582DE092924C56400E44425 /* HUDManager.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -644,6 +652,7 @@
 				D5B3E0D1291A03E50071E3EA /* Test2.swift */,
 				D5278A29291B496300874956 /* NavTest3.swift */,
 				D504A6B2291FA4F600AB0522 /* GouWuViewController.swift */,
+				D52D53B22924A8C3005AF265 /* operationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -806,7 +815,7 @@
 				D51C314C28CCA973001B813F /* Leftbar_mine_unselected.svg */,
 				D51C314F28CCA973001B813F /* Leftbar_shop_selected.svg */,
 				D51C314B28CCA973001B813F /* Leftbar_shop_unselected.svg */,
-				D5FA231A28C86A1D00B83CE0 /* biaoqian.svg */,
+				D5FA231A28C86A1D00B83CE0 /* titleima.svg */,
 				D5FA231B28C86A1D00B83CE0 /* baobiao.svg */,
 				D51C314928CCA80A001B813F /* quanbu.svg */,
 			);
@@ -948,7 +957,7 @@
 				D5FA231D28C86A1E00B83CE0 /* baobiao.svg in Resources */,
 				D51C315728CCA973001B813F /* Leftbar_shop_selected.svg in Resources */,
 				D51C315428CCA973001B813F /* Leftbar_mine_unselected.svg in Resources */,
-				D5FA231C28C86A1E00B83CE0 /* biaoqian.svg in Resources */,
+				D5FA231C28C86A1E00B83CE0 /* titleima.svg in Resources */,
 				D51C315928CCA973001B813F /* Leftbar_cloud_unselected.svg in Resources */,
 				D51C314A28CCA80A001B813F /* quanbu.svg in Resources */,
 				D51D184128D1BECC00321B1B /* nanIcon.svg in Resources */,
@@ -1090,6 +1099,7 @@
 				D5377FCB290FA28800E4A620 /* BaseView.swift in Sources */,
 				D590AFB928B85CB10013DB2A /* BiBaoVC.swift in Sources */,
 				D504A6BC291FCA7800AB0522 /* String+Extension.swift in Sources */,
+				D52D53B32924A8C3005AF265 /* operationVC.swift in Sources */,
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
@@ -1109,6 +1119,7 @@
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
 				D5377FD5290FA84900E4A620 /* MVVMModel.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
+				D582DE082924C15D00E44425 /* CacheManager.swift in Sources */,
 				D5C3D06C291A2E5C00DE1237 /* NavTitleModel.swift in Sources */,
 				D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */,
 				D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */,
@@ -1118,6 +1129,7 @@
 				D558F53528CF279500964016 /* ListCell.swift in Sources */,
 				D553C8FA29135C2C006475A8 /* UITabBar+Extension.swift in Sources */,
 				D5B3E0CD291A03600071E3EA /* BaseNavigationController.swift in Sources */,
+				D582DE0A2924C56400E44425 /* HUDManager.swift in Sources */,
 				D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */,
 				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateContrller.swift in Sources */,

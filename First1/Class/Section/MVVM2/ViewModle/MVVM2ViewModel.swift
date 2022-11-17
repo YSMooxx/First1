@@ -17,38 +17,45 @@ class MVVM2ViewModel:BaseViewModel {
         case nn
     }
     
-    var index:IndexPath = IndexPath.init(row: 0, section: 0) 
-    var height:CGFloat = 44
-    var imageHeight:CGFloat = 0
+    var height:CGFloat = 64
+
     var sex:sexType = sexType.nan
     
-    var model:MVVM2Model? {
+    var imageHeight:CGFloat = 0
+    
+    var subModel:MVVM2Model? {
         
         didSet {
             
-            dealSexTyeWithInt(model: model ?? MVVM2Model())
+            dealSexTyeWithInt(model: subModel ?? MVVM2Model())
         }
     }
     
     func dealSexTyeWithInt(model:MVVM2Model) {
         
         if model.sex == 0 {
-            
+
             sex = sexType.nv
+            height = 84
         }else if model.sex == 1 {
             
             sex = sexType.nan
+            
         }else if model.sex == 2 {
-            
+
             sex = sexType.nn
+
+            let image:UIImage = UIImage(named: subModel?.icon ?? "titleimage3")!
             
-            let image:UIImage = UIImage.init(named: model.icon) ?? UIImage()
-            
-            height = image.size.height * ScreenW / image.size.width
-            
-            model.height = height
+            height = UIScreen.main.bounds.size.width * image.size.height / image.size.width
+
         }
         
     }
     
+    override func getdateWithsubModel(vm: BaseModel) {
+        
+        subModel = vm as? MVVM2Model
+        
+    }
 }

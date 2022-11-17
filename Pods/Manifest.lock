@@ -10,6 +10,7 @@ PODS:
   - SnapKit (5.6.0)
   - SVGKit (3.0.0):
     - CocoaLumberjack (~> 3.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.14.1)
   - SnapKit (~> 5.6.0)
   - SVGKit (~> 3.0.0)
+  - SVProgressHUD (~> 2.2.5)
 
 SPEC REPOS:
   trunk:
@@ -26,6 +28,7 @@ SPEC REPOS:
     - SDWebImage
     - SnapKit
     - SVGKit
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
@@ -34,7 +37,8 @@ SPEC CHECKSUMS:
   SDWebImage: e1b3c38f170c6100130fce6856e423ed9e5f4fce
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 70befcf3d6151a9945671c7a18c686401fd185db
+PODFILE CHECKSUM: dcc781777172568d76aa214bbf4969f466bd080d
 
 COCOAPODS: 1.11.3

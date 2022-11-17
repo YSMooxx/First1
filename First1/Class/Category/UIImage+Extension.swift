@@ -107,13 +107,15 @@ extension UIImage {
             let URl:NSURL = NSURL.init(string: urlString)!
             
             SDWebImageManager.shared.loadImage(with: URl as URL, options: SDWebImageOptions.refreshCached) { pro, totle, url in
-                
-                
+
+
             } completed: { imagec, totle, error, cacheType, isTrue, url in
-                
+
                 if (error == nil) {
+
+                    let imaged = imagec
                     
-                    result(imagec ?? UIImage())
+                    result(imaged ?? UIImage())
                 }
             }
         }

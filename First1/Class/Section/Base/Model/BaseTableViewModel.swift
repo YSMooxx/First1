@@ -17,50 +17,36 @@ class BaseTableViewModel:BaseModel {
     
     var arrayCout = 1
     
-    var subModelArray:NSMutableArray = NSMutableArray()
+    var vModelArray:[Any] = []
     
-    var subModelArray2:NSMutableArray = NSMutableArray()
+    var sModelArray:[BaseModel] = []
     
     var jsonArray:[Any] = []
     
-    func jsonZhuanModelWithTypel( _ modelType:HandyJSON.Type,jsonArray1:[Any],result:()->Void) {
-        
-        jsonArray = jsonArray1
+    func jsonZhuanModelWithTypel( _ modelType:HandyJSON.Type,jsonArray1:[Any],_ vMClass:String) {
         
         let jsonString:String = JsonUtil.getJSONStringFromArray(array:jsonArray1)
+
+        let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as!String
         
-        let array:[Any]  = JsonUtil.jsonArrayToModel(jsonString,modelType.self)
+        let vcClass = NSClassFromString(namespace+"."+vMClass)!as!BaseViewModel.Type
         
-        for model in array {
+        for mode in JsonUtil.jsonArrayToModel(jsonString,modelType.self) {
+
+            let vm = vcClass.init()
             
-            subModelArray.add(model)
+            vm.getdateWithsubModel(vm: mode)
+
+            vModelArray.append(vm)
         }
-        
-        result()
         
     }
     
-    func jsonZhuanModelWithTypel( _ modelType:HandyJSON.Type,jsonArray1:[Any],jsonArray2:[Any],result:(_ array1:[Any],_ array2:[Any])->Void) {
+    func jsonZhuanModelWithTypel( _ modelType:HandyJSON.Type,jsonArray1:[Any]) {
         
-        let jsonString1:String = JsonUtil.getJSONStringFromArray(array:jsonArray1)
-        
-        let jsonString2:String = JsonUtil.getJSONStringFromArray(array:jsonArray2)
-        
-        let array1:[Any]  = JsonUtil.jsonArrayToModel(jsonString1,modelType.self)
-        
-        let array2:[Any]  = JsonUtil.jsonArrayToModel(jsonString2,modelType.self)
-        
-        for model in array1 {
-            
-            subModelArray.add(model)
-        }
-        
-        for model in array2 {
-            
-            subModelArray2.add(model)
-        }
-        
-        result(array1,array2)
+        let jsonString:String = JsonUtil.getJSONStringFromArray(array:jsonArray1)
+
+        sModelArray = JsonUtil.jsonArrayToModel(jsonString,modelType.self)
         
     }
     

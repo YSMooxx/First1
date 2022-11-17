@@ -46,18 +46,11 @@ class MVVM2Controller:BaseTableViewController{
     override func getDate() {
         
         let array:[Any] = [["name":"非常想你","height":64,"icon":"titleimage3","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6","sex":2],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F","sex":0],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6","sex":0],["name":"伟哥","height":80,"icon":"nanIcon","explain":"在哪里","color":"#2775B6","sex":1],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6","sex":1],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F","sex":0],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6","sex":0],["name":"伟哥","height":80,"icon":"nanIcon","explain":"在哪里","color":"#2775B6","sex":1],["name":"非常想你","height":64,"icon":"nanIcon","explain":"[捂脸][捂脸][捂脸]","color":"#2775B6","sex":1],["name":"四川一家人","height":64,"icon":"nvIcon","explain":"非常想你：厉害了","color":"#EA517F","sex":0],["name":"张俊杰","height":64,"icon":"nanIcon","explain":"好的好的","color":"#2775B6","sex":0],["name":"伟哥","height":80,"icon":"nanIcon","explain":"在哪里","color":"#2775B6","sex":1]]
+
         
-        model.jsonZhuanModelWithTypel(MVVM2Model.self, jsonArray1: array) {
-            
-            for sModel in model.subModelArray {
-                
-                let VM:MVVM2ViewModel = MVVM2ViewModel.init()
-                VM.model = sModel as? MVVM2Model
-                model.subModelArray2.add(VM)
-            }
-            
-            tableView.reloadData()
-        }
+        model.jsonZhuanModelWithTypel(MVVM2Model.self, jsonArray1: array, "MVVM2ViewModel")
+        
+        tableView.reloadData()
 
     }
     
@@ -67,43 +60,41 @@ class MVVM2Controller:BaseTableViewController{
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return model.subModelArray2.count
+        
+        return model.vModelArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let VM:MVVM2ViewModel = model.subModelArray2[indexPath.row] as! MVVM2ViewModel
+        let vModel:MVVM2ViewModel = model.vModelArray[indexPath.row] as! MVVM2ViewModel
         
-        VM.index = indexPath
-        
-        let sex = VM.sex
+        let sex = vModel.sex
         
         switch sex{
         case .nan :
             let cell1 = tableView.dequeueReusableCell(withIdentifier: MVVM2ListCell1ID, for: indexPath) as! MVVM2ListCell1
-            cell1.vModel = VM
+            cell1.vModel = vModel
             return cell1
             
         case .nv :
             let cell2 = tableView.dequeueReusableCell(withIdentifier: MVVM2ListCell2ID, for: indexPath) as! MVVM2ListCell2
-            cell2.vModel = VM
+            cell2.vModel = vModel
             return cell2
         case .nn:
-            let cell3 = tableView.dequeueReusableCell(withIdentifier: ImageViewCellID, for: indexPath) as! ImageViewCell
-            cell3.vModel = VM
-            titleView.model.imageHeight = VM.height
-            titleimageCell = cell3
-            return cell3
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: ImageViewCellID, for: indexPath) as! ImageViewCell
+            cell1.vModel = vModel
+            titleimageCell = cell1
+            return cell1
         }
+        
     }
     
     //UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        let VM:MVVM2ViewModel = model.subModelArray2[indexPath.row] as! MVVM2ViewModel
+        let vModel:MVVM2ViewModel = model.vModelArray[indexPath.row] as! MVVM2ViewModel
         
-        return VM.model?.height ?? 10
+        return vModel.height
     }
     
 }

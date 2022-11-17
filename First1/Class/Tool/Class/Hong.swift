@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-
 let ScreenW:CGFloat = UIScreen.main.bounds.size.width
 
 let ScreenH:CGFloat = UIScreen.main.bounds.size.height
@@ -41,4 +40,3 @@ func RScreenH() -> CGFloat {
     
     return ScreenH / 667
 }
-

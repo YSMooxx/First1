@@ -29,20 +29,16 @@ class NavTest3:BaseViewController {
         
         titleView.model = sMode
         
+        imageView.image = UIImage.init(named: "back2")
+        
         UIImage.initWithUrl(urlString: "http://www.djy-es.com/statics/images/test1.png") {image1 in
 
-            print(image1)
-            print(ScreenW,ScreenH)
-            self.imageView.width = image1.size.width
-            self.imageView.height = image1.size.height
-            self.imageView.image = image1
-            
+//            self?.imageView.width = image1.size.width
+//            self?.imageView.height = image1.size.height
+//            self?.imageView.image = image1
+
         }
-        
-//        imageView.setImageWithUrl(urlString: "http://www.djy-es.com/statics/images/test12.png")
-//
-//        imageView.width = 371
-//        imageView.height = 190
+    
         
         view.addSubview(imageView)
     }
@@ -50,11 +46,12 @@ class NavTest3:BaseViewController {
     override func viewWillLayoutSubviews() {
         
         super.viewWillLayoutSubviews()
-        
+
         imageView.snp.makeConstraints { make in
-            
+
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
+            make.height.width.equalTo(100)
         }
     }
     
