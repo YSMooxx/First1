@@ -19,8 +19,6 @@ class ImageViewCell:UITableViewCell {
         addView()
     }
     
-    
-    
     //setupUI
     func setupUI() {
         backImageView.contentMode = UIView.ContentMode.scaleAspectFill

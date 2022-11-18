@@ -7,12 +7,8 @@
 
 import Foundation
 
-@objc protocol GouWuCellViewModelDelegate : NSObjectProtocol {
-    
-    @objc optional func comGetHeight() -> Void
-}
 
-class GouWuCellViewModel:BaseModel {
+class GouWuCellViewModel:BaseViewModel {
     
     enum Tyle {
         
@@ -20,48 +16,40 @@ class GouWuCellViewModel:BaseModel {
         case TwoLie
     }
     
-    weak var delegate: GouWuCellViewModelDelegate?
-    
-    var imageHeight:CGFloat = 0
+    var imageHeight:CGFloat = 100
     
     var contentSize:CGSize = CGSize()
     
-    var image:UIImage = UIImage.init(named: "yuan1")!
-    
     var cellTyle:Tyle = .Default
     
-    var model:GouWuCellModel? {
+    var sModel:GouWuCellModel? {
         
         didSet {
             
-            getDateWithModel(model: model ?? GouWuCellModel())
+            getDateWithModel(model: sModel ?? GouWuCellModel())
         }
+    }
+    
+    override func getdateWithsubModel(vm: BaseModel) {
+        
+        sModel = vm as? GouWuCellModel
     }
     
     func getDateWithModel(model:GouWuCellModel) {
         
-        let margin: CGFloat = 5
-        
-        let margin2: CGFloat = 3
-        
+        let margin: CGFloat = 8
+
+        let margin2: CGFloat = 5
+
         let lie = 2
-        
+
         let zongMargi:CGFloat =  CGFloat((lie + 1)) * margin
-        
+
         let w:CGFloat = (ScreenW - zongMargi) / CGFloat(lie)
         
-        UIImage.initWithUrl(urlString: model.image) { [weak self] image1 in
-            
-            self?.image = image1
-            
-            self?.imageHeight = (image1.size.height * w) / image1.size.width
-
-            let size:CGSize = self?.model?.title.getSizeWithWidth(width: w, font: UIFont.systemFont(ofSize: 16)) ?? CGSize()
-
-            self?.contentSize = CGSize(width: w, height: size.height + (self?.imageHeight ?? 0) + margin2)
-            
-            self?.delegate?.comGetHeight?()
-        }
+        let size:CGSize = self.sModel?.title.getSizeWithWidth(width: w, font: UIFont.systemFont(ofSize: 16)) ?? CGSize()
+        
+        self.contentSize = CGSize(width: w, height: size.height + (100) + margin2)
         
     }
 }

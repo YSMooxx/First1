@@ -36,7 +36,7 @@ class MVVM2ViewModel:BaseViewModel {
         if model.sex == 0 {
 
             sex = sexType.nv
-            height = 84
+        
         }else if model.sex == 1 {
             
             sex = sexType.nan
@@ -48,7 +48,6 @@ class MVVM2ViewModel:BaseViewModel {
             let image:UIImage = UIImage(named: subModel?.icon ?? "titleimage3")!
             
             height = UIScreen.main.bounds.size.width * image.size.height / image.size.width
-
         }
         
     }

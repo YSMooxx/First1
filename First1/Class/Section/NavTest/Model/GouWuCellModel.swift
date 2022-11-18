@@ -11,4 +11,6 @@ class GouWuCellModel:BaseModel {
     
     var image:String = ""
     var title:String = ""
+    var height:CGFloat = 0
+    var width:CGFloat = 0
 }

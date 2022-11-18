@@ -20,29 +20,18 @@ class GouWuViewController:BaseCollectionViewController {
     
     override func getDate() {
         
-//        let jArray2:[Any] = [["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"]]
+        let jArray2:[Any] = [["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"]]
         
-//        model.jsonZhuanModelWithTypel(GouWuCellModel.self, jsonArray1: jArray2) {
-//
-//            HUDManager.shard.show()
-//
-//            for sModel2 in model.subModelArray {
-//
-//                let VM:GouWuCellViewModel = GouWuCellViewModel.init()
-//                VM.cellTyle = .TwoLie
-//                VM.delegate = self
-//                VM.model = sModel2 as? GouWuCellModel
-//                model.subModelArray2.add(VM)
-//            }
-//
-//        }
+        model.jsonZhuanModelWithTypel(GouWuCellModel.self, jsonArray1: jArray2, "GouWuCellViewModel")
+        
+        collectionView.reloadData()
         
     }
     
     override func setupUI() {
         
         let layout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let  margin: CGFloat = 5
+        let  margin: CGFloat = 8
         layout.minimumLineSpacing = margin
         layout.minimumInteritemSpacing = margin
         layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
@@ -112,23 +101,6 @@ class GouWuViewController:BaseCollectionViewController {
     deinit {
         
         SDImageCache.shared.clearMemory()
-    }
-    
-}
-
-extension GouWuViewController:GouWuCellViewModelDelegate {
-    
-    func comGetHeight() {
-        
-        if(model.arrayCout == model.jsonArray.count) {
-            
-            collectionView.reloadData()
-            HUDManager.shard.dismiss()
-        }else {
-            
-            model.arrayCout = model.arrayCout + 1
-        }
-        
     }
     
 }

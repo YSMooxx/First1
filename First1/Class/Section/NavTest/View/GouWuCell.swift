@@ -45,9 +45,12 @@ class GouWuCell:UICollectionViewCell {
         
         didSet {
             
-            imageView.setImageWithUrl(urlString: vModel?.model?.image ?? "" ,placeholderImage: "yuan1")
-//            imageView.image = vModel?.image
-            titleLable.text = vModel?.model?.title
+            imageView.setImageWithUrl(urlString: vModel?.sModel?.image ?? "" ,placeholderImage: "yuan1") { image2, error1 in
+                
+                
+            }
+            
+            titleLable.text = vModel?.sModel?.title
             
             setNeedsLayout()
         }
@@ -60,7 +63,7 @@ class GouWuCell:UICollectionViewCell {
         imageView.frame = CGRect(x: 0, y: 0, width: self.contentView.frame.size.width, height: vModel?.imageHeight ?? 0)
         
         titleLable.x = 0
-        titleLable.y = (vModel?.imageHeight ?? 0) + 3
+        titleLable.y = (vModel?.imageHeight ?? 0) + 5
         titleLable.width = self.contentView.frame.size.width
         titleLable.sizeToFit()
         
