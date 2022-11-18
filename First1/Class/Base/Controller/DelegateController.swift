@@ -17,6 +17,10 @@ class DelegateController: UIViewController {
         person.delegate = yellowCattle
         person.goToShanghai()
         person.canlePiao()
+        let other = Other()
+        person.delegate = other
+        person.goToShanghai()
+        person.canlePiao()
     }
 }
 
@@ -51,7 +55,8 @@ class YellowCattle : BuyTicketDelegate {
     }
 }
 
-class OtherDeletegate : BuyTicketDelegate {
+class Other : BuyTicketDelegate {
+    
     func buyTicket() {
         print("其他人帮你买了一张站票")
     }
