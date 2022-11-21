@@ -43,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             navHeight = statusBarHeight + 44
         }
+        
+        NetTypeMananer.shard.startListening()
             
         return true
     }

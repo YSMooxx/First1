@@ -61,6 +61,7 @@
 		D553C8FA29135C2C006475A8 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */; };
 		D558F53528CF279500964016 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53428CF279500964016 /* ListCell.swift */; };
 		D558F53828CF2CD600964016 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558F53728CF2CD600964016 /* ListModel.swift */; };
+		D55C1AD2292B6AE100400F54 /* NetTypeMananer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C1AD1292B6AE100400F54 /* NetTypeMananer.swift */; };
 		D56E81EA29124A2900587A03 /* MVVM2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81E929124A2900587A03 /* MVVM2Controller.swift */; };
 		D56E81EE2912571600587A03 /* MVVM2ListCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81ED2912571600587A03 /* MVVM2ListCell1.swift */; };
 		D56E81F02912572600587A03 /* MVVM2ListCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81EF2912572600587A03 /* MVVM2ListCell2.swift */; };
@@ -200,6 +201,7 @@
 		D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		D558F53428CF279500964016 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		D558F53728CF2CD600964016 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		D55C1AD1292B6AE100400F54 /* NetTypeMananer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTypeMananer.swift; sourceTree = "<group>"; };
 		D56E81E929124A2900587A03 /* MVVM2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2Controller.swift; sourceTree = "<group>"; };
 		D56E81ED2912571600587A03 /* MVVM2ListCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2ListCell1.swift; sourceTree = "<group>"; };
 		D56E81EF2912572600587A03 /* MVVM2ListCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2ListCell2.swift; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 				D51D184528D31FFD00321B1B /* NetManager.swift */,
 				D582DE072924C15D00E44425 /* CacheManager.swift */,
 				D582DE092924C56400E44425 /* HUDManager.swift */,
+				D55C1AD1292B6AE100400F54 /* NetTypeMananer.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -1168,6 +1171,7 @@
 				D590AFC128BCAC7F0013DB2A /* MeiJuVC.swift in Sources */,
 				D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */,
 				D5B3E0D3291A03E50071E3EA /* Test2.swift in Sources */,
+				D55C1AD2292B6AE100400F54 /* NetTypeMananer.swift in Sources */,
 				D51D183A28D0751800321B1B /* BaseModel.swift in Sources */,
 				D59E04B828C9E25200F5C0AF /* Account.m in Sources */,
 				D558F53828CF2CD600964016 /* ListModel.swift in Sources */,

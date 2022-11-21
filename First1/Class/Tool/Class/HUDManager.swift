@@ -30,6 +30,11 @@ class HUDManager:NSObject {
         SVProgressHUD.dismiss()
     }
     
+    static func dismissWithDelay(time:Double) {
+        
+        SVProgressHUD.dismiss(withDelay: time)
+    }
+    
     static func shouTextWithString(text:String) {
         
         SVProgressHUD.show(withStatus: text)
