@@ -56,6 +56,8 @@ class BaseCollectionViewController:UIViewController, WaterFallLayoutDelegate {
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
         view.addSubview(self.titleView)
         titleView.delegate = self
+        let titleModel = NavTitleModel()
+        titleView.model = titleModel
     }
     
     override func viewWillAppear(_ animated: Bool) {

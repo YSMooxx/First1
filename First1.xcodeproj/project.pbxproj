@@ -16,6 +16,9 @@
 		D504A6B9291FADBE00AB0522 /* GouWuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B8291FADBE00AB0522 /* GouWuCell.swift */; };
 		D504A6BC291FCA7800AB0522 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6BB291FCA7800AB0522 /* String+Extension.swift */; };
 		D504A6C0291FECB900AB0522 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */; };
+		D516D823292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D822292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift */; };
+		D516D825292B0BFB009C26B9 /* WaterFallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D824292B0BFB009C26B9 /* WaterFallController.swift */; };
+		D516D827292B0CA1009C26B9 /* BaseCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D826292B0CA1009C26B9 /* BaseCollectionModel.swift */; };
 		D51C314228CB236F001B813F /* Hong.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C314128CB236F001B813F /* Hong.swift */; };
 		D51C314428CB25F1001B813F /* SwiftUIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C314328CB25F1001B813F /* SwiftUIVC.swift */; };
 		D51C314828CB2F24001B813F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C314728CB2F24001B813F /* BaseViewController.swift */; };
@@ -152,6 +155,9 @@
 		D504A6B8291FADBE00AB0522 /* GouWuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuCell.swift; sourceTree = "<group>"; };
 		D504A6BB291FCA7800AB0522 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
+		D516D822292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallMutiSectionFlowLayout.swift; sourceTree = "<group>"; };
+		D516D824292B0BFB009C26B9 /* WaterFallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFallController.swift; sourceTree = "<group>"; };
+		D516D826292B0CA1009C26B9 /* BaseCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionModel.swift; sourceTree = "<group>"; };
 		D51C314128CB236F001B813F /* Hong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hong.swift; sourceTree = "<group>"; };
 		D51C314328CB25F1001B813F /* SwiftUIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVC.swift; sourceTree = "<group>"; };
 		D51C314728CB2F24001B813F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +330,55 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D516D81C292B0B5F009C26B9 /* WaterFall */ = {
+			isa = PBXGroup;
+			children = (
+				D516D821292B0BF2009C26B9 /* FlowLayout */,
+				D516D81D292B0B5F009C26B9 /* ViewModel */,
+				D516D81E292B0B5F009C26B9 /* Controller */,
+				D516D81F292B0B5F009C26B9 /* Model */,
+				D516D820292B0B5F009C26B9 /* View */,
+			);
+			path = WaterFall;
+			sourceTree = "<group>";
+		};
+		D516D81D292B0B5F009C26B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D516D81E292B0B5F009C26B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D516D824292B0BFB009C26B9 /* WaterFallController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D516D81F292B0B5F009C26B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D516D820292B0B5F009C26B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D516D821292B0BF2009C26B9 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D516D822292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
 		D51C314528CB2EFE001B813F /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +508,7 @@
 				D51D183928D0751800321B1B /* BaseModel.swift */,
 				D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */,
 				D51DA7C3291DD9ED0003A723 /* BaseTableViewModel.swift */,
+				D516D826292B0CA1009C26B9 /* BaseCollectionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -754,6 +810,7 @@
 		D5CDEF8D283CC6AA00468664 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				D516D81C292B0B5F009C26B9 /* WaterFall */,
 				D5B3E0CE291A03B20071E3EA /* NavTest */,
 				D51C314528CB2EFE001B813F /* Base */,
 				D5CDEF8E283CC6AA00468664 /* Home */,
@@ -1102,6 +1159,7 @@
 				D52D53B32924A8C3005AF265 /* operationVC.swift in Sources */,
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
+				D516D825292B0BFB009C26B9 /* WaterFallController.swift in Sources */,
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
 				D51DA7BF291CC9E60003A723 /* ImageViewCell.swift in Sources */,
 				D5D5B8D62921E95C003F686F /* UIImageView+Extension.swift in Sources */,
@@ -1116,6 +1174,7 @@
 				D5377FD3290FA35300E4A620 /* MVVMView.swift in Sources */,
 				D51C314828CB2F24001B813F /* BaseViewController.swift in Sources */,
 				D504A6B7291FAD7000AB0522 /* GouWuCellModel.swift in Sources */,
+				D516D827292B0CA1009C26B9 /* BaseCollectionModel.swift in Sources */,
 				D590AFCE28BDFF920013DB2A /* LeiVC.swift in Sources */,
 				D5377FD5290FA84900E4A620 /* MVVMModel.swift in Sources */,
 				D5FEF5AA28AF73C7008639E2 /* TiaoJianYuJuVC.swift in Sources */,
@@ -1128,6 +1187,7 @@
 				D51DA7C4291DD9ED0003A723 /* BaseTableViewModel.swift in Sources */,
 				D558F53528CF279500964016 /* ListCell.swift in Sources */,
 				D553C8FA29135C2C006475A8 /* UITabBar+Extension.swift in Sources */,
+				D516D823292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift in Sources */,
 				D5B3E0CD291A03600071E3EA /* BaseNavigationController.swift in Sources */,
 				D582DE0A2924C56400E44425 /* HUDManager.swift in Sources */,
 				D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */,

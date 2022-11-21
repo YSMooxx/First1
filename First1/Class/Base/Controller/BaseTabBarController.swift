@@ -36,7 +36,7 @@ class BaseTabBarContrller: UITabBarController {
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"Test1","YTitle":"首页","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"Test2","YTitle":"消息","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"tabViewVC","YTitle":"业务","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"MVVM2Controller","YTitle":"我的","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
+        let VCArray : NSArray = [["YClass":"WaterFallController","YTitle":"首页","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"Test2","YTitle":"消息","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"tabViewVC","YTitle":"业务","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"MVVM2Controller","YTitle":"我的","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
         
         for controller in VCArray {
             

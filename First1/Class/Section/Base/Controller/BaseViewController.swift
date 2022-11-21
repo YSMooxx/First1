@@ -33,6 +33,10 @@ class BaseViewController:UIViewController {
         view.addSubview(titleView)
         
         titleView.delegate = self
+        
+        let titleModel = NavTitleModel()
+        
+        titleView.model = titleModel
     }
     
     func setupUI() {

@@ -49,7 +49,7 @@ class MVVM2Controller:BaseTableViewController{
 
         
         model.jsonZhuanModelWithTypel(MVVM2Model.self, jsonArray1: array, "MVVM2ViewModel")
-        
+    
         tableView.reloadData()
 
     }

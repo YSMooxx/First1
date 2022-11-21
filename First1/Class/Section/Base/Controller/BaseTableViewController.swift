@@ -32,26 +32,19 @@ class BaseTableViewController:UIViewController {
     func setupDefault() {
         
         model.oy = Int((statusBarHeight).rounded())
-        
         view.backgroundColor = .white
         
         view.addSubview(tableView)
-        
         tableView.delegate = self
-        
         tableView.dataSource = self
-        
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
-//        tableView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
         
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: navHeight)
-        
         view.addSubview(self.titleView)
-        
         titleView.delegate = self
+        let titleModel = NavTitleModel()
+        titleView.model = titleModel
     }
     
     override func viewWillAppear(_ animated: Bool) {

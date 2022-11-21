@@ -18,10 +18,9 @@ import Foundation
 class NavTitleView:BaseView {
     
     weak var delegate : (NavTitleViewDelegate)?
-    
-    var titleLabel:UILabel = UILabel()
-    var leftBtn:UIButton = UIButton()
-    var sy:CGFloat = 0
+    private var titleLabel:UILabel = UILabel()
+    private var leftBtn:UIButton = UIButton()
+    private var sy:CGFloat = 0
     private var top:CGFloat {
         
         get {
@@ -57,44 +56,15 @@ class NavTitleView:BaseView {
         isUserInteractionEnabled = true
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
-        leftBtn .addTarget(self, action:#selector(changTitle), for: UIControl.Event.touchUpInside)
+        leftBtn .addTarget(self, action:#selector(backClick), for: UIControl.Event.touchUpInside)
         leftBtn.setTitleColor(.black, for: UIControl.State.normal)
     }
     
-    @objc func changTitle() {
+    @objc func backClick() {
         
         delegate?.didBackButton?()
     }
     
-    func setDateDefault() {
-        
-        titleLabel.text = model?.title
-        titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "", alpha: model?.aplha ?? 1)
-        backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "", alpha: model?.aplha ?? 1)
-        titleLabel.sizeToFit()
-        leftBtn.setImage(UIImage.svgWithName(name: model?.backImage ?? "", size: CGSize(width: 26, height: 26)), for: UIControl.State.normal)
-        leftBtn.sizeToFit()
-        
-        self.setNeedsLayout()
-        
-        self.isHidden = model?.viewHideen ?? true
-        
-        if (model.vcCount > 1) {
-            
-            model.backBtnHidden = false
-        }else {
-            
-            model.backBtnHidden = true
-        }
-        
-        leftBtn.isHidden = model.backBtnHidden
-    }
-    
-    func addSubviewDefault() {
-        
-        addSubview(titleLabel)
-        addSubview(leftBtn)
-    }
     
     func getPointFromScroll(oy:CGFloat) {
         
@@ -108,46 +78,6 @@ class NavTitleView:BaseView {
             changAlhaWithPoint(oy: oy)
         case .Other: break
             
-        }
-        
-        
-    }
-    
-    func changAlhaWithPoint(oy:CGFloat) {
-        
-        if(oy > 0 && oy < (model?.imageHeight ?? 0) - navHeight) {
-            
-            let bilie:CGFloat = oy / ((model?.imageHeight ?? 0) - navHeight)
-            
-            isHidden = false
-            
-            backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "#FFFFFF", alpha: Float(bilie))
-            titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "#FFFFFF", alpha: Float(bilie))
-            
-            model?.bilie = Float(bilie)
-            
-            delegate?.changTopWith?(status: true)
-            
-        }else if (oy >= (model?.imageHeight ?? 0) - navHeight){
-            
-            if model?.bilie ?? 0 <= 1 {
-                
-                model?.bilie = 1
-                
-                backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "#FFFFFF", alpha: 1)
-                titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "#FFFFFF", alpha: 1)
-                
-                isHidden = false
-                
-                delegate?.changTopWith?(status: false)
-            }
-            
-        }else {
-            
-            if self.isHidden != model?.viewHideen {
-                
-                self.isHidden = model?.viewHideen ?? true
-            }
         }
         
     }
@@ -203,6 +133,45 @@ class NavTitleView:BaseView {
     
     }
     
+    deinit {
+        
+        
+    }
+}
+
+//Default
+extension NavTitleView {
+    
+    func setDateDefault() {
+        
+        titleLabel.text = model?.title
+        titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "", alpha: model?.aplha ?? 1)
+        backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "", alpha: model?.aplha ?? 1)
+        titleLabel.sizeToFit()
+        leftBtn.setImage(UIImage.svgWithName(name: model?.backImage ?? "", size: CGSize(width: 26, height: 26)), for: UIControl.State.normal)
+        leftBtn.sizeToFit()
+        
+        self.setNeedsLayout()
+        
+        self.isHidden = model?.viewHideen ?? true
+        
+        if (model.vcCount > 1) {
+            
+            model.backBtnHidden = false
+        }else {
+            
+            model.backBtnHidden = true
+        }
+        
+        leftBtn.isHidden = model.backBtnHidden
+    }
+    
+    func addSubviewDefault() {
+        
+        addSubview(titleLabel)
+        addSubview(leftBtn)
+    }
+    
     func layoutSubviewsDefatult() {
         
         titleLabel.snp.makeConstraints { make in
@@ -218,9 +187,47 @@ class NavTitleView:BaseView {
         }
     }
     
+}
+
+//ScrollShow
+extension NavTitleView {
     
-    deinit {
+    func changAlhaWithPoint(oy:CGFloat) {
         
+        if(oy > 0 && oy < (model?.imageHeight ?? 0) - navHeight) {
+            
+            let bilie:CGFloat = oy / ((model?.imageHeight ?? 0) - navHeight)
+            
+            isHidden = false
+            
+            backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "#FFFFFF", alpha: Float(bilie))
+            titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "#FFFFFF", alpha: Float(bilie))
+            
+            model?.bilie = Float(bilie)
+            
+            delegate?.changTopWith?(status: true)
+            
+        }else if (oy >= (model?.imageHeight ?? 0) - navHeight){
+            
+            if model?.bilie ?? 0 <= 1 {
+                
+                model?.bilie = 1
+                
+                backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "#FFFFFF", alpha: 1)
+                titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "#FFFFFF", alpha: 1)
+                
+                isHidden = false
+                
+                delegate?.changTopWith?(status: false)
+            }
+            
+        }else {
+            
+            if self.isHidden != model?.viewHideen {
+                
+                self.isHidden = model?.viewHideen ?? true
+            }
+        }
         
     }
 }
