@@ -4,6 +4,7 @@ PODS:
     - CocoaLumberjack/Core (= 3.8.0)
   - CocoaLumberjack/Core (3.8.0)
   - HandyJSON (5.0.2)
+  - MJRefresh (3.7.5)
   - SDWebImage (5.14.1):
     - SDWebImage/Core (= 5.14.1)
   - SDWebImage/Core (5.14.1)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0)
   - HandyJSON (~> 5.0.1)
+  - MJRefresh (~> 3.7.5)
   - SDWebImage (~> 5.14.1)
   - SnapKit (~> 5.6.0)
   - SVGKit (~> 3.0.0)
@@ -25,6 +27,7 @@ SPEC REPOS:
     - Alamofire
     - CocoaLumberjack
     - HandyJSON
+    - MJRefresh
     - SDWebImage
     - SnapKit
     - SVGKit
@@ -34,11 +37,12 @@ SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   CocoaLumberjack: 78abfb691154e2a9df8ded4350d504ee19d90732
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   SDWebImage: e1b3c38f170c6100130fce6856e423ed9e5f4fce
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: dcc781777172568d76aa214bbf4969f466bd080d
+PODFILE CHECKSUM: 56af524ca75675610cfccba23a01127560fdda30
 
 COCOAPODS: 1.11.3

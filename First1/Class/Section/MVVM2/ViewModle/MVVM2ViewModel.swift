@@ -48,6 +48,7 @@ class MVVM2ViewModel:BaseViewModel {
             let image:UIImage = UIImage(named: subModel?.icon ?? "titleimage3")!
             
             height = UIScreen.main.bounds.size.width * image.size.height / image.size.width
+            
         }
         
     }

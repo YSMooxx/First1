@@ -14,7 +14,7 @@ target 'First1' do
      pod 'HandyJSON', '~> 5.0.1'
      pod 'SDWebImage', '~> 5.14.1'
      pod 'SVProgressHUD', '~> 2.2.5'
-
+     pod 'MJRefresh', '~> 3.7.5'
   target 'First1Tests' do
     inherit! :search_paths
     # Pods for testing

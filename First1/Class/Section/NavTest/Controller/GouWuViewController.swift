@@ -7,6 +7,7 @@
 
 import Foundation
 import SDWebImage
+import MJRefresh
 
 private let GouWuCellID = "GouWuCell"
 
@@ -26,6 +27,15 @@ class GouWuViewController:BaseCollectionViewController {
         
         collectionView.reloadData()
         
+    }
+    
+    func getDate1() {
+        
+        let jArray2:[Any] = [["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-2.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/jianjie.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/slider-bg-13.jpg"],["title":"棉花川贝制作，新疆长绒棉,棉花川贝制作，新疆长绒棉","image":"http://www.djy-es.com/statics/images/zhunzhe.jpg"]]
+        
+        model.jsonAddModelWithTypel(GouWuCellModel.self, jsonArray1: jArray2, "GouWuCellViewModel")
+        
+        collectionView.reloadData()
     }
     
     override func setupUI() {
@@ -48,6 +58,23 @@ class GouWuViewController:BaseCollectionViewController {
 
         titleView.model = sMode
         
+        collectionView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            
+            self.collectionView.mj_header?.beginRefreshing()
+            
+            self.getDate()
+            
+            self.collectionView.mj_header?.endRefreshing()
+        })
+        
+        collectionView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
+            
+            self.collectionView.mj_footer?.beginRefreshing()
+            
+            self.getDate1()
+            
+            self.collectionView.mj_footer?.endRefreshing()
+        })
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

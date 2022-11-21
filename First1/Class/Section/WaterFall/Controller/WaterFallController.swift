@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class WaterFallController: UIViewController {
     
@@ -44,6 +45,21 @@ class WaterFallController: UIViewController {
         titleView.delegate = self
         let titleModel = NavTitleModel()
         titleView.model = titleModel
+        
+        let header:MJRefreshNormalHeader = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(refresh))
+        
+        header.lastUpdatedTimeLabel?.isHidden = true
+        
+        collectionView.mj_header = header
+    }
+    
+    @objc func refresh() {
+        
+        self.collectionView.mj_header?.beginRefreshing()
+        
+        collectionView.reloadData()
+        
+        self.collectionView.mj_header?.endRefreshing()
     }
   
   // MARK: - ====== 初始化布局 ======
@@ -107,10 +123,10 @@ extension WaterFallController: UICollectionViewDelegate, UICollectionViewDataSou
     switch section {
         // 瀑布流
     case 0:
-      return 3
+      return 18
         // 线性
     case 1:
-      return 18
+      return 3
         // 九宫格
     default:
       return 9
@@ -144,9 +160,9 @@ extension WaterFallController: WaterfallMutiSectionDelegate {
   func heightForRowAtIndexPath(collectionView collection: UICollectionView, layout: WaterfallMutiSectionFlowLayout, indexPath: IndexPath, itemWidth: CGFloat) -> CGFloat {
     switch indexPath.section {
     case 0:
-      return 135
-    case 1:
       return CGFloat((arc4random() % 3 + 1) * 30)
+    case 1:
+      return 135
     default:
       return 80
     }
@@ -155,9 +171,9 @@ extension WaterFallController: WaterfallMutiSectionDelegate {
   func columnNumber(collectionView collection: UICollectionView, layout: WaterfallMutiSectionFlowLayout, section: Int) -> Int {
     switch section {
     case 0:
-      return 1
-    case 1:
       return 2
+    case 1:
+      return 1
     default:
       return 3
     }

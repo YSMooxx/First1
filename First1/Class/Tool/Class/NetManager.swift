@@ -48,8 +48,10 @@ class NetManager {
     /// 单例
     public class var defualt : NetManager{
         struct Static {
+            
             static let instance :NetManager = NetManager()
     }
+        
     return Static.instance
 }
     

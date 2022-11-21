@@ -20,14 +20,19 @@ class HUDManager:NSObject {
         return Static.shard
     }
     
-    func show() {
+    static func show() {
         
         SVProgressHUD.show()
     }
     
-    func dismiss() {
+    static func dismiss() {
         
         SVProgressHUD.dismiss()
+    }
+    
+    static func shouTextWithString(text:String) {
+        
+        SVProgressHUD.show(withStatus: text)
     }
 }
 

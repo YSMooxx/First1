@@ -55,7 +55,7 @@ class Test2:BaseViewController {
         
         super.viewWillDisappear(animated)
         
-        HUDManager.shard.dismiss()
+        HUDManager.dismiss()
         
         CacheManager.shard.isCancell = true
     }
@@ -71,26 +71,26 @@ class Test2:BaseViewController {
     
     @objc func clearCache() {
         
-        HUDManager.shard.show()
+        HUDManager.shouTextWithString(text: "正在清理文件")
         
         CacheManager.shard.clearCache {
             
             self.getFileSize()
             
-            HUDManager.shard.dismiss()
+            HUDManager.dismiss()
         }
         
     }
     
     func getFileSize() {
         
-        HUDManager.shard.show()
+        HUDManager.shouTextWithString(text: "正在查找文件")
         
         CacheManager.shard.getCacheSize { size1 in
             
             self.label.text = size1
             
-            HUDManager.shard.dismiss()
+            HUDManager.dismiss()
         }
     }
     
