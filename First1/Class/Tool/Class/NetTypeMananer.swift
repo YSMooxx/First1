@@ -26,8 +26,6 @@ class NetTypeMananer:NSObject {
         
         newsHomeNetworkReachabilityManager?.startListening(onUpdatePerforming: { state in
             
-            print(state)
-            
             switch state {
                     case .unknown:
                     HUDManager.shouTextWithString(text: "似乎与网络断开了连接!")
