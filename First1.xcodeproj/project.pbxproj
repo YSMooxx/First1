@@ -67,6 +67,7 @@
 		D56E81F02912572600587A03 /* MVVM2ListCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81EF2912572600587A03 /* MVVM2ListCell2.swift */; };
 		D56E81F22912574700587A03 /* MVVM2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81F12912574700587A03 /* MVVM2Model.swift */; };
 		D56E81F629125CE700587A03 /* MVVM2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E81F529125CE700587A03 /* MVVM2ViewModel.swift */; };
+		D5713264292CFA6C00CCB9DB /* 6.1@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5713263292CFA6C00CCB9DB /* 6.1@3x.jpg */; };
 		D57F685A28309BB300647F08 /* CommotTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F685928309BB200647F08 /* CommotTool.swift */; };
 		D582DE082924C15D00E44425 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D582DE072924C15D00E44425 /* CacheManager.swift */; };
 		D582DE0A2924C56400E44425 /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D582DE092924C56400E44425 /* HUDManager.swift */; };
@@ -104,6 +105,7 @@
 		D5D5B8D62921E95C003F686F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B8D52921E95C003F686F /* UIImageView+Extension.swift */; };
 		D5E99C25288E928C0025F9D1 /* YXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */; };
 		D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */; };
+		D5F79C0F292CD1A700647EEF /* testImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F79C0E292CD1A700647EEF /* testImageView.swift */; };
 		D5FA19E328C57F1A00B83CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */; };
 		D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */; };
 		D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */; };
@@ -207,6 +209,7 @@
 		D56E81EF2912572600587A03 /* MVVM2ListCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2ListCell2.swift; sourceTree = "<group>"; };
 		D56E81F12912574700587A03 /* MVVM2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2Model.swift; sourceTree = "<group>"; };
 		D56E81F529125CE700587A03 /* MVVM2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM2ViewModel.swift; sourceTree = "<group>"; };
+		D5713263292CFA6C00CCB9DB /* 6.1@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "6.1@3x.jpg"; sourceTree = "<group>"; };
 		D57F685928309BB200647F08 /* CommotTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommotTool.swift; sourceTree = "<group>"; };
 		D582DE072924C15D00E44425 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		D582DE092924C56400E44425 /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
@@ -251,6 +254,7 @@
 		D5D5B8D52921E95C003F686F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D5E99C24288E928C0025F9D1 /* YXNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXNavigationController.swift; sourceTree = "<group>"; };
 		D5ECF9EB28F1A35F00342307 /* ShengMingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShengMingVC.swift; sourceTree = "<group>"; };
+		D5F79C0E292CD1A700647EEF /* testImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testImageView.swift; sourceTree = "<group>"; };
 		D5FA19E228C57F1A00B83CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -682,6 +686,7 @@
 				D582DE072924C15D00E44425 /* CacheManager.swift */,
 				D582DE092924C56400E44425 /* HUDManager.swift */,
 				D55C1AD1292B6AE100400F54 /* NetTypeMananer.swift */,
+				D5F79C0E292CD1A700647EEF /* testImageView.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -860,6 +865,7 @@
 		D5FA231928C86A1D00B83CE0 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
+				D5713263292CFA6C00CCB9DB /* 6.1@3x.jpg */,
 				D51DA7C7291E20B70003A723 /* back.svg */,
 				D51DA7C5291E20470003A723 /* back1.svg */,
 				D51D183F28D1BECC00321B1B /* nanIcon.svg */,
@@ -1012,6 +1018,7 @@
 				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
 				D51DA7C6291E20470003A723 /* back1.svg in Resources */,
 				D51D184028D1BECC00321B1B /* nvIcon.svg in Resources */,
+				D5713264292CFA6C00CCB9DB /* 6.1@3x.jpg in Resources */,
 				D51C315628CCA973001B813F /* Leftbar_index_unselected.svg in Resources */,
 				D53043B7291900AE0001D39B /* navback.svg in Resources */,
 				D5FA231D28C86A1E00B83CE0 /* baobiao.svg in Resources */,
@@ -1197,6 +1204,7 @@
 				D590AFDC28C1DD4C0013DB2A /* ShuXingVC.swift in Sources */,
 				D5FEF59728AA2769008639E2 /* ChangLiangVC.swift in Sources */,
 				D5CDEF84283CB8BF00468664 /* DelegateController.swift in Sources */,
+				D5F79C0F292CD1A700647EEF /* testImageView.swift in Sources */,
 				D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */,
 				D5B3E0D4291A03E50071E3EA /* Test1.swift in Sources */,
 				D590AFDA28C1DCEE0013DB2A /* ShuXing.swift in Sources */,
@@ -1417,6 +1425,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1424,7 +1434,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = First1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -1445,7 +1455,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "First1/Class/OC/Section/Controller/First1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wstrict-prototypes";
 			};
 			name = Debug;
@@ -1456,6 +1466,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1463,7 +1475,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = First1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -1483,7 +1495,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "First1/Class/OC/Section/Controller/First1-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wstrict-prototypes";
 			};
 			name = Release;

@@ -9,8 +9,6 @@ import Foundation
 
 class NavTest3:BaseViewController {
     
-    let imageView:UIImageView = UIImageView()
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -29,30 +27,12 @@ class NavTest3:BaseViewController {
         
         titleView.model = sMode
         
-        imageView.image = UIImage.init(named: "back2")
-        
-        UIImage.initWithUrl(urlString: "http://www.djy-es.com/statics/images/test1.png") {image1 in
-
-//            self?.imageView.width = image1.size.width
-//            self?.imageView.height = image1.size.height
-//            self?.imageView.image = image1
-
-        }
-    
-        
-        view.addSubview(imageView)
+        let imagetest:UIImage = UIImage(named: "tabbar_bill_selected") ?? UIImage()
     }
     
     override func viewWillLayoutSubviews() {
         
-        super.viewWillLayoutSubviews()
 
-        imageView.snp.makeConstraints { make in
-
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.height.width.equalTo(100)
-        }
     }
     
 }

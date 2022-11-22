@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    
+        
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navHeight = statusBarHeight + 44
         }
         
-        NetTypeMananer.shard.startListening()
+//        NetTypeMananer.shard.startListening()
             
         return true
     }
