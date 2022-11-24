@@ -9,11 +9,14 @@ import UIKit
 
 class BaseTabBarContrller: UITabBarController {
     
+    var customIndex:Int = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         AddChileVCWithArray()
+        
     }
     
     func setupUI() {
@@ -22,11 +25,20 @@ class BaseTabBarContrller: UITabBarController {
         tabBar.tintColor = mColor
         tabBar.shadowImage = UIImage()
         tabBar.backgroundImage = UIImage()
+        delegate = self
+        
         
         if #available(iOS 11.0, *) {
             
             tabHeight = (UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 0) + self.tabBar.size.height
         
+            if(UIApplication.shared.delegate?.window??.safeAreaInsets.bottom != 0) {
+                
+                isLiuHai = true
+            }else {
+                
+                isLiuHai = false
+            }
         }else {
             
             tabHeight = self.tabBar.size.height
@@ -36,16 +48,16 @@ class BaseTabBarContrller: UITabBarController {
     
     func AddChileVCWithArray() {
         
-        let VCArray : NSArray = [["YClass":"NavTest3","YTitle":"首页","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"Test2","YTitle":"消息","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"tabViewVC","YTitle":"业务","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"MVVM2Controller","YTitle":"我的","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
+        let VCArray : NSArray = [["YClass":"WaterFallController","YTitle":"首页","YImage":"Leftbar_index_unselected","YSelImage":"Leftbar_index_selected"],["YClass":"Test2","YTitle":"消息","YImage":"Leftbar_cloud_unselected","YSelImage":"Leftbar_cloud_selected"],["YClass":"NavTest3","YTitle":"","YImage":"add-circle","YSelImage":"add-circle"],["YClass":"tabViewVC","YTitle":"业务","YImage":"Leftbar_shop_unselected","YSelImage":"Leftbar_shop_selected"],["YClass":"MVVM2Controller","YTitle":"我的","YImage":"Leftbar_mine_unselected","YSelImage":"Leftbar_mine_selected"]]
         
-        for controller in VCArray {
+        for (index,controller) in VCArray.enumerated() {
             
-            AddChileVCWithDic(dic: controller as! Dictionary<String, String>)
+            AddChileVCWithDic(index: index, dic: controller as! Dictionary<String, String>)
         }
         
     }
     
-    func AddChileVCWithDic(dic:Dictionary<String,String>) {
+    func AddChileVCWithDic(index:Int,dic:Dictionary<String,String>) {
         
         let YClass:String = dic["YClass"] ?? ""
         let YTitle:String = dic["YTitle"] ?? ""
@@ -57,13 +69,56 @@ class BaseTabBarContrller: UITabBarController {
         
         let navigationVC = BaseNavigationController(rootViewController: vcClass.init())
         
-        navigationVC.tabBarItem.image = UIImage.svgWithName(name: YImage, size: CGSize(width: 26, height: 26))
+        if index == customIndex {
+            
+            if isLiuHai {
+                
+                navigationVC.tabBarItem.image = UIImage.svgWithName(name: YImage, size: CGSize(width: 48, height: 48)).withRenderingMode(.alwaysOriginal)
+                
+                navigationVC.tabBarItem.imageInsets = UIEdgeInsets.init(top: 4, left: 0, bottom: -4, right: 0)
+                
+            }else {
+                
+                navigationVC.tabBarItem.image = UIImage.svgWithName(name: YImage, size: CGSize(width: 44, height: 44)).withRenderingMode(.alwaysOriginal)
+                
+                navigationVC.tabBarItem.imageInsets = UIEdgeInsets.init(top: 5, left: 0, bottom: -5, right: 0)
+            }
+            
+        }else {
+            
+            navigationVC.tabBarItem.image = UIImage.svgWithName(name: YImage, size: CGSize(width: 26, height: 26)).withRenderingMode(.alwaysOriginal)
+            
+            navigationVC.tabBarItem.selectedImage = UIImage.svgWithName(name: YSelImage, size: CGSize(width: 26, height: 26)).withRenderingMode(.alwaysOriginal)
+        }
         
-        navigationVC.tabBarItem.selectedImage = UIImage.svgWithName(name: YSelImage, size: CGSize(width: 26, height: 26))
+        navigationVC.tabBarItem.tag = index
         
         navigationVC.title = YTitle
         
         addChild(navigationVC)
+        
+    }
+    
+}
+
+extension BaseTabBarContrller:UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        if viewController.tabBarItem.tag == customIndex {
+            
+            let vc = NavTest3()
+            let nav = BaseNavigationController(rootViewController: vc)
+            
+            definesPresentationContext = true
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
+            return false
+        }else {
+            
+            return true
+        }
+        
         
     }
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		164F8D984B10D24E1A073187 /* Pods_First1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C838D5304B81524E70AA9FD /* Pods_First1.framework */; };
 		6C9B4F4DBA0A90F366D5FC28 /* Pods_First1_First1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */; };
+		D50362E4292DEB0C007B3C29 /* add-circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = D50362E3292DEB0B007B3C29 /* add-circle.svg */; };
 		D504A6AE291FA43A00AB0522 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6AD291FA43A00AB0522 /* BaseCollectionViewController.swift */; };
 		D504A6B3291FA4F600AB0522 /* GouWuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B2291FA4F600AB0522 /* GouWuViewController.swift */; };
 		D504A6B5291FAD5F00AB0522 /* GouWuCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B4291FAD5F00AB0522 /* GouWuCellViewModel.swift */; };
@@ -151,6 +152,7 @@
 		55DBCC07F4AAF0CF2FA568E7 /* Pods-First1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1.debug.xcconfig"; path = "Target Support Files/Pods-First1/Pods-First1.debug.xcconfig"; sourceTree = "<group>"; };
 		8868DAC80127AF90597D6E65 /* Pods-First1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First1Tests.debug.xcconfig"; path = "Target Support Files/Pods-First1Tests/Pods-First1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E4696D7EE657C4EBB28EA2 /* Pods_First1_First1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First1_First1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50362E3292DEB0B007B3C29 /* add-circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "add-circle.svg"; sourceTree = "<group>"; };
 		D504A6AD291FA43A00AB0522 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		D504A6B2291FA4F600AB0522 /* GouWuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuViewController.swift; sourceTree = "<group>"; };
 		D504A6B4291FAD5F00AB0522 /* GouWuCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuCellViewModel.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 		D5FA231928C86A1D00B83CE0 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
+				D50362E3292DEB0B007B3C29 /* add-circle.svg */,
 				D5713263292CFA6C00CCB9DB /* 6.1@3x.jpg */,
 				D51DA7C7291E20B70003A723 /* back.svg */,
 				D51DA7C5291E20470003A723 /* back1.svg */,
@@ -1025,6 +1028,7 @@
 				D51C315728CCA973001B813F /* Leftbar_shop_selected.svg in Resources */,
 				D51C315428CCA973001B813F /* Leftbar_mine_unselected.svg in Resources */,
 				D5FA231C28C86A1E00B83CE0 /* titleima.svg in Resources */,
+				D50362E4292DEB0C007B3C29 /* add-circle.svg in Resources */,
 				D51C315928CCA973001B813F /* Leftbar_cloud_unselected.svg in Resources */,
 				D51C314A28CCA80A001B813F /* quanbu.svg in Resources */,
 				D51D184128D1BECC00321B1B /* nanIcon.svg in Resources */,

@@ -1,49 +1,245 @@
 //
-//  UITabBar+Extension.swift
-//  First1
+//  UITabBar+HahnBadge.swift
+//  Hahn_Tabbar_Swfir
 //
-//  Created by New on 2022/11/3.
+//  Created by Hahn on 2019/12/2.
+//  Copyright © 2019 Hahn. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UITabBar {
-    
-    func showBadeOnItemIndex(index:Int) {
-        
-        removeBadgeOnItemIndex(index: index)
-        
-        //新建小红点
-        let badgeView = UIView()
-        badgeView.tag = 888 + index
-        badgeView.layer.cornerRadius = 5
-        badgeView.backgroundColor = UIColor.red
-        //确定小红点位置
-        let percentX = (Double(index) + 0.6) / 4
-        let x = ceilf(Float(percentX) * Float(percentX))
-        let y = ceilf(Float(percentX) * Float(percentX))
-        
-        badgeView.frame = CGRect(x: CGFloat(x), y: CGFloat(y), width: 10, height: 10)
-        
-        addSubview(badgeView)
-    }
-    
-    func hideBadgeOnItemIndex(index:Int) {
-        
-        
-        removeBadgeOnItemIndex(index: index)
-    }
-    
-    func removeBadgeOnItemIndex(index:Int) {
-        
-        for itemView in self.subviews {
-            
-            if(itemView.tag == 888 + index) {
-                
-                itemView.removeFromSuperview()
-            }
+    /**
+     tabbar  tag
+     */
+    private var badgeTag:Int! {
+        get{
+            return 1000
         }
+        set{
+            
+        }
+    }
+    
+    /**
+    运行时对应的key值
+    */
+    private struct AssociatedKeys {
+        static var kBadgeSize:String! = "kBadgeSize"
+        static var kBadgeColor:String! = "kBadgeColor"
+        static var kBadgeImage:String! = "kBadgeImage"
+        static var kBadgePoint:String! = "kBadgePoint"
+        static var kBadgeValue:String! = "kBadgeValue"
+    }
+    
+    
+    /**
+    运行时注释
+    objc_setAssociatedObject 相当于 setValue:forKey 进行关联value对象
+
+    objc_getAssociatedObject 用来读取对象
+
+    objc_AssociationPolicy  属性 是设定该value在object内的属性，即 assgin, (retain,nonatomic)...等
+
+     objc_removeAssociatedObjects 函数来移除一个关联对象，或者使用objc_setAssociatedObject函数将key指定的关联对象设置为nil。
+    
+    key：要保证全局唯一，key与关联的对象是一一对应关系。必须全局唯一。通常用@selector(methodName)作为key。
+    value：要关联的对象。
+    policy：关联策略。有五种关联策略。
+    OBJC_ASSOCIATION_ASSIGN 等价于 @property(assign)。
+    OBJC_ASSOCIATION_RETAIN_NONATOMIC等价于 @property(strong, nonatomic)。
+    OBJC_ASSOCIATION_COPY_NONATOMIC等价于@property(copy, nonatomic)。
+    OBJC_ASSOCIATION_RETAIN等价于@property(strong,atomic)。
+    OBJC_ASSOCIATION_COPY等价于@property(copy, atomic)。
+    
+    */
+    
+    
+    // 小红点size
+    public var badgeSize:CGSize! {
+        get{
+            return objc_getAssociatedObject(self, &AssociatedKeys.kBadgeSize) as? CGSize
+        }
+        set{
+            objc_setAssociatedObject(self, &AssociatedKeys.kBadgeSize, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    // 小红点图片
+    public var badgeImage:UIImage! {
+        get{
+            return objc_getAssociatedObject(self, &AssociatedKeys.kBadgeImage) as? UIImage
+        }
+        set{
+            objc_setAssociatedObject(self, &AssociatedKeys.kBadgeImage, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    // 小红点颜色
+    public var badgeColor:UIColor! {
+        get{
+            return objc_getAssociatedObject(self, &AssociatedKeys.kBadgeColor) as? UIColor
+        }
+        set{
+            objc_setAssociatedObject(self, &AssociatedKeys.kBadgeColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    // 小红点的x、y值
+    public var badgePoint:CGPoint! {
+        get{
+            return objc_getAssociatedObject(self, &AssociatedKeys.kBadgePoint) as? CGPoint
+        }
+        set{
+            objc_setAssociatedObject(self, &AssociatedKeys.kBadgePoint, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    // 小红点的数字
+    public var badgeValue:String! {
+        get{
+            return objc_getAssociatedObject(self, &AssociatedKeys.kBadgeValue) as? String
+        }
+        set{
+            objc_setAssociatedObject(self, &AssociatedKeys.kBadgeValue, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    // MARK:-显示小红点
+    public func showBadgeOnItemIndex(index:Int){
+        // 移除
+        self.removeRedPointOnIndex(index: index, animation: false)
+        
+        // 防止是空的
+        if self.badgeColor == nil {
+            self.badgeColor = UIColor()
+            self.badgeColor = UIColor.red
+        }
+        
+        if self.badgePoint == nil {
+            self.badgePoint = CGPoint()
+            self.badgePoint = CGPoint.zero
+        }
+        
+        if self.badgeSize == nil {
+            self.badgeSize = CGSize.zero
+        }
+        
+        if self.badgeImage == nil {
+            self.badgeImage = UIImage()
+        }
+        
+        if self.badgeValue == nil {
+            self.badgeValue = String()
+        }
+        
+        // 小红点背景默认值大小设置
+        if __CGSizeEqualToSize(self.badgeSize, CGSize.zero) {
+            self.badgeSize = CGSize(width: 12, height: 12)
+        }
+        
+        let barButtonView = self.getBarButttonViewWithIndex(index: index)
+        //（图片的imageView）
+        var iconView = UIView()
+        for swappableImageView in barButtonView.subviews {
+            
+            if swappableImageView.isKind(of: UIImageView.self) {
+                iconView = swappableImageView
+                break
+            }
+            
+        }
+        
+        let mar1:CGFloat = 6.25
+        let mar2:CGFloat = 2
+        
+        if self.badgeValue != nil {
+            let badgeLabel = UILabel()
+            badgeLabel.text = self.badgeValue
+            badgeLabel.backgroundColor = self.badgeColor
+            badgeLabel.textAlignment = .center
+            badgeLabel.numberOfLines = 0
+            badgeLabel.font = UIFont.systemFont(ofSize: 12)
+            badgeLabel.textColor = UIColor.white
+            badgeLabel.tag = badgeTag + 1 + index
+            badgeLabel.sizeToFit()
+            print(badgeLabel.size)
+            
+            if __CGPointEqualToPoint(self.badgePoint, CGPoint.zero) {
+                
+                badgeLabel.frame = CGRect(x: 20, y: -3, width: badgeLabel.size.width + 2 * mar1, height: badgeLabel.size.height + 2 * mar2)
+                
+            }else {
+                
+                badgeLabel.frame = CGRect(x: self.badgePoint.x, y: self.badgePoint.y, width: badgeLabel.size.width + 2 * mar1, height: badgeLabel.size.height + 2 * mar2)
+            }
+            
+            print(badgeLabel.size)
+            
+            badgeLabel.layer.cornerRadius = badgeLabel.size.height / 2
+            badgeLabel.layer.masksToBounds = true
+            
+            iconView.addSubview(badgeLabel)
+        }
+        
+    }
+    
+    // MARK:-隐藏小红点
+    public func hiddenRedPointOnIndex(index:Int, animation:Bool){
+        self.removeRedPointOnIndex(index: index, animation: animation)
+    }
+    
+    public func setNumOnIndexWithString(index:Int,text:String) {
+        
+        self.badgeValue = text
+        
+        showBadgeOnItemIndex(index: index)
+    }
+    
+    
+    private func removeRedPointOnIndex(index:Int, animation:Bool) {
+        let barButtonView = self.getBarButttonViewWithIndex(index: index)
+        
+        for swapView in barButtonView.subviews {
+            
+            if swapView.isKind(of: UIImageView.self) {
+                
+                for view1 in swapView.subviews {
+                    
+                    if view1.tag == (badgeTag + 1 + index) {
+                        
+                        if animation {
+                            UIView.animate(withDuration: 0.2, animations: {
+                                view1.transform = CGAffineTransform(translationX: 2, y: 2)
+                                view1.alpha = 0
+                            }) { (finished) in
+                                view1.removeFromSuperview()
+                            }
+                        }else{
+                            view1.removeFromSuperview()
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    // 获取barButtonView
+    private func getBarButttonViewWithIndex(index:Int) -> UIView {
+
+        if let itemss = self.items {
+            let item = itemss[index]
+            let barButtonView = item.value(forKey: "view")
+            return barButtonView as! UIView
+        }
+        
+        let vw = UIView()
+        return vw
     }
     
 }

@@ -23,6 +23,18 @@ class WaterFallController: UIViewController {
         setupParamter()
         setupUI()
         layoutPageSubviews()
+        settabbarNum()
+    }
+    
+    func settabbarNum() {
+        
+        let badgePoint = CGPoint(x: 18, y: -3)
+        self.tabBarController?.tabBar.badgePoint = badgePoint
+        self.tabBarController?.tabBar.badgeSize = CGSize(width: 20, height: 20)
+        self.tabBarController?.tabBar.badgeColor = UIColor.colorWithHex(hexStr: "#FF0033")
+        self.tabBarController?.tabBar.badgeValue = "99+"
+        self.tabBarController?.tabBar.showBadgeOnItemIndex(index: 0)
+        self.tabBarController?.tabBar.setNumOnIndexWithString(index: 0, text: "11")
     }
   
   // MARK: - ====== View Initialization 初始化界面 ======
@@ -51,6 +63,7 @@ class WaterFallController: UIViewController {
         header.lastUpdatedTimeLabel?.isHidden = true
         
         collectionView.mj_header = header
+        
     }
     
     @objc func refresh() {

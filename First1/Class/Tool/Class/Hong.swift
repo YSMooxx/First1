@@ -25,6 +25,8 @@ var tabHeight:CGFloat = 49
 
 var navHeight:CGFloat = 0
 
+var isLiuHai = false
+
 var statusBarHeight:CGFloat = 0
 
 let RW:CGFloat = RScreenW()

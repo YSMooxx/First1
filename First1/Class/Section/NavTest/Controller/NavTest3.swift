@@ -26,13 +26,19 @@ class NavTest3:BaseViewController {
         sMode.vcCount = navigationController?.children.count ?? 1
         
         titleView.model = sMode
-        
-        let imagetest:UIImage = UIImage(named: "tabbar_bill_selected") ?? UIImage()
+    
     }
     
     override func viewWillLayoutSubviews() {
         
 
+    }
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        dismiss(animated: true)
     }
     
 }
