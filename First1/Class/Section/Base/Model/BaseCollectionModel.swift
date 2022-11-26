@@ -11,5 +11,5 @@ import HandyJSON
 
 class BaseCollectionModel:BaseModel {
     
-    
+    var city:String = ""
 }

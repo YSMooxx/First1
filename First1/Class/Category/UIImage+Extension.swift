@@ -13,7 +13,7 @@ import SDWebImage
 extension UIImage {
     
     //image切圆角
-    func isRoundCorner(radius: CGFloat = 3, byRoundingCorners corners: UIRectCorner = .allCorners, imageSize: CGSize?) -> UIImage? {
+    func isRoundCorner(radius: CGFloat, byRoundingCorners corners: UIRectCorner = .allCorners, imageSize: CGSize?) -> UIImage? {
             let weakSize = imageSize ?? size
             let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: weakSize)
             // 开始图形上下文

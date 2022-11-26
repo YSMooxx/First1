@@ -28,13 +28,13 @@ class WaterFallController: UIViewController {
     
     func settabbarNum() {
         
-        let badgePoint = CGPoint(x: 18, y: -3)
+        let badgePoint = CGPoint(x: 19, y: -4)
         self.tabBarController?.tabBar.badgePoint = badgePoint
         self.tabBarController?.tabBar.badgeSize = CGSize(width: 20, height: 20)
         self.tabBarController?.tabBar.badgeColor = UIColor.colorWithHex(hexStr: "#FF0033")
         self.tabBarController?.tabBar.badgeValue = "99+"
         self.tabBarController?.tabBar.showBadgeOnItemIndex(index: 0)
-        self.tabBarController?.tabBar.setNumOnIndexWithString(index: 0, text: "11")
+        self.tabBarController?.tabBar.setNumOnIndexWithString(index: 0, text: "1")
     }
   
   // MARK: - ====== View Initialization 初始化界面 ======
@@ -56,7 +56,11 @@ class WaterFallController: UIViewController {
         view.addSubview(self.titleView)
         titleView.delegate = self
         let titleModel = NavTitleModel()
+        titleModel.vcCount = 2
+        titleModel.backImage = "map"
+        titleModel.btnSize = CGSize(width: 18, height: 18)
         titleView.model = titleModel
+        titleView.setletfContetn(text: "定位")
         
         let header:MJRefreshNormalHeader = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(refresh))
         
@@ -122,6 +126,22 @@ extension WaterFallController:NavTitleViewDelegate {
     func setTableViewWith(top: CGFloat) {
         
         collectionView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+    }
+    
+    func didBackButton() {
+        
+        let vc = CityViewController()
+        
+        vc.callBack = {[weak self] (city) in
+            
+            self?.titleView.setletfContetn(text: city)
+        }
+        
+        let nav = BaseNavigationController(rootViewController: vc)
+        definesPresentationContext = true
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
+        
     }
 }
 

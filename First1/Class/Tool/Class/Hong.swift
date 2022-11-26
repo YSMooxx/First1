@@ -17,7 +17,7 @@ let mColor:UIColor = UIColor.colorWithHex(hexStr: "#41AF9B")
 
 let tColor:UIColor = UIColor.colorWithHex(hexStr: "#f8f8f8")
 
-let bColor:UIColor = UIColor.colorWithHex(hexStr: "#327864")
+let bColor:UIColor = UIColor.colorWithHex(hexStr: "#F03752")
 
 let mColorA:UIColor = UIColor.coloWithHex(hexStr: "#41AF9B", alpha: 0.1)
 
@@ -42,3 +42,4 @@ func RScreenH() -> CGFloat {
     
     return ScreenH / 667
 }
+

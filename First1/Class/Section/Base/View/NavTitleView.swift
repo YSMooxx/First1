@@ -18,8 +18,8 @@ import Foundation
 class NavTitleView:BaseView {
     
     weak var delegate : (NavTitleViewDelegate)?
-    private var titleLabel:UILabel = UILabel()
-    private var leftBtn:UIButton = UIButton()
+    private lazy var titleLabel:UILabel = UILabel()
+    private lazy var leftBtn:UIButton = UIButton()
     private var sy:CGFloat = 0
     private var top:CGFloat {
         
@@ -50,7 +50,7 @@ class NavTitleView:BaseView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
+    private func setupUI() {
         
         backgroundColor = mColor
         isUserInteractionEnabled = true
@@ -65,6 +65,12 @@ class NavTitleView:BaseView {
         delegate?.didBackButton?()
     }
     
+    func setletfContetn(text:String) {
+        
+        leftBtn.setTitle(text, for: UIControl.State.normal)
+        leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        leftBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+    }
     
     func getPointFromScroll(oy:CGFloat) {
         
@@ -142,13 +148,13 @@ class NavTitleView:BaseView {
 //Default
 extension NavTitleView {
     
-    func setDateDefault() {
+    private func setDateDefault() {
         
         titleLabel.text = model?.title
         titleLabel.textColor = UIColor.coloWithHex(hexStr: model?.titleColor ?? "", alpha: model?.aplha ?? 1)
         backgroundColor = UIColor.coloWithHex(hexStr: model?.backColor ?? "", alpha: model?.aplha ?? 1)
         titleLabel.sizeToFit()
-        leftBtn.setImage(UIImage.svgWithName(name: model?.backImage ?? "", size: CGSize(width: 26, height: 26)), for: UIControl.State.normal)
+        leftBtn.setImage(UIImage.svgWithName(name: model?.backImage ?? "", size: model.btnSize), for: UIControl.State.normal)
         leftBtn.sizeToFit()
         
         self.setNeedsLayout()
@@ -166,13 +172,13 @@ extension NavTitleView {
         leftBtn.isHidden = model.backBtnHidden
     }
     
-    func addSubviewDefault() {
+    private func addSubviewDefault() {
         
         addSubview(titleLabel)
         addSubview(leftBtn)
     }
     
-    func layoutSubviewsDefatult() {
+    private func layoutSubviewsDefatult() {
         
         titleLabel.snp.makeConstraints { make in
             
@@ -192,7 +198,7 @@ extension NavTitleView {
 //ScrollShow
 extension NavTitleView {
     
-    func changAlhaWithPoint(oy:CGFloat) {
+    private func changAlhaWithPoint(oy:CGFloat) {
         
         if(oy > 0 && oy < (model?.imageHeight ?? 0) - navHeight) {
             

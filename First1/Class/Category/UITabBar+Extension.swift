@@ -150,9 +150,6 @@ extension UITabBar {
             
         }
         
-        let mar1:CGFloat = 6.25
-        let mar2:CGFloat = 2
-        
         if self.badgeValue != nil {
             let badgeLabel = UILabel()
             badgeLabel.text = self.badgeValue
@@ -163,18 +160,27 @@ extension UITabBar {
             badgeLabel.textColor = UIColor.white
             badgeLabel.tag = badgeTag + 1 + index
             badgeLabel.sizeToFit()
-            print(badgeLabel.size)
+            
+            let mar1:CGFloat = 1
+            var mar2:CGFloat = 1
+            
+            if badgeLabel.size.height > badgeLabel.size.width {
+                
+                mar2 = (badgeLabel.size.height + 2 * mar1 - badgeLabel.width) / 2
+            }else {
+                
+                mar2 = 3.25
+            }
             
             if __CGPointEqualToPoint(self.badgePoint, CGPoint.zero) {
                 
-                badgeLabel.frame = CGRect(x: 20, y: -3, width: badgeLabel.size.width + 2 * mar1, height: badgeLabel.size.height + 2 * mar2)
+                badgeLabel.frame = CGRect(x: 19, y: -4, width: badgeLabel.size.width + 2 * mar2, height: badgeLabel.size.height + 2 * mar1)
                 
             }else {
                 
-                badgeLabel.frame = CGRect(x: self.badgePoint.x, y: self.badgePoint.y, width: badgeLabel.size.width + 2 * mar1, height: badgeLabel.size.height + 2 * mar2)
+                badgeLabel.frame = CGRect(x: self.badgePoint.x, y: self.badgePoint.y, width: badgeLabel.size.width + 2 * mar2, height: badgeLabel.size.height + 2 * mar1)
             }
             
-            print(badgeLabel.size)
             
             badgeLabel.layer.cornerRadius = badgeLabel.size.height / 2
             badgeLabel.layer.masksToBounds = true

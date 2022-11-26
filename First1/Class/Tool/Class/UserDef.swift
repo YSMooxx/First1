@@ -23,7 +23,6 @@ class UserDef:NSObject {
         self.num = defaults.value(forKey: "num") as? String ?? ""
         self.wRatio = defaults.value(forKey: "wRatio") as? CGFloat ?? 1
         self.hRatio = defaults.value(forKey: "hRatio") as? CGFloat ?? 1
-        
     }
     
     public class var userDef : UserDef{

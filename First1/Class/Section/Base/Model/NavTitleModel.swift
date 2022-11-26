@@ -29,5 +29,6 @@ class NavTitleModel:BaseModel {
     var backImage:String = "back"
     var bilie:Float = 0
     var backColorClear:Bool = false
+    var btnSize = CGSize(width: 26, height: 26)
     
 }
