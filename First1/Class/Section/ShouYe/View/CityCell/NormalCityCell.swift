@@ -26,6 +26,8 @@ class NormalCityCell:UITableViewCell {
     
     private func setupUI() {
         
+        selectionStyle = .none
+        
         titleLabel.textColor = UIColor.black
         titleLabel.font = UIFont.systemFont(ofSize: 15)
     }

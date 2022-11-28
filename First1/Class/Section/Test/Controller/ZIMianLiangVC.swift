@@ -27,10 +27,6 @@ class ZIMianLiangVC:UIViewController {
     
     func read1() {
         
-        print("name的值:\(UserDef.userDef.name!)")
-        print("num的值:\(UserDef.userDef.num!)")
-        print("wRatio的值:\(UserDef.userDef.wRatio)")
-        print("hRatio的值:\(UserDef.userDef.hRatio)")
         print(RScreenH)
         print(RScreenW)
     }

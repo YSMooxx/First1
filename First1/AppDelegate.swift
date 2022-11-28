@@ -44,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navHeight = statusBarHeight + 44
         }
         
-//        NetTypeMananer.shard.startListening()
+        UserDef.shard.hRatio = ScreenH / 896
+        UserDef.saveUserDefToSandBox()
             
         return true
     }

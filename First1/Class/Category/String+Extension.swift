@@ -29,4 +29,53 @@ extension String {
         
     }
     
+    func isIncludeChineseIn() -> Bool {
+        
+        for (_, value) in self.enumerated() {
+            
+            if ("\u{4E00}" <= value  && value <= "\u{9FA5}") {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func chineseToPinyin() -> String {
+        
+        let stringRef = NSMutableString(string: self) as CFMutableString
+        // 转换为带音标的拼音
+        CFStringTransform(stringRef,nil, kCFStringTransformToLatin, false)
+        // 去掉音标
+        CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false)
+        let pinyin = stringRef as String
+        
+        return pinyin
+    }
+    
+    func getShouZiMu() -> String {
+        
+        let result = self.components(separatedBy: " ").map { String($0.prefix(1))}.joined()
+        
+        return result
+    }
+    
+    var removeAllSapce: String {
+        
+        var string:String = ""
+        
+        for c in self {
+            
+            if c == " " || c == " " {
+                
+                continue
+            }else {
+                
+                string = string + String(c)
+            }
+        }
+        
+        return string
+    }
+    
 }

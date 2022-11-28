@@ -15,8 +15,6 @@ class testImageView:UIImageView {
         super.init(frame: frame)
         
         setupUI()
-        
-        print("创建")
     }
     
     func setupUI() {

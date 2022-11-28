@@ -22,9 +22,8 @@ class CityTitleView:BaseView {
     
     private var top:CGFloat = statusBarHeight
     
-    private lazy var searchView:UISearchBar = UISearchBar()
+    private lazy var searchView:UITextField = UITextField()
     private lazy var titleLabel:UILabel = UILabel()
-    private lazy var tipLabel:UILabel = UILabel()
     private lazy var leftBtn:UIButton = UIButton()
     private lazy var cancelBtn:UIButton = UIButton()
     
@@ -48,15 +47,22 @@ class CityTitleView:BaseView {
         
         //searchView
         searchView.delegate = self
-        searchView.backgroundImage = UIImage()
-        let image = UIImage(named: "back")
-        searchView.setSearchFieldBackgroundImage(image?.isRoundCorner(radius: 5, imageSize:  CGSize(width: ScreenW - 14, height: 35)), for: UIControl.State.normal)
-        searchView.frame = CGRect(x: 7, y: navHeight, width: ScreenW - 14, height: 35)
+        searchView.backgroundColor = tColor
+        searchView.font = UIFont.systemFont(ofSize: 15)
+        searchView.frame = CGRect(x: 15, y: navHeight, width: ScreenW - 30, height: 35)
+        searchView.layer.cornerRadius = 5
+        searchView.layer.masksToBounds = true
+        searchView.placeholder = "输入城市或区县名称"
+        let wh:CGFloat = 16
+        let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: searchView.size.height, height: searchView.size.height))
+        let imageView:UIImageView = UIImageView(frame: CGRect(x: (searchView.size.height - wh) / 2, y: (searchView.size.height - wh) / 2, width: wh, height: wh))
+        imageView.image = UIImage.svgWithName(name: "search",size: CGSize(width: wh, height: wh))
+        leftView.addSubview(imageView)
+        searchView.leftView = leftView
+        searchView.leftViewMode = .always
+        searchView.returnKeyType = .search
+        searchView.addTarget(self, action: #selector(textViewDidChange), for: UIControl.Event.editingChanged)
         
-        //提示label
-        tipLabel.textColor = .gray
-        tipLabel.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.bold)
-        tipLabel.text = "输入城市或区县名称"
         //标题label
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
@@ -78,7 +84,6 @@ class CityTitleView:BaseView {
         addSubview(titleLabel)
         addSubview(leftBtn)
         addSubview(searchView)
-        addSubview(tipLabel)
         addSubview(cancelBtn)
     }
     
@@ -87,20 +92,33 @@ class CityTitleView:BaseView {
         delegate?.didBackButton?()
     }
     
+    @objc func textViewDidChange(textView:UITextView) {
+        
+        delegate?.searchViewDidChange?(text: textView.text ?? "")
+        
+        if textView.text?.count ?? 0 >= 1 {
+            
+            delegate?.searchViewBeginEdit?()
+        }else {
+            
+            delegate?.searchViewEndEdit?()
+        }
+    }
+    
     @objc func cancelClick() {
         
-        tipLabel.isHidden = false
         searchView.resignFirstResponder()
         searchView.text = ""
         UIView.animate(withDuration: 0.3) {
             
-            self.searchView.width = ScreenW - 14
+            self.searchView.width = ScreenW - 30
             self.cancelBtn.isHidden = true
         } completion: { Bool in
             
-            self.searchView.width = ScreenW - 14
+            self.searchView.width = ScreenW - 30
             self.cancelBtn.isHidden = true
         }
+        
         delegate?.searchViewEndEdit?()
     }
     
@@ -131,12 +149,6 @@ class CityTitleView:BaseView {
             make.top.equalToSuperview().offset(top)
         }
         
-        tipLabel.snp.makeConstraints { make in
-
-            make.centerY.equalTo(searchView)
-            make.left.equalTo(searchView).offset(40)
-        }
-        
         cancelBtn.snp.makeConstraints { make in
 
             make.centerY.equalTo(searchView)
@@ -146,42 +158,36 @@ class CityTitleView:BaseView {
     
 }
 
-extension CityTitleView:UISearchBarDelegate {
+extension CityTitleView:UITextFieldDelegate {
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         
         UIView.animate(withDuration: 0.3) {
             
-            self.searchView.width = ScreenW - 49
+            self.searchView.width = ScreenW - 65
             
         } completion: { Bool in
             
-            self.searchView.width = ScreenW - 49
+            self.searchView.width = ScreenW - 65
             self.cancelBtn.isHidden = false
-        }
-        
-    }
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        delegate?.searchViewDidChange?(text: searchBar.text ?? "")
-        
-        if searchText.count >= 1 {
-            
-            tipLabel.isHidden = true
-            delegate?.searchViewBeginEdit?()
-        }else {
-            
-            tipLabel.isHidden = false
-            delegate?.searchViewEndEdit?()
         }
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         model?.status = .searchClick
         searchView.resignFirstResponder()
+        
+        return true
     }
     
+}
+
+extension CityTitleView {
+    
+    func resign() {
+
+        searchView.resignFirstResponder()
+    }
     
 }

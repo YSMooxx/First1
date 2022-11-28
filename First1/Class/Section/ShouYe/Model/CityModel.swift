@@ -27,12 +27,43 @@ class CityModel:BaseModel {
         return array ?? []
     }()
     
-    //所有城市
+    
+    //所有城市Dic
     lazy var allCityDic: [String: [String]] = { () -> [String : [String]] in
         let path = Bundle.main.path(forResource: "cities.plist", ofType: nil)
         let dic = NSDictionary(contentsOfFile: path ?? "") as? [String: [String]]
         return dic ?? [:]
         }()
+    
+    //所有城市
+    lazy var allCityArray:[String] = {
+        var allArray:[String] = []
+        for array in allCityDic.values {
+            allArray.append(contentsOf: array)
+        }
+        return allArray
+    }()
+    
+    //所有城市pinyin
+    lazy var allCityPYArray:[String] = {
+        var allArray:[String] = []
+        for city in allCityArray {
+            let pin = city.chineseToPinyin().removeAllSapce
+            allArray.append(pin)
+            
+        }
+        return allArray
+    }()
+    
+    //所有城市pinyin缩写
+    lazy var allCityPYSXArray:[String] = {
+        var allArray:[String] = []
+        for city in allCityArray {
+            let pin = city.chineseToPinyin().getShouZiMu()
+            allArray.append(pin)
+        }
+        return allArray
+    }()
     
     //标题
     lazy var titleArray: [String] = { () -> [String] in
@@ -42,9 +73,22 @@ class CityModel:BaseModel {
         }
         // 标题排序
         array.sort()
-        array.insert("热门", at: 0)
-        array.insert("最近", at: 0)
-        array.insert("当前", at: 0)
+        array.insert("热门城市", at: 0)
+        array.insert("最近选择", at: 0)
+        array.insert("当前定位", at: 0)
+        return array
+    }()
+    
+    lazy var titleArray2: [String] = { () -> [String] in
+       var array = [String]()
+        for str in allCityDic.keys {
+            array.append(str)
+        }
+        // 标题排序
+        array.sort()
+        array.insert("火", at: 0)
+        array.insert("☆", at: 0)
+        array.insert("▲", at: 0)
         return array
     }()
     

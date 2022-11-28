@@ -60,7 +60,7 @@ class WaterFallController: UIViewController {
         titleModel.backImage = "map"
         titleModel.btnSize = CGSize(width: 18, height: 18)
         titleView.model = titleModel
-        titleView.setletfContetn(text: "定位")
+        titleView.setletfContetn(text: UserDef.shard.xCity ?? "")
         
         let header:MJRefreshNormalHeader = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(refresh))
         
@@ -134,6 +134,8 @@ extension WaterFallController:NavTitleViewDelegate {
         
         vc.callBack = {[weak self] (city) in
             
+            UserDef.shard.xCity = city
+            UserDef.saveUserDefToSandBox()
             self?.titleView.setletfContetn(text: city)
         }
         

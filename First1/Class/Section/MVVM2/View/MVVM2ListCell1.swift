@@ -29,7 +29,6 @@ class MVVM2ListCell1:UITableViewCell {
     //setupUI
     func setupUI() {
     
-        
         selectedBackgroundView = UIView.init()
         selectedBackgroundView?.backgroundColor = mColorA
         

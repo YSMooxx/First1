@@ -51,7 +51,7 @@ class latelyCityCell:UITableViewCell {
             let btn = UIButton(frame: CGRect(x: left + btnMargin + CGFloat(column) * (btnWidth + btnMargin), y: top1 + CGFloat(row) * (btnHeight + btnMargin), width: btnWidth, height: btnHeight))
             btn.setTitle(hotCities[i], for: .normal)
             btn.setTitleColor(.black, for: .normal)
-            btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             btn.backgroundColor = UIColor.coloWithHex(hexStr: "#808080", alpha: 0.3)
             btn .addTarget(self, action: #selector(btnClick(btn:)), for: .touchUpInside)
             contentView.addSubview(btn)

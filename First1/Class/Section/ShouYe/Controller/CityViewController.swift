@@ -28,7 +28,7 @@ class CityViewController:UIViewController {
         
         super.viewDidLoad()
         
-        self.setupUI()
+        setupUI()
     }
     
     func setupUI() {
@@ -54,36 +54,7 @@ class CityViewController:UIViewController {
         
         view.addSubview(resultView)
         resultView.isHidden = true
-    }
-    
-    func writeTolatelyCities(city:String) {
-        
-        let filePath = NSHomeDirectory().appending("/Documents/latelyCities.plist")
-        
-        let array:NSMutableArray?
-        
-        if model.latelyCityArray.count == 0 {
-            
-            array = NSMutableArray()
-            
-        }else {
-            
-            for city1 in model.latelyCityArray {
-
-                if city1 == city {
-
-                    return
-                }
-            }
-            
-            array = NSMutableArray(contentsOfFile: filePath)
-        
-        }
-        
-        array?.add(city)
-        
-        array?.write(toFile:filePath ,atomically:true)
-        
+        resultView.zDelegate = self
     }
 
     override func viewWillLayoutSubviews() {
@@ -103,6 +74,91 @@ class CityViewController:UIViewController {
         }
     }
     
+}
+
+extension CityViewController {
+    
+    func writeTolatelyCities(city:String) {
+        
+        let filePath = NSHomeDirectory().appending("/Documents/latelyCities.plist")
+        
+        let array:NSMutableArray?
+        
+        if model.latelyCityArray.count == 0 {
+            
+            array = NSMutableArray()
+            
+            array?.add(city)
+            
+        }else {
+            
+            for city1 in model.latelyCityArray {
+                
+                if city1 == city {
+                    
+                    return
+                }
+            }
+            
+            array = NSMutableArray(contentsOfFile: filePath)
+            
+            array?.add(city)
+            
+            if array?.count ?? 0 > 5 {
+                
+                array?.removeObject(at: 0)
+            }
+        }
+        
+        array?.write(toFile:filePath ,atomically:true)
+        
+    }
+    
+    func dealStringReturnArray(text:String) -> [String]{
+        
+        var array:[String] = []
+        
+        if text.isIncludeChineseIn() {
+            
+            for str in model.allCityArray {
+                
+                if str.contains(text) {
+                    
+                    array.append(str)
+                }
+            }
+        
+        }else {
+            
+            let text1 = text.lowercased()
+            
+            let text2 = text1.removeAllSapce
+            
+            print(text2)
+            
+            for (index,str) in model.allCityPYSXArray.enumerated() {
+                
+                if str.contains(text2) {
+                    
+                    array.append(model.allCityArray[index])
+                }
+            }
+            
+            if array.count == 0 {
+                
+                for (index,str) in model.allCityPYArray.enumerated() {
+                    
+                    if str.contains(text2) {
+                        
+                        array.append(model.allCityArray[index])
+                    }
+                }
+            }
+            
+        }
+        
+        return array
+    }
 }
 
 extension CityViewController:UITableViewDelegate,UITableViewDataSource {
@@ -153,7 +209,7 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: NormalCityCellID, for: indexPath) as! NormalCityCell
             
-            cell.content = "成都"
+            cell.content = UserDef.shard.xCity ?? ""
             
             return cell
         case 1 :
@@ -173,8 +229,8 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
             
             cell.callBack = {[weak self] (city) in
                 
+                self?.callBack(String(city))
                 self?.writeTolatelyCities(city: city)
-                
                 self?.dismiss(animated: true)
             }
             
@@ -186,7 +242,6 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
             let key = model.titleArray[indexPath.section]
             
             cell.content = model.allCityDic[key]![indexPath.row]
-            
             
             return cell
         }
@@ -213,7 +268,7 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
     //右边索引
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         
-        return model.titleArray
+        return model.titleArray2
     }
     
     // section头视图
@@ -232,6 +287,11 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return model.sectionMargin
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        titleView.cancelClick()
     }
     
 }
@@ -255,7 +315,24 @@ extension CityViewController:CityTitleViewDelegate {
     
     func searchViewDidChange(text: String) {
         
-        
+        resultView.setupWithArray(array: dealStringReturnArray(text: text))
     }
 
+}
+
+extension CityViewController:searchResultViewDelegate {
+    
+    func didBeginScroll() {
+        
+        titleView.resign()
+    }
+    
+    func didSelectCity(city: String) {
+        
+        writeTolatelyCities(city: city)
+        
+        callBack(String(city))
+        
+        dismiss(animated: true)
+    }
 }

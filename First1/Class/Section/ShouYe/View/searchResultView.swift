@@ -8,13 +8,26 @@
 import Foundation
 import UIKit
 
-private let cellID = "cell"
+private let NormalCityCellID = "NormalCityCell"
 
-class searchResultView:UITableView {
+@objc protocol searchResultViewDelegate : NSObjectProtocol {
     
-    override init(frame: CGRect, style: UITableView.Style) {
+    @objc optional func didBeginScroll()  -> Void
+    @objc optional func didSelectCity(city:String)  -> Void
+
+}
+
+class searchResultView:UIView {
     
-        super.init(frame: frame, style: style)
+    weak var zDelegate : (searchResultViewDelegate)?
+    
+    var tipView:BaseTipView = BaseTipView()
+    
+    var tableView:UITableView = UITableView()
+    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
         
         setupUI()
     }
@@ -24,24 +37,60 @@ class searchResultView:UITableView {
     }
     
     func setupUI() {
-        register(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        self.dataSource = self
-        self.delegate = self
+        
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = .white
+        tableView.register(NormalCityCell.self, forCellReuseIdentifier: NormalCityCellID)
+        tableView.dataSource = self
+        tableView.delegate = self
+        addSubview(tableView)
+        
+        tipView.isHidden = true
+        addSubview(tipView)
+    }
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        
+        tableView.frame = self.bounds
+        
+        tipView.frame = self.bounds
+    }
+    
+    var resultArray:[String]? = []
+    
+    public func setupWithArray(array:[String]) {
+        
+        resultArray = array
+        
+        if array.count == 0 {
+            
+            tipView.isHidden = false
+        }else {
+            
+            tipView.isHidden = true
+        }
+        
+        tableView.reloadData()
     }
 
 }
 
 extension searchResultView:UITableViewDelegate,UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return resultArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: NormalCityCellID) as! NormalCityCell
         
-        cell.textLabel?.text = String(indexPath.row)
+        let text:String = resultArray?[indexPath.row] ?? ""
+        
+        cell.content = text
         
         return cell
         
@@ -49,7 +98,12 @@ extension searchResultView:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        zDelegate?.didSelectCity?(city: resultArray?[indexPath.row] ?? "")
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
+        zDelegate?.didBeginScroll?()
     }
     
 }
