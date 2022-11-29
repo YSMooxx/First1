@@ -96,6 +96,8 @@
 		D590AFDE28C1F5770013DB2A /* FangFaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFDD28C1F5770013DB2A /* FangFaVC.swift */; };
 		D590AFF828C2F9620013DB2A /* SVGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590AFF728C2F9620013DB2A /* SVGVC.swift */; };
 		D590B00E28C33A560013DB2A /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D590B00D28C33A550013DB2A /* MessageVC.m */; };
+		D59BA78A2935991B00B451F6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BA7892935991B00B451F6 /* LocationManager.swift */; };
+		D59BA78E2935F28E00B451F6 /* gaodeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BA78D2935F28E00B451F6 /* gaodeDataModel.swift */; };
 		D59E04B828C9E25200F5C0AF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D59E04B628C9E25200F5C0AF /* Account.m */; };
 		D59E04BA28C9E2A200F5C0AF /* UserDefaultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E04B928C9E2A200F5C0AF /* UserDefaultsVC.swift */; };
 		D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E04BD28C9E73D00F5C0AF /* UserDef.swift */; };
@@ -252,6 +254,8 @@
 		D590B00B28C339250013DB2A /* MessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
 		D590B00C28C33A550013DB2A /* First1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First1-Bridging-Header.h"; sourceTree = "<group>"; };
 		D590B00D28C33A550013DB2A /* MessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
+		D59BA7892935991B00B451F6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D59BA78D2935F28E00B451F6 /* gaodeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaodeDataModel.swift; sourceTree = "<group>"; };
 		D59E04B628C9E25200F5C0AF /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		D59E04B728C9E25200F5C0AF /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		D59E04B928C9E2A200F5C0AF /* UserDefaultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsVC.swift; sourceTree = "<group>"; };
@@ -532,6 +536,7 @@
 		D51D183828D074FC00321B1B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D59BA78D2935F28E00B451F6 /* gaodeDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				D582DE092924C56400E44425 /* HUDManager.swift */,
 				D55C1AD1292B6AE100400F54 /* NetTypeMananer.swift */,
 				D5F79C0E292CD1A700647EEF /* testImageView.swift */,
+				D59BA7892935991B00B451F6 /* LocationManager.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -1352,6 +1358,7 @@
 				D5FEF5C428B5B8AD008639E2 /* ZiDianVC.swift in Sources */,
 				D5377FD1290FA32F00E4A620 /* MVVMViewModel.swift in Sources */,
 				D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */,
+				D59BA78A2935991B00B451F6 /* LocationManager.swift in Sources */,
 				D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */,
 				D50498CF292F3E090089AC3F /* searchResultView.swift in Sources */,
 				D5C615AD29349EBA00E6D785 /* BaseTipView.swift in Sources */,
@@ -1364,6 +1371,7 @@
 				D5D5B8D42921D8B1003F686F /* ViewController.swift in Sources */,
 				D590B00E28C33A560013DB2A /* MessageVC.m in Sources */,
 				D504A6B3291FA4F600AB0522 /* GouWuViewController.swift in Sources */,
+				D59BA78E2935F28E00B451F6 /* gaodeDataModel.swift in Sources */,
 				D56E81EA29124A2900587A03 /* MVVM2Controller.swift in Sources */,
 				D5B3E0C6291A02CC0071E3EA /* UIView+Frame.swift in Sources */,
 				D56E81F629125CE700587A03 /* MVVM2ViewModel.swift in Sources */,
@@ -1554,6 +1562,10 @@
 				DEVELOPMENT_TEAM = NL8A4FJ48B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = First1/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1595,6 +1607,10 @@
 				DEVELOPMENT_TEAM = NL8A4FJ48B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = First1/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

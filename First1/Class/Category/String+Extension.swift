@@ -78,4 +78,31 @@ extension String {
         return string
     }
     
+    public func getCityNameRemoveLast() -> String {
+        
+        if self.contains("市") && self.count >= 3 {
+            
+            let count = self.count - 1
+            
+            return subString(to:count)
+        }else {
+            
+            return self
+        }
+    }
+    
+    public func subString(to index:Int) -> String {
+        
+        if(self.count > index) {
+            
+            let endindex = self.index(self.startIndex, offsetBy: index)
+            let subString = self[self.startIndex..<endindex]
+            return String(subString)
+        }else {
+            
+            return self
+        }
+        
+    }
+    
 }

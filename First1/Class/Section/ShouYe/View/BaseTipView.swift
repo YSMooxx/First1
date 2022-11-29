@@ -32,8 +32,7 @@ class BaseTipView:UIView {
     private func setupUI() {
         
         backgroundColor = mColor
-        
-        self.isUserInteractionEnabled = false
+        isUserInteractionEnabled = false
         
         tipImageView.image = UIImage(named: "view_off")
         
@@ -46,7 +45,6 @@ class BaseTipView:UIView {
         tipLabel2.textColor = tColor
         tipLabel2.font = UIFont.systemFont(ofSize: 14)
         tipLabel2.sizeToFit()
-        
     }
     
     private func addsubview1() {

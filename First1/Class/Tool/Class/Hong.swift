@@ -43,3 +43,8 @@ func RScreenH() -> CGFloat {
     return ScreenH / 667
 }
 
+#if !DEBUG
+    public func print(_ items: Any...) {
+    }
+
+#endif

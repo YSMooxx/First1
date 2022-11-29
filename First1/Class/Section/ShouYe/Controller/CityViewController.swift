@@ -42,6 +42,7 @@ class CityViewController:UIViewController {
         showTablewView.register(latelyCityCell.self, forCellReuseIdentifier: latelyCityCellID)
         showTablewView.sectionIndexColor = .gray
         if #available(iOS 15.0, *) {
+            
             showTablewView.sectionHeaderTopPadding = 0;
         }
         view.addSubview(showTablewView)
@@ -111,7 +112,6 @@ extension CityViewController {
         }
         
         array?.write(toFile:filePath ,atomically:true)
-        
     }
     
     func dealStringReturnArray(text:String) -> [String]{
@@ -133,8 +133,6 @@ extension CityViewController {
             let text1 = text.lowercased()
             
             let text2 = text1.removeAllSapce
-            
-            print(text2)
             
             for (index,str) in model.allCityPYSXArray.enumerated() {
                 
@@ -209,7 +207,7 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: NormalCityCellID, for: indexPath) as! NormalCityCell
             
-            cell.content = UserDef.shard.xCity ?? ""
+            cell.content = UserDef.shard.dCity ?? ""
             
             return cell
         case 1 :

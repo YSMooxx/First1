@@ -24,6 +24,12 @@ class WaterFallController: UIViewController {
         setupUI()
         layoutPageSubviews()
         settabbarNum()
+        LocationManager.shared.startRequestLocation()
+        LocationManager.shared.callBack = {[weak self] (city) in
+            UserDef.shard.dCity = city.getCityNameRemoveLast()
+            UserDef.saveUserDefToSandBox()
+            self?.titleView.setletfContetn(text: city.getCityNameRemoveLast())
+        }
     }
     
     func settabbarNum() {
@@ -60,7 +66,7 @@ class WaterFallController: UIViewController {
         titleModel.backImage = "map"
         titleModel.btnSize = CGSize(width: 18, height: 18)
         titleView.model = titleModel
-        titleView.setletfContetn(text: UserDef.shard.xCity ?? "")
+        titleView.setletfContetn(text: UserDef.shard.dCity ?? "")
         
         let header:MJRefreshNormalHeader = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(refresh))
         
