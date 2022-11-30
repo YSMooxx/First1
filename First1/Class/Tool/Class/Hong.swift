@@ -33,6 +33,8 @@ let RW:CGFloat = RScreenW()
 
 let RH:CGFloat = RScreenH()
 
+let baseUrl = "https://"
+
 func RScreenW() -> CGFloat {
 
     return ScreenW / 375

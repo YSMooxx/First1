@@ -97,7 +97,7 @@ class JsonUtil:NSObject {
             return " "
         }
     
-    class func getJSONStringFromDictionary(dict:[String:AnyObject]) -> String {
+    class func getJSONStringFromDictionary(dict:[String:Any]) -> String {
       var result:String = ""
       do {
         //如果设置options为JSONSerialization.WritingOptions.prettyPrinted，则打印格式更好阅读

@@ -18,15 +18,19 @@ class WaterFallController: UIViewController {
     var model:BaseCollectionModel = BaseCollectionModel()
   
     override func viewDidLoad() {
-        
+    
         super.viewDidLoad()
         setupParamter()
         setupUI()
         layoutPageSubviews()
         settabbarNum()
+        
         LocationManager.shared.startRequestLocation()
         LocationManager.shared.callBack = {[weak self] (city) in
+            
             UserDef.shard.dCity = city.getCityNameRemoveLast()
+            HUDManager.shouTextWithString(text: city)
+            HUDManager.dismissWithDelay(time: 5)
             UserDef.saveUserDefToSandBox()
             self?.titleView.setletfContetn(text: city.getCityNameRemoveLast())
         }

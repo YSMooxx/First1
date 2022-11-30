@@ -16,6 +16,7 @@ class UserDef:NSObject {
     var xCity:String? = "同城"
     var wRatio:CGFloat = 1
     var hRatio:CGFloat = 1
+    var locationTime:Int = 0
 
     override init() {
         
@@ -27,6 +28,8 @@ class UserDef:NSObject {
         self.xCity = defaults.value(forKey: "xCity") as? String ?? "同城"
         self.wRatio = defaults.value(forKey: "wRatio") as? CGFloat ?? 1
         self.hRatio = defaults.value(forKey: "hRatio") as? CGFloat ?? 1
+        self.locationTime = defaults.value(forKey: "locationTime") as? Int ?? 0
+        
     }
     
     public class var shard:UserDef{
@@ -50,6 +53,7 @@ class UserDef:NSObject {
         defaults.setValue(shard.xCity, forKey: "xCity")
         defaults.setValue(shard.wRatio, forKey: "wRatio")
         defaults.setValue(shard.hRatio, forKey: "hRatio")
+        defaults.setValue(shard.locationTime, forKey: "locationTime")
         
         defaults.synchronize()
     }

@@ -56,6 +56,32 @@ extension LocationManager {
     
     func sendLocation(location:String){
         
+        let hModel = gaodeHeaderModel()
+        let pModel = gaodeParameterModel()
+        
+        pModel.location = location
+        hModel.parameter = pModel
+        
+        NetManager.shard.request(netModel: hModel, success: {[weak self] (json) in
+            
+            let dict : Dictionary = json as! [String:Any]
+
+            let dictString = JsonUtil.getJSONStringFromDictionary(dict: dict)
+            
+            let model:gaodeDataModel = JsonUtil.jsonToModel(dictString, gaodeDataModel.self) as! gaodeDataModel
+            
+            self?.locationManager?.stopUpdatingLocation()
+            
+            self?.callBack(model.regeocode?.addressComponent?.city ?? "")
+            
+        }, failure: {(error) in
+            
+            print(error)
+        })
+    }
+    
+    func sendLocation2(location:String){
+        
         var url = "https://restapi.amap.com/v3/geocode/regeo?"
         
         url = url + "key=ce6391b3276fa3f7d396c72fef20f9cf" + "&location=" + location
@@ -70,7 +96,7 @@ extension LocationManager {
 //                print(String(data:data!, encoding: String.Encoding.utf8) ?? "空")
                 if let any = try?JSONSerialization.jsonObject(with: data!, options: .allowFragments){
                     
-                    let dict : Dictionary = any as! [String:AnyObject]
+                    let dict : Dictionary = any as! [String:Any]
 
                     let dictString = JsonUtil.getJSONStringFromDictionary(dict: dict)
                     
@@ -106,8 +132,21 @@ extension LocationManager:CLLocationManagerDelegate {
         let longitudeS = String(longitude)
         let locationS = longitudeS + "," + latitudeS
         
-        sendLocation(location: locationS)
-        locationManager?.stopUpdatingLocation()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd HH:mm:ss.SSS"
+        
+        let time = Date.init().timeIntervalSince1970 * 1000
+        print(formatter.string(from: Date.init()))
+        print(Date.init())
+        print(Int(time))
+
+        if Int(time) > UserDef.shard.locationTime + 30000 {
+            
+            sendLocation(location: locationS)
+            UserDef.shard.locationTime = Int(time)
+            UserDef.saveUserDefToSandBox()
+        }
+        
     }
     
     public func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {

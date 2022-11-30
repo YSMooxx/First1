@@ -21,7 +21,6 @@ extension UIView {
             var frame1:CGRect = frame
             frame1.origin.x = newValue
             frame = frame1
-            
         }
     }
     

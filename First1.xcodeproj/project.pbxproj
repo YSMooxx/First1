@@ -53,7 +53,6 @@
 		D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D183628D0747C00321B1B /* JsonUtil.swift */; };
 		D51D183A28D0751800321B1B /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D183928D0751800321B1B /* BaseModel.swift */; };
 		D51D184628D31FFD00321B1B /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184528D31FFD00321B1B /* NetManager.swift */; };
-		D51D184828D3479600321B1B /* NetManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184728D3479600321B1B /* NetManager+Extension.swift */; };
 		D51D184B28D34B5D00321B1B /* TestHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184A28D34B5D00321B1B /* TestHttpTool.swift */; };
 		D51D184D28D34BAE00321B1B /* TestHttpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D184C28D34BAE00321B1B /* TestHttpVC.swift */; };
 		D51DA7BA291CA28D0003A723 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */; };
@@ -98,6 +97,7 @@
 		D590B00E28C33A560013DB2A /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D590B00D28C33A550013DB2A /* MessageVC.m */; };
 		D59BA78A2935991B00B451F6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BA7892935991B00B451F6 /* LocationManager.swift */; };
 		D59BA78E2935F28E00B451F6 /* gaodeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BA78D2935F28E00B451F6 /* gaodeDataModel.swift */; };
+		D59BA790293725E900B451F6 /* NetBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BA78F293725E900B451F6 /* NetBaseModel.swift */; };
 		D59E04B828C9E25200F5C0AF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D59E04B628C9E25200F5C0AF /* Account.m */; };
 		D59E04BA28C9E2A200F5C0AF /* UserDefaultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E04B928C9E2A200F5C0AF /* UserDefaultsVC.swift */; };
 		D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E04BD28C9E73D00F5C0AF /* UserDef.swift */; };
@@ -211,7 +211,6 @@
 		D51D183628D0747C00321B1B /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		D51D183928D0751800321B1B /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		D51D184528D31FFD00321B1B /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
-		D51D184728D3479600321B1B /* NetManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetManager+Extension.swift"; sourceTree = "<group>"; };
 		D51D184A28D34B5D00321B1B /* TestHttpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpTool.swift; sourceTree = "<group>"; };
 		D51D184C28D34BAE00321B1B /* TestHttpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpVC.swift; sourceTree = "<group>"; };
 		D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -256,6 +255,7 @@
 		D590B00D28C33A550013DB2A /* MessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
 		D59BA7892935991B00B451F6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D59BA78D2935F28E00B451F6 /* gaodeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaodeDataModel.swift; sourceTree = "<group>"; };
+		D59BA78F293725E900B451F6 /* NetBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBaseModel.swift; sourceTree = "<group>"; };
 		D59E04B628C9E25200F5C0AF /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		D59E04B728C9E25200F5C0AF /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		D59E04B928C9E2A200F5C0AF /* UserDefaultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsVC.swift; sourceTree = "<group>"; };
@@ -537,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				D59BA78D2935F28E00B451F6 /* gaodeDataModel.swift */,
+				D59BA78F293725E900B451F6 /* NetBaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -992,7 +993,6 @@
 				D5FA19E528C5948400B83CE0 /* UIImage+Extension.swift */,
 				D5FA19E928C5E94300B83CE0 /* UIColor+Extension.swift */,
 				D5FA19EB28C6053B00B83CE0 /* UIView+SVGKit.swift */,
-				D51D184728D3479600321B1B /* NetManager+Extension.swift */,
 				D553C8F929135C2C006475A8 /* UITabBar+Extension.swift */,
 				D51DA7B9291CA28D0003A723 /* UIButton+Extension.swift */,
 				D504A6BB291FCA7800AB0522 /* String+Extension.swift */,
@@ -1297,6 +1297,7 @@
 				D5ECF9EC28F1A35F00342307 /* ShengMingVC.swift in Sources */,
 				D504990529308EB00089AC3F /* NormalCityCell.swift in Sources */,
 				D5B3E0D3291A03E50071E3EA /* Test2.swift in Sources */,
+				D59BA790293725E900B451F6 /* NetBaseModel.swift in Sources */,
 				D55C1AD2292B6AE100400F54 /* NetTypeMananer.swift in Sources */,
 				D51D183A28D0751800321B1B /* BaseModel.swift in Sources */,
 				D50498D1292F43C00089AC3F /* CityTitleModel.swift in Sources */,
@@ -1337,7 +1338,6 @@
 				D56E81EE2912571600587A03 /* MVVM2ListCell1.swift in Sources */,
 				D5B3E0DB291A2A700071E3EA /* NavTitleView.swift in Sources */,
 				D5049907293094030089AC3F /* HotCityCell.swift in Sources */,
-				D51D184828D3479600321B1B /* NetManager+Extension.swift in Sources */,
 				D51D184628D31FFD00321B1B /* NetManager.swift in Sources */,
 				D504A6C0291FECB900AB0522 /* WaterFallFlowLayout.swift in Sources */,
 				D5377FCD290FA2BE00E4A620 /* BaseViewModel.swift in Sources */,
