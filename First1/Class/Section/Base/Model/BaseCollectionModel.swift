@@ -12,4 +12,5 @@ import HandyJSON
 class BaseCollectionModel:BaseModel {
     
     var city:String = ""
+    var loactionCount:Int = 0
 }

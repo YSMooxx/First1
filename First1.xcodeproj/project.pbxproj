@@ -44,6 +44,7 @@
 		D504A6B9291FADBE00AB0522 /* GouWuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6B8291FADBE00AB0522 /* GouWuCell.swift */; };
 		D504A6BC291FCA7800AB0522 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6BB291FCA7800AB0522 /* String+Extension.swift */; };
 		D504A6C0291FECB900AB0522 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */; };
+		D50B175F29384C0E0022CBFB /* ZheGaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50B175E29384C0D0022CBFB /* ZheGaiView.swift */; };
 		D516D823292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D822292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift */; };
 		D516D825292B0BFB009C26B9 /* WaterFallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D824292B0BFB009C26B9 /* WaterFallController.swift */; };
 		D516D827292B0CA1009C26B9 /* BaseCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D826292B0CA1009C26B9 /* BaseCollectionModel.swift */; };
@@ -202,6 +203,7 @@
 		D504A6B8291FADBE00AB0522 /* GouWuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GouWuCell.swift; sourceTree = "<group>"; };
 		D504A6BB291FCA7800AB0522 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
+		D50B175E29384C0D0022CBFB /* ZheGaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZheGaiView.swift; sourceTree = "<group>"; };
 		D516D822292B0BF2009C26B9 /* WaterfallMutiSectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallMutiSectionFlowLayout.swift; sourceTree = "<group>"; };
 		D516D824292B0BFB009C26B9 /* WaterFallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFallController.swift; sourceTree = "<group>"; };
 		D516D826292B0CA1009C26B9 /* BaseCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionModel.swift; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 				D5377FCA290FA28800E4A620 /* BaseView.swift */,
 				D5B3E0DA291A2A700071E3EA /* NavTitleView.swift */,
 				D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */,
+				D50B175E29384C0D0022CBFB /* ZheGaiView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1360,6 +1363,7 @@
 				D5FEF5BD28B4AE1F008639E2 /* ShuZuVC.swift in Sources */,
 				D59BA78A2935991B00B451F6 /* LocationManager.swift in Sources */,
 				D59E04BE28C9E73D00F5C0AF /* UserDef.swift in Sources */,
+				D50B175F29384C0E0022CBFB /* ZheGaiView.swift in Sources */,
 				D50498CF292F3E090089AC3F /* searchResultView.swift in Sources */,
 				D5C615AD29349EBA00E6D785 /* BaseTipView.swift in Sources */,
 				D52650CD28A642FE004A43EE /* TestWebViewController.swift in Sources */,

@@ -47,9 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDef.shard.hRatio = ScreenH / 896
         UserDef.shard.token = "121213"
         UserDef.saveUserDefToSandBox()
-            
+        
         return true
     }
+    
+    
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         

@@ -54,6 +54,33 @@ class LocationManager:NSObject {
 
 extension LocationManager {
     
+    func getCity(location:CLLocation) {
+        
+        let geoCoder:CLGeocoder = CLGeocoder()
+        
+        HUDManager.shouTextWithString(text: "开始获取GPS城市")
+        
+        geoCoder.reverseGeocodeLocation(location) {[weak self] cities, error in
+            
+            let array:[CLPlacemark]? = cities
+            
+            if array?.count ?? 0 >= 1 {
+                
+                let city:CLPlacemark? = array?.first
+                
+                self?.callBack(city?.locality ?? "同城")
+                
+                self?.locationManager?.stopUpdatingLocation()
+            }else {
+                
+                HUDManager.shouTextWithString(text: "GeocoderError")
+                HUDManager.dismissWithDelay(time: 2)
+            }
+            
+        }
+        
+    }
+    
     func sendLocation(location:String){
         
         let hModel = gaodeHeaderModel()
@@ -76,6 +103,12 @@ extension LocationManager {
             
         }, failure: {(error) in
             
+            let error1 = error as! NSError
+            
+            print(error1.domain)
+            
+            HUDManager.shouTextWithString(text: "网络错误，请求超时")
+            HUDManager.dismissWithDelay(time: 5)
             print(error)
         })
     }
@@ -123,28 +156,20 @@ extension LocationManager {
 extension LocationManager:CLLocationManagerDelegate {
     
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let location = locations.last ?? CLLocation.init()
-        let coordinate = location.coordinate
-        let latitude = coordinate.latitude
-        let longitude = coordinate.longitude
         
-        let latitudeS = String(latitude)
-        let longitudeS = String(longitude)
-        let locationS = longitudeS + "," + latitudeS
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-dd HH:mm:ss.SSS"
-        
-        let time = Date.init().timeIntervalSince1970 * 1000
-        print(formatter.string(from: Date.init()))
-        print(Date.init())
-        print(Int(time))
+//        let formatter = DateFormatter()
+//
+//        formatter.dateFormat = "YYYY-MM-dd HH:mm:ss.SSS"
 
-        if Int(time) > UserDef.shard.locationTime + 30000 {
+        let time = Date.init().timeIntervalSince1970 * 1000
+        
+        if Int(time) > UserDef.shard.locationTime + 10000 {
             
-            sendLocation(location: locationS)
             UserDef.shard.locationTime = Int(time)
             UserDef.saveUserDefToSandBox()
+            self.getCity(location: location)
         }
         
     }
@@ -156,7 +181,8 @@ extension LocationManager:CLLocationManagerDelegate {
         } else if (status == .restricted) {//应用没有授权用户定位
             
         } else if (status == .denied) {//用户禁止定位
-            
+            UserDef.shard.dCity = "同城"
+            UserDef.saveUserDefToSandBox()
         }else if (status == .authorizedAlways) {//用户授权一直可以获取定位
            
         }else if (status == .authorizedWhenInUse) {//用户授权使用期间获取定位

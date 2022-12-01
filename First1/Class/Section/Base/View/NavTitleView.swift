@@ -68,7 +68,7 @@ class NavTitleView:BaseView {
     func setletfContetn(text:String) {
         
         leftBtn.setTitle(text, for: UIControl.State.normal)
-        leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         leftBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
     }
     

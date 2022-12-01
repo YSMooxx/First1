@@ -24,16 +24,36 @@ class WaterFallController: UIViewController {
         setupUI()
         layoutPageSubviews()
         settabbarNum()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-        LocationManager.shared.startRequestLocation()
-        LocationManager.shared.callBack = {[weak self] (city) in
+        super.viewWillAppear(animated)
+        
+        let time = Date.init().timeIntervalSince1970 * 1000
+        
+        if Int(time) > UserDef.shard.locationTime + 10000 {
             
-            UserDef.shard.dCity = city.getCityNameRemoveLast()
-            HUDManager.shouTextWithString(text: city)
-            HUDManager.dismissWithDelay(time: 5)
-            UserDef.saveUserDefToSandBox()
-            self?.titleView.setletfContetn(text: city.getCityNameRemoveLast())
+            LocationManager.shared.startRequestLocation()
+            LocationManager.shared.callBack = {[weak self] (city) in
+                
+                let sCity = city.getCityNameRemoveLast()
+                
+                if self?.model.loactionCount == 0 {
+                    
+                    self?.titleView.setletfContetn(text:sCity)
+                }
+                
+                self?.model.loactionCount = (self?.model.loactionCount ?? 0) + 1
+                
+                UserDef.shard.dCity = sCity
+                UserDef.saveUserDefToSandBox()
+                HUDManager.shouTextWithString(text: sCity)
+                HUDManager.dismissWithDelay(time: 2)
+            }
+            
         }
+        
     }
     
     func settabbarNum() {
@@ -147,6 +167,7 @@ extension WaterFallController:NavTitleViewDelegate {
             UserDef.shard.xCity = city
             UserDef.saveUserDefToSandBox()
             self?.titleView.setletfContetn(text: city)
+            self?.model.loactionCount = (self?.model.loactionCount ?? 0) + 1
         }
         
         let nav = BaseNavigationController(rootViewController: vc)

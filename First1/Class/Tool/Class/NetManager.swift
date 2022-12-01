@@ -62,6 +62,7 @@ class NetManager:NSObject {
         
         let headers:HTTPHeaders = ["Authorization":UserDef.shard.token ?? ""]
         
+        HUDManager.shouTextWithString(text: "开始请求")
         manager?.request(URL(string: netModel.url)!, method: method, parameters:parameter,headers: headers).responseJSON { (response) in
             
             switch response.result {
@@ -71,6 +72,7 @@ class NetManager:NSObject {
                 success(json1)
                 break
             case .failure(let error1):
+                
                 
                 failure(error1)
                 break

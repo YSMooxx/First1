@@ -29,6 +29,30 @@ class CityViewController:UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        getCity()
+    }
+    
+    func getCity() {
+        
+        let hModel = gaodeHeaderModel()
+        let pModel = gaodeParameterModel()
+        
+        pModel.location = "104.06359164,30.59255430"
+        hModel.parameter = pModel
+        
+        HUDManager.shouTextWithString(text: "开始获取高德城市")
+        
+        NetManager.shard.request(netModel: hModel, success: { (json) in
+            
+            HUDManager.shouTextWithString(text: "成功")
+            HUDManager.dismissWithDelay(time: 2)
+            
+        }, failure: {(error) in
+            
+            HUDManager.shouTextWithString(text: "网络错误，请求超时")
+            HUDManager.dismissWithDelay(time: 2)
+        })
     }
     
     func setupUI() {
