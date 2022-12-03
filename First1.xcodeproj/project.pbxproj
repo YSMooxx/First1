@@ -112,6 +112,8 @@
 		D5B6D95D2823AF2800481169 /* First1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D95C2823AF2800481169 /* First1Tests.swift */; };
 		D5B6D9672823AF2800481169 /* First1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9662823AF2800481169 /* First1UITests.swift */; };
 		D5B6D9692823AF2800481169 /* First1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */; };
+		D5B90CB12939938700D2D172 /* ShouYeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B90CB02939938700D2D172 /* ShouYeViewController.swift */; };
+		D5B90CB329399DD700D2D172 /* BaseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B90CB229399DD700D2D172 /* BaseSearchViewController.swift */; };
 		D5C3D06C291A2E5C00DE1237 /* NavTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */; };
 		D5C615AB2934941600E6D785 /* search.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5C615AA2934941600E6D785 /* search.svg */; };
 		D5C615AD29349EBA00E6D785 /* BaseTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C615AC29349EBA00E6D785 /* BaseTipView.swift */; };
@@ -278,6 +280,8 @@
 		D5B6D9622823AF2800481169 /* First1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = First1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B6D9662823AF2800481169 /* First1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First1UITests.swift; sourceTree = "<group>"; };
 		D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5B90CB02939938700D2D172 /* ShouYeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouYeViewController.swift; sourceTree = "<group>"; };
+		D5B90CB229399DD700D2D172 /* BaseSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchViewController.swift; sourceTree = "<group>"; };
 		D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTitleModel.swift; sourceTree = "<group>"; };
 		D5C615AA2934941600E6D785 /* search.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = search.svg; sourceTree = "<group>"; };
 		D5C615AC29349EBA00E6D785 /* BaseTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTipView.swift; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 		D50498C5292F182F0089AC3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D5B90CB02939938700D2D172 /* ShouYeViewController.swift */,
 				D50498C8292F18870089AC3F /* CityViewController.swift */,
 			);
 			path = Controller;
@@ -531,6 +536,7 @@
 				D51C314728CB2F24001B813F /* BaseViewController.swift */,
 				D5B3E0D5291A1E010071E3EA /* BaseTableViewController.swift */,
 				D504A6AD291FA43A00AB0522 /* BaseCollectionViewController.swift */,
+				D5B90CB229399DD700D2D172 /* BaseSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1318,6 +1324,7 @@
 				D5FEF5AE28B35919008639E2 /* ZiFuChuanVC.swift in Sources */,
 				D52B8BC828CE128B0014D4E2 /* tabViewVC.swift in Sources */,
 				D50498C9292F18870089AC3F /* CityViewController.swift in Sources */,
+				D5B90CB329399DD700D2D172 /* BaseSearchViewController.swift in Sources */,
 				D52650B628A0B312004A43EE /* YXMessegeController.swift in Sources */,
 				D52650C528A3994D004A43EE /* BianLiangVC.swift in Sources */,
 				D51DA7C4291DD9ED0003A723 /* BaseTableViewModel.swift in Sources */,
@@ -1375,6 +1382,7 @@
 				D5D5B8D42921D8B1003F686F /* ViewController.swift in Sources */,
 				D590B00E28C33A560013DB2A /* MessageVC.m in Sources */,
 				D504A6B3291FA4F600AB0522 /* GouWuViewController.swift in Sources */,
+				D5B90CB12939938700D2D172 /* ShouYeViewController.swift in Sources */,
 				D59BA78E2935F28E00B451F6 /* gaodeDataModel.swift in Sources */,
 				D56E81EA29124A2900587A03 /* MVVM2Controller.swift in Sources */,
 				D5B3E0C6291A02CC0071E3EA /* UIView+Frame.swift in Sources */,

@@ -24,7 +24,7 @@ class NetTypeMananer:NSObject {
     
     func startListening() {
         
-        newsHomeNetworkReachabilityManager?.startListening(onUpdatePerforming: { state in
+        newsHomeNetworkReachabilityManager?.startListening(onUpdatePerforming: {[weak self] state in
             
             switch state {
                     case .unknown:
@@ -41,7 +41,9 @@ class NetTypeMananer:NSObject {
                         break
             }
             
-            HUDManager.dismissWithDelay(time: 3)
+            self?.stopListening()
+            
+            HUDManager.dismissWithDelay(time: 1)
         })
     }
     

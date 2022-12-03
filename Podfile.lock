@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.5)
+  - Alamofire (5.6.4)
   - CocoaLumberjack (3.8.0):
     - CocoaLumberjack/Core (= 3.8.0)
   - CocoaLumberjack/Core (3.8.0)
@@ -14,7 +14,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0)
+  - Alamofire (~> 5.6.2)
   - HandyJSON (~> 5.0.1)
   - MJRefresh (~> 3.7.5)
   - SDWebImage (~> 5.14.1)
@@ -34,7 +34,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   CocoaLumberjack: 78abfb691154e2a9df8ded4350d504ee19d90732
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 56af524ca75675610cfccba23a01127560fdda30
+PODFILE CHECKSUM: 9aada168bb680a8758946609bdb235781ef06936
 
 COCOAPODS: 1.11.3

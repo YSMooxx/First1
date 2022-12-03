@@ -74,7 +74,7 @@ extension LocationManager {
             }else {
                 
                 HUDManager.shouTextWithString(text: "GeocoderError")
-                HUDManager.dismissWithDelay(time: 2)
+                HUDManager.dismissWithDelay(time: 1)
             }
             
         }
@@ -108,7 +108,7 @@ extension LocationManager {
             print(error1.domain)
             
             HUDManager.shouTextWithString(text: "网络错误，请求超时")
-            HUDManager.dismissWithDelay(time: 5)
+            HUDManager.dismissWithDelay(time: 1)
             print(error)
         })
     }
@@ -126,7 +126,7 @@ extension LocationManager {
             if error != nil {
                 print(error.debugDescription)
             }else{
-//                print(String(data:data!, encoding: String.Encoding.utf8) ?? "空")
+
                 if let any = try?JSONSerialization.jsonObject(with: data!, options: .allowFragments){
                     
                     let dict : Dictionary = any as! [String:Any]

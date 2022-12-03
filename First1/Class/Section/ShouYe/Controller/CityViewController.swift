@@ -11,7 +11,6 @@ private let NormalCityCellID = "NormalCityCell"
 private let HotCityCellID = "HotCityCell"
 private let latelyCityCellID = "latelyCityCell"
 
-
 class CityViewController:UIViewController {
     
     lazy var titleView:CityTitleView = CityTitleView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: navHeight + 47))
@@ -29,6 +28,9 @@ class CityViewController:UIViewController {
         super.viewDidLoad()
         
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         getCity()
     }
@@ -46,12 +48,12 @@ class CityViewController:UIViewController {
         NetManager.shard.request(netModel: hModel, success: { (json) in
             
             HUDManager.shouTextWithString(text: "成功")
-            HUDManager.dismissWithDelay(time: 2)
+            HUDManager.dismissWithDelay(time: 1)
+            print(json)
             
         }, failure: {(error) in
             
-            HUDManager.shouTextWithString(text: "网络错误，请求超时")
-            HUDManager.dismissWithDelay(time: 2)
+            
         })
     }
     
@@ -101,90 +103,7 @@ class CityViewController:UIViewController {
     
 }
 
-extension CityViewController {
-    
-    func writeTolatelyCities(city:String) {
-        
-        let filePath = NSHomeDirectory().appending("/Documents/latelyCities.plist")
-        
-        let array:NSMutableArray?
-        
-        if model.latelyCityArray.count == 0 {
-            
-            array = NSMutableArray()
-            
-            array?.add(city)
-            
-        }else {
-            
-            for city1 in model.latelyCityArray {
-                
-                if city1 == city {
-                    
-                    return
-                }
-            }
-            
-            array = NSMutableArray(contentsOfFile: filePath)
-            
-            array?.add(city)
-            
-            if array?.count ?? 0 > 5 {
-                
-                array?.removeObject(at: 0)
-            }
-        }
-        
-        array?.write(toFile:filePath ,atomically:true)
-    }
-    
-    func dealStringReturnArray(text:String) -> [String]{
-        
-        var array:[String] = []
-        
-        if text.isIncludeChineseIn() {
-            
-            for str in model.allCityArray {
-                
-                if str.contains(text) {
-                    
-                    array.append(str)
-                }
-            }
-        
-        }else {
-            
-            let text1 = text.lowercased()
-            
-            let text2 = text1.removeAllSapce
-            
-            for (index,str) in model.allCityPYSXArray.enumerated() {
-                
-                if str.contains(text2) {
-                    
-                    array.append(model.allCityArray[index])
-                }
-            }
-            
-            if array.count == 0 {
-                
-                for (index,str) in model.allCityPYArray.enumerated() {
-                    
-                    if str.contains(text2) {
-                        
-                        array.append(model.allCityArray[index])
-                    }
-                }
-            }
-            
-        }
-        
-        return array
-    }
-}
-
 extension CityViewController:UITableViewDelegate,UITableViewDataSource {
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -252,7 +171,7 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
             cell.callBack = {[weak self] (city) in
                 
                 self?.callBack(String(city))
-                self?.writeTolatelyCities(city: city)
+                self?.model.writeTolatelyCities(city: city)
                 self?.dismiss(animated: true)
             }
             
@@ -279,7 +198,7 @@ extension CityViewController:UITableViewDelegate,UITableViewDataSource {
             
             let city = model.allCityDic[key]![indexPath.row]
             
-            writeTolatelyCities(city: city)
+            model.writeTolatelyCities(city: city)
             
             callBack(String(city))
             
@@ -327,17 +246,17 @@ extension CityViewController:CityTitleViewDelegate {
     
     func searchViewBeginEdit() {
         
-        self.resultView.isHidden = false
+        resultView.isHidden = false
     }
     
     func searchViewEndEdit() {
         
-        self.resultView.isHidden = true
+        resultView.isHidden = true
     }
     
     func searchViewDidChange(text: String) {
         
-        resultView.setupWithArray(array: dealStringReturnArray(text: text))
+        resultView.setupWithArray(array: model.dealStringReturnArray(text: text))
     }
 
 }
@@ -351,7 +270,7 @@ extension CityViewController:searchResultViewDelegate {
     
     func didSelectCity(city: String) {
         
-        writeTolatelyCities(city: city)
+        model.writeTolatelyCities(city: city)
         
         callBack(String(city))
         

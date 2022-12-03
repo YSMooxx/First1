@@ -52,7 +52,7 @@ class CityTitleView:BaseView {
         searchView.frame = CGRect(x: 15, y: navHeight, width: ScreenW - 30, height: 35)
         searchView.layer.cornerRadius = 5
         searchView.layer.masksToBounds = true
-        searchView.placeholder = "输入城市或区县名称"
+        searchView.placeholder = "输入城市名称"
         let wh:CGFloat = 16
         let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: searchView.size.height, height: searchView.size.height))
         let imageView:UIImageView = UIImageView(frame: CGRect(x: (searchView.size.height - wh) / 2, y: (searchView.size.height - wh) / 2, width: wh, height: wh))

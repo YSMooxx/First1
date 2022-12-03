@@ -26,9 +26,9 @@ class WaterFallController: UIViewController {
         settabbarNum()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
-        super.viewWillAppear(animated)
+        super.viewDidAppear(animated)
         
         let time = Date.init().timeIntervalSince1970 * 1000
         
@@ -49,7 +49,7 @@ class WaterFallController: UIViewController {
                 UserDef.shard.dCity = sCity
                 UserDef.saveUserDefToSandBox()
                 HUDManager.shouTextWithString(text: sCity)
-                HUDManager.dismissWithDelay(time: 2)
+                HUDManager.dismissWithDelay(time: 1)
             }
             
         }
