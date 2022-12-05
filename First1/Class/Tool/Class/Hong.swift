@@ -46,7 +46,9 @@ func RScreenH() -> CGFloat {
 }
 
 #if !DEBUG
+
     public func print(_ items: Any...) {
+        
     }
 
 #endif

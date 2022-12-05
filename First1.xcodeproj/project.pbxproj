@@ -114,6 +114,12 @@
 		D5B6D9692823AF2800481169 /* First1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */; };
 		D5B90CB12939938700D2D172 /* ShouYeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B90CB02939938700D2D172 /* ShouYeViewController.swift */; };
 		D5B90CB329399DD700D2D172 /* BaseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B90CB229399DD700D2D172 /* BaseSearchViewController.swift */; };
+		D5B90CB5293D7AF700D2D172 /* BaseSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B90CB4293D7AF700D2D172 /* BaseSearchModel.swift */; };
+		D5B90CB7293D7B8900D2D172 /* BaseSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B90CB6293D7B8900D2D172 /* BaseSearchTitleView.swift */; };
+		D5B90CBB293D99BC00D2D172 /* notification.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5B90CBA293D99BB00D2D172 /* notification.svg */; };
+		D5B90CBD293DB5A600D2D172 /* search_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5B90CBC293DB5A600D2D172 /* search_white.svg */; };
+		D5B90CBF293DE1AE00D2D172 /* notification_black.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5B90CBE293DE1AE00D2D172 /* notification_black.svg */; };
+		D5B90CC1293DE1B700D2D172 /* map_black.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5B90CC0293DE1B700D2D172 /* map_black.svg */; };
 		D5C3D06C291A2E5C00DE1237 /* NavTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */; };
 		D5C615AB2934941600E6D785 /* search.svg in Resources */ = {isa = PBXBuildFile; fileRef = D5C615AA2934941600E6D785 /* search.svg */; };
 		D5C615AD29349EBA00E6D785 /* BaseTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C615AC29349EBA00E6D785 /* BaseTipView.swift */; };
@@ -282,6 +288,12 @@
 		D5B6D9682823AF2800481169 /* First1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5B90CB02939938700D2D172 /* ShouYeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouYeViewController.swift; sourceTree = "<group>"; };
 		D5B90CB229399DD700D2D172 /* BaseSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchViewController.swift; sourceTree = "<group>"; };
+		D5B90CB4293D7AF700D2D172 /* BaseSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchModel.swift; sourceTree = "<group>"; };
+		D5B90CB6293D7B8900D2D172 /* BaseSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchTitleView.swift; sourceTree = "<group>"; };
+		D5B90CBA293D99BB00D2D172 /* notification.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = notification.svg; sourceTree = "<group>"; };
+		D5B90CBC293DB5A600D2D172 /* search_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = search_white.svg; sourceTree = "<group>"; };
+		D5B90CBE293DE1AE00D2D172 /* notification_black.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = notification_black.svg; sourceTree = "<group>"; };
+		D5B90CC0293DE1B700D2D172 /* map_black.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_black.svg; sourceTree = "<group>"; };
 		D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTitleModel.swift; sourceTree = "<group>"; };
 		D5C615AA2934941600E6D785 /* search.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = search.svg; sourceTree = "<group>"; };
 		D5C615AC29349EBA00E6D785 /* BaseTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTipView.swift; sourceTree = "<group>"; };
@@ -410,8 +422,12 @@
 		D50498D3292F5BCF0089AC3F /* SVG */ = {
 			isa = PBXGroup;
 			children = (
+				D5B90CBA293D99BB00D2D172 /* notification.svg */,
+				D5B90CBE293DE1AE00D2D172 /* notification_black.svg */,
 				D5C615AA2934941600E6D785 /* search.svg */,
+				D5B90CBC293DB5A600D2D172 /* search_white.svg */,
 				D504990129304B230089AC3F /* map.svg */,
+				D5B90CC0293DE1B700D2D172 /* map_black.svg */,
 				D50498D4292F5BCF0089AC3F /* zhantu.svg */,
 				D50498D5292F5BCF0089AC3F /* Leftbar_cloud_unselected.svg */,
 				D50498D6292F5BCF0089AC3F /* Leftbar_shop_unselected.svg */,
@@ -652,6 +668,7 @@
 				D5C3D06B291A2E5C00DE1237 /* NavTitleModel.swift */,
 				D51DA7C3291DD9ED0003A723 /* BaseTableViewModel.swift */,
 				D516D826292B0CA1009C26B9 /* BaseCollectionModel.swift */,
+				D5B90CB4293D7AF700D2D172 /* BaseSearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -663,6 +680,7 @@
 				D5B3E0DA291A2A700071E3EA /* NavTitleView.swift */,
 				D504A6BF291FECB900AB0522 /* WaterFallFlowLayout.swift */,
 				D50B175E29384C0D0022CBFB /* ZheGaiView.swift */,
+				D5B90CB6293D7B8900D2D172 /* BaseSearchTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1136,17 +1154,21 @@
 				D50498FD292F5BD00089AC3F /* navback.svg in Resources */,
 				D58B32AE28C3853E00627117 /* Main.storyboard in Resources */,
 				D50498F4292F5BD00089AC3F /* Leftbar_mine_selected.svg in Resources */,
+				D5B90CBF293DE1AE00D2D172 /* notification_black.svg in Resources */,
 				D5C615AB2934941600E6D785 /* search.svg in Resources */,
 				D50498EF292F5BD00089AC3F /* back.svg in Resources */,
 				D50498EB292F5BD00089AC3F /* Leftbar_cloud_unselected.svg in Resources */,
 				D50498FA292F5BD00089AC3F /* Leftbar_index_unselected.svg in Resources */,
 				D50498F6292F5BD00089AC3F /* add-circle.svg in Resources */,
 				D50498FC292F5BD00089AC3F /* back2.svg in Resources */,
+				D5B90CC1293DE1B700D2D172 /* map_black.svg in Resources */,
+				D5B90CBB293D99BC00D2D172 /* notification.svg in Resources */,
 				D50498F9292F5BD00089AC3F /* Leftbar_shop_selected.svg in Resources */,
 				D5ED944D2930B253008FE3F9 /* hotCities.plist in Resources */,
 				D58B32AD28C3853100627117 /* LaunchScreen.storyboard in Resources */,
 				D50498ED292F5BD00089AC3F /* Leftbar_cloud_selected.svg in Resources */,
 				D50498F3292F5BD00089AC3F /* Leftbar_mine_unselected.svg in Resources */,
+				D5B90CBD293DB5A600D2D172 /* search_white.svg in Resources */,
 				D50498EA292F5BD00089AC3F /* zhantu.svg in Resources */,
 				D50498FB292F5BD00089AC3F /* 6.1@3x.jpg in Resources */,
 				D50498F8292F5BD00089AC3F /* back1.svg in Resources */,
@@ -1297,6 +1319,7 @@
 				D5FA19EA28C5E94300B83CE0 /* UIColor+Extension.swift in Sources */,
 				D51D183728D0747C00321B1B /* JsonUtil.swift in Sources */,
 				D516D825292B0BFB009C26B9 /* WaterFallController.swift in Sources */,
+				D5B90CB7293D7B8900D2D172 /* BaseSearchTitleView.swift in Sources */,
 				D5FA19E628C5948400B83CE0 /* UIImage+Extension.swift in Sources */,
 				D51DA7BF291CC9E60003A723 /* ImageViewCell.swift in Sources */,
 				D5D5B8D62921E95C003F686F /* UIImageView+Extension.swift in Sources */,
@@ -1385,6 +1408,7 @@
 				D5B90CB12939938700D2D172 /* ShouYeViewController.swift in Sources */,
 				D59BA78E2935F28E00B451F6 /* gaodeDataModel.swift in Sources */,
 				D56E81EA29124A2900587A03 /* MVVM2Controller.swift in Sources */,
+				D5B90CB5293D7AF700D2D172 /* BaseSearchModel.swift in Sources */,
 				D5B3E0C6291A02CC0071E3EA /* UIView+Frame.swift in Sources */,
 				D56E81F629125CE700587A03 /* MVVM2ViewModel.swift in Sources */,
 				D51C314428CB25F1001B813F /* SwiftUIVC.swift in Sources */,

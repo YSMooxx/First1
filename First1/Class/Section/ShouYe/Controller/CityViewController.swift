@@ -30,37 +30,11 @@ class CityViewController:UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        getCity()
-    }
-    
-    func getCity() {
-        
-        let hModel = gaodeHeaderModel()
-        let pModel = gaodeParameterModel()
-        
-        pModel.location = "104.06359164,30.59255430"
-        hModel.parameter = pModel
-        
-        HUDManager.shouTextWithString(text: "开始获取高德城市")
-        
-        NetManager.shard.request(netModel: hModel, success: { (json) in
-            
-            HUDManager.shouTextWithString(text: "成功")
-            HUDManager.dismissWithDelay(time: 1)
-            print(json)
-            
-        }, failure: {(error) in
-            
-            
-        })
-    }
-    
     func setupUI() {
         
         view.backgroundColor = .white
         
+        //showTablewView
         showTablewView.delegate = self
         showTablewView.dataSource = self
         showTablewView.register(NormalCityCell.self, forCellReuseIdentifier: NormalCityCellID)
@@ -73,6 +47,7 @@ class CityViewController:UIViewController {
         }
         view.addSubview(showTablewView)
         
+        //titleView
         let titleModel = CityTitleModel()
         titleModel.title = "切换城市"
         titleView.model = titleModel

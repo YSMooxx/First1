@@ -32,7 +32,7 @@ class WaterFallController: UIViewController {
         
         let time = Date.init().timeIntervalSince1970 * 1000
         
-        if Int(time) > UserDef.shard.locationTime + 10000 {
+        if Int(time) > UserDef.shard.locationTime + 60000 {
             
             LocationManager.shared.startRequestLocation()
             LocationManager.shared.callBack = {[weak self] (city) in
@@ -48,8 +48,6 @@ class WaterFallController: UIViewController {
                 
                 UserDef.shard.dCity = sCity
                 UserDef.saveUserDefToSandBox()
-                HUDManager.shouTextWithString(text: sCity)
-                HUDManager.dismissWithDelay(time: 1)
             }
             
         }

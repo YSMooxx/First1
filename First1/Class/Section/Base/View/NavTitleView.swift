@@ -156,7 +156,6 @@ extension NavTitleView {
         titleLabel.sizeToFit()
         leftBtn.setImage(UIImage.svgWithName(name: model?.backImage ?? "", size: model.btnSize), for: UIControl.State.normal)
         leftBtn.sizeToFit()
-
         
         self.setNeedsLayout()
         

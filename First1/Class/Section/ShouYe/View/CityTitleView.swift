@@ -132,6 +132,7 @@ class CityTitleView:BaseView {
             leftBtn.setImage(UIImage.svgWithName(name: "back1", size: CGSize(width: 26, height: 26)), for: UIControl.State.normal)
             leftBtn.setTitleColor(UIColor.red, for: UIControl.State.normal)
             leftBtn.sizeToFit()
+            setNeedsLayout()
         }
     }
     

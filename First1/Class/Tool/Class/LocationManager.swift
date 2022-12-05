@@ -58,8 +58,6 @@ extension LocationManager {
         
         let geoCoder:CLGeocoder = CLGeocoder()
         
-        HUDManager.shouTextWithString(text: "开始获取GPS城市")
-        
         geoCoder.reverseGeocodeLocation(location) {[weak self] cities, error in
             
             let array:[CLPlacemark]? = cities
@@ -73,8 +71,7 @@ extension LocationManager {
                 self?.locationManager?.stopUpdatingLocation()
             }else {
                 
-                HUDManager.shouTextWithString(text: "GeocoderError")
-                HUDManager.dismissWithDelay(time: 1)
+                
             }
             
         }
