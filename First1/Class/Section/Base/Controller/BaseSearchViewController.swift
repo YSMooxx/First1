@@ -25,6 +25,7 @@ class BaseSearchViewController:UIViewController {
         setupUI()
     }
     
+    //默认初始化
     func setDefault() {
         
         titleView.delegate = self
@@ -35,26 +36,22 @@ class BaseSearchViewController:UIViewController {
         tableView.backgroundColor = UIColor.white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
         tableView.contentInset = UIEdgeInsets(top: -statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.showsVerticalScrollIndicator = false
         view.insertSubview(tableView, at: 0)
     }
     
+    //子类初始化
     func setupUI() {
         
         
     }
     
-    override func viewWillLayoutSubviews() {
-        
-        super.viewWillLayoutSubviews()
-
-    }
-    
-    
-    
 }
 
+//补充方法
 extension BaseSearchViewController {
     
+    //改变状态栏颜色
     func changBarStyleWithStyle() {
         
         let nav:BaseNavigationController = self.navigationController as? BaseNavigationController ?? BaseNavigationController()
@@ -63,11 +60,12 @@ extension BaseSearchViewController {
     }
 }
 
+//tableView代理、数据源
 extension BaseSearchViewController:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,11 +79,70 @@ extension BaseSearchViewController:UITableViewDataSource,UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        let y = scrollView.contentOffset.y
         
+        if y <= 0 {
+            
+            if model.navStatus == .scollHalfNavHeightUp {
+                
+                titleView.titleViewBackClear()
+            }
+            
+            if model.navStatus != .scollOutNavHeightUp {
+                
+                model.navStatus = .scollOutNavHeightUp
+            }
+            
+        }else if y > 0 && y <= navHeight / 2 {
+            
+            if model.navStatus == .scollHalfNavHeightDown {
+                
+                model.statusBarStyle = .lightContent
+                changBarStyleWithStyle()
+                titleView.titleViewChangSubViewColor(changde: false)
+            }
+            
+            titleView.titleViewChangBackAlphaWithPoint(point: scrollView.contentOffset)
+            
+            if model.navStatus != .scollHalfNavHeightUp {
+                
+                model.navStatus = .scollHalfNavHeightUp
+            }
+            
+        }else if y > navHeight / 2 &&  y <= navHeight{
+            
+            if model.navStatus == .scollHalfNavHeightUp {
+                
+                model.statusBarStyle = .default
+                changBarStyleWithStyle()
+                titleView.titleViewChangSubViewColor(changde: true)
+            }
+            
+            titleView.titleViewChangBackAlphaWithPoint(point: scrollView.contentOffset)
+            
+            if model.navStatus != .scollHalfNavHeightDown {
+                
+                model.navStatus = .scollHalfNavHeightDown
+            }
+            
+        }else if y > navHeight{
+            
+            if model.navStatus == .scollHalfNavHeightDown {
+                
+                titleView.titleViewChangBackAlphaWithPoint(point: scrollView.contentOffset)
+            }
+            
+            if model.navStatus != .scollOutNavHeightDown {
+                
+                model.navStatus = .scollOutNavHeightDown
+            }
+            
+        }
     }
     
 }
 
+//头部代理方法
 extension BaseSearchViewController:SearchTitleDelegate {
     
     func leftButtonClick() {
