@@ -56,7 +56,7 @@ class BaseSearchTitleView:BaseView {
         searchView.textColor = .white
         searchView.layer.cornerRadius = model.wh / 2
         searchView.layer.masksToBounds = true
-        let attring = NSAttributedString(string: "输入您想搜索的服务", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)])
+        let attring = NSAttributedString(string: "输入您想搜索的服务", attributes: [NSAttributedString.Key.foregroundColor:UIColor.coloWithHex(hexStr: "#FFFFFF", alpha: 0.7),NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)])
         searchView.attributedPlaceholder = attring
         
         let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: model.wh, height: model.wh))
@@ -171,7 +171,7 @@ extension BaseSearchTitleView {
             leftsearchImage.image = UIImage.svgWithName(name: "search",size: CGSize(width: model.searImageWH, height: model.searImageWH))
         }else {
             
-            let attring = NSAttributedString(string: "输入您想搜索的服务", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.bold)])
+            let attring = NSAttributedString(string: "输入您想搜索的服务", attributes: [NSAttributedString.Key.foregroundColor:UIColor.coloWithHex(hexStr: "#ffffff", alpha: 0.7),NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.bold)])
             searchView.attributedPlaceholder = attring
             searchView.backgroundColor = UIColor.coloWithHex(hexStr: "#F8F8F8", alpha: 0.2)
             

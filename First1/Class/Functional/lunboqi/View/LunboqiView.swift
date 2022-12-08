@@ -37,8 +37,8 @@ class LunboqiView:UIView {
     func setupUI() {
         
         flowlayout.itemSize = CGSizeMake(frame.size.width, frame.size.height)
-        flowlayout.minimumInteritemSpacing = 0
-        flowlayout.minimumLineSpacing = 0
+        flowlayout.minimumInteritemSpacing = model.margin
+        flowlayout.minimumLineSpacing = model.margin
         flowlayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
         collectionView = UICollectionView.init(frame: CGRectMake(0, 0, frame.size.width, frame.size.height), collectionViewLayout: flowlayout)
@@ -187,6 +187,32 @@ extension LunboqiView:UICollectionViewDelegate,UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if model.cellModelArray.count == 1 {
+            
+            delegate?.didSelectIndexCollectionViewCell?(index: 0)
+        }else {
+            
+            var index = indexPath.row
+            
+            if index == 0 {
+                
+                index = model.cellModelArray.count - 1
+            }else if index == model.cellModelArray.count + 1 {
+                
+                index = 0
+            }else {
+                
+                index = index - 1
+            }
+            
+            delegate?.didSelectIndexCollectionViewCell?(index: index)
+        }
+        
+        
+    }
+    
     //滚动中
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
@@ -238,6 +264,7 @@ class LunboqiViewModel:BaseModel {
         case vertical = 1
     }
 
+    var margin:CGFloat = 0
     var scrollModel:ScrollMode = .horizontal
     var section:Int = 1
     var duration:Int = 5
@@ -246,7 +273,7 @@ class LunboqiViewModel:BaseModel {
         let array = [["imageUrl":"http://www.djy-es.com/statics/lunbo/1.jpg","content":"1"],["imageUrl":"http://www.djy-es.com/statics/lunbo/2.jpg","content":"2"],["imageUrl":"http://www.djy-es.com/statics/lunbo/3.jpg","content":"3"],["imageUrl":"http://www.djy-es.com/statics/lunbo/4.jpg","content":"4"],["imageUrl":"http://www.djy-es.com/statics/lunbo/5.jpg","content":"5"]]
         
         let jsonString = JsonUtil.getJSONStringFromArray(array:array)
-        
+
         let modelarray = JsonUtil.jsonArrayToModel(jsonString, LunboqiCellModel.self)
         
         return modelarray

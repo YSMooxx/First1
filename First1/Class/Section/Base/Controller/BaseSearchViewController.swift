@@ -58,6 +58,75 @@ extension BaseSearchViewController {
         
         nav.setBarStyleWithStyle(style: model.statusBarStyle)
     }
+    
+    func scrollWithPoint(point:CGPoint) {
+        
+        let y = point.y
+        
+        if y <= 0 {
+            
+            if model.navStatus == .scollHalfNavHeightUp || model.navStatus == .scollHalfNavHeightDown || model.navStatus == .scollOutNavHeightDown{
+                
+                titleView.titleViewBackClear()
+                titleView.titleViewChangSubViewColor(changde: false)
+                model.statusBarStyle = .lightContent
+                changBarStyleWithStyle()
+            }
+            
+            if model.navStatus != .scollOutNavHeightUp {
+                
+                model.navStatus = .scollOutNavHeightUp
+            }
+            
+            titleView.y = -y
+            
+            
+        }else if y > 0 && y <= navHeight / 2 {
+            
+            if model.navStatus == .scollHalfNavHeightDown {
+                
+                model.statusBarStyle = .lightContent
+                changBarStyleWithStyle()
+                titleView.titleViewChangSubViewColor(changde: false)
+            }
+            
+            titleView.titleViewChangBackAlphaWithPoint(point: point)
+            
+            if model.navStatus != .scollHalfNavHeightUp {
+                
+                model.navStatus = .scollHalfNavHeightUp
+            }
+            
+        }else if y > navHeight / 2 &&  y <= navHeight{
+            
+            if model.navStatus == .scollHalfNavHeightUp {
+                
+                model.statusBarStyle = .default
+                changBarStyleWithStyle()
+                titleView.titleViewChangSubViewColor(changde: true)
+            }
+            
+            titleView.titleViewChangBackAlphaWithPoint(point: point)
+            
+            if model.navStatus != .scollHalfNavHeightDown {
+                
+                model.navStatus = .scollHalfNavHeightDown
+            }
+            
+        }else if y > navHeight{
+            
+            if model.navStatus == .scollHalfNavHeightDown {
+                
+                titleView.titleViewChangBackAlphaWithPoint(point: point)
+            }
+            
+            if model.navStatus != .scollOutNavHeightDown {
+                
+                model.navStatus = .scollOutNavHeightDown
+            }
+            
+        }
+    }
 }
 
 //tableView代理、数据源
@@ -79,65 +148,12 @@ extension BaseSearchViewController:UITableViewDataSource,UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let y = scrollView.contentOffset.y
-        
-        if y <= 0 {
-            
-            if model.navStatus == .scollHalfNavHeightUp {
-                
-                titleView.titleViewBackClear()
-            }
-            
-            if model.navStatus != .scollOutNavHeightUp {
-                
-                model.navStatus = .scollOutNavHeightUp
-            }
-            
-        }else if y > 0 && y <= navHeight / 2 {
-            
-            if model.navStatus == .scollHalfNavHeightDown {
-                
-                model.statusBarStyle = .lightContent
-                changBarStyleWithStyle()
-                titleView.titleViewChangSubViewColor(changde: false)
-            }
-            
-            titleView.titleViewChangBackAlphaWithPoint(point: scrollView.contentOffset)
-            
-            if model.navStatus != .scollHalfNavHeightUp {
-                
-                model.navStatus = .scollHalfNavHeightUp
-            }
-            
-        }else if y > navHeight / 2 &&  y <= navHeight{
-            
-            if model.navStatus == .scollHalfNavHeightUp {
-                
-                model.statusBarStyle = .default
-                changBarStyleWithStyle()
-                titleView.titleViewChangSubViewColor(changde: true)
-            }
-            
-            titleView.titleViewChangBackAlphaWithPoint(point: scrollView.contentOffset)
-            
-            if model.navStatus != .scollHalfNavHeightDown {
-                
-                model.navStatus = .scollHalfNavHeightDown
-            }
-            
-        }else if y > navHeight{
-            
-            if model.navStatus == .scollHalfNavHeightDown {
-                
-                titleView.titleViewChangBackAlphaWithPoint(point: scrollView.contentOffset)
-            }
-            
-            if model.navStatus != .scollOutNavHeightDown {
-                
-                model.navStatus = .scollOutNavHeightDown
-            }
-            
-        }
+        scrollWithPoint(point: scrollView.contentOffset)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+
+        scrollWithPoint(point: scrollView.contentOffset)
     }
     
 }

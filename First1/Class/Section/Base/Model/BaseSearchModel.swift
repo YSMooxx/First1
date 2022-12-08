@@ -28,4 +28,5 @@ class BaseSearchModel:BaseModel {
     
     var navStatus:navStatusType = navStatusType.scollOutNavHeightUp
     
+    var subModelArray:[Any] = []
 }
