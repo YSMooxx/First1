@@ -14,7 +14,7 @@ class LoginView:UIView {
     ////logo imageView
     lazy var logoImageView:UIImageView = {
         
-        let imageView:UIImageView = UIImageView(frame: CGRect(x: model.iconImageViewX, y: model.iconImageViewY, width: model.iconImageViewWidth, height: model.iconImageViewHeight))
+        let imageView:UIImageView = UIImageView(frame: CGRect(x: model.X, y: model.iconImageViewY, width: model.iconImageViewWidth, height: model.iconImageViewHeight))
         imageView.image = UIImage.init(named: model.iconImage)
         
         return imageView
@@ -41,6 +41,20 @@ class LoginView:UIView {
         return label
     }()
     
+    lazy var accountTextField:UITextField = {
+        
+        let textField = UITextField()
+        textField.backgroundColor = tColor
+        textField.font = UIFont.systemFont(ofSize: 15)
+  
+        textField.placeholder = "请输入手机号"
+        textField
+        textField.returnKeyType = .search
+        textField.addTarget(self, action: #selector(textViewDidChange), for: UIControl.Event.editingChanged)
+        
+        return textField
+    }()
+    
     override init(frame: CGRect) {
         
         super.init(frame: frame)
@@ -49,8 +63,8 @@ class LoginView:UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
         
+        fatalError("init(coder:) has not been implemented")
     }
     
     class func initWithModel(model:LoginViewModel,frame:CGRect) -> LoginView{
@@ -64,23 +78,24 @@ class LoginView:UIView {
         
         addSubview(logoImageView)
         addSubview(titleLabel)
+        addSubview(tipLabel)
         
         var maxY = model.iconImageViewY
         
-        
         maxY = maxY + model.iconImageViewHeight + 17
         
-        titleLabel.x = model.iconImageViewX
+        //标题label
+        titleLabel.x = model.X
         titleLabel.y = maxY
         
-        
         maxY = maxY + titleLabel.height + 8
-        
         //说明label
-        
-        tipLabel.x = model.iconImageViewX
+        tipLabel.x = model.X
         tipLabel.y = maxY
-        addSubview(titleLabel)
+    }
+    
+    @objc func textViewDidChange() {
+        
         
     }
 }
@@ -90,7 +105,7 @@ class LoginViewModel:BaseModel {
     //iconImageView
     var iconImageViewHeight:CGFloat = 41
     var iconImageViewWidth:CGFloat = 133
-    var iconImageViewX:CGFloat = 17
+    var X:CGFloat = 17
     var iconImageViewY:CGFloat = navHeight
     var iconImage:String = "back2"
 }
