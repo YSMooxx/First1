@@ -13,6 +13,8 @@ class ShouyeSelectMenuCell:UITableViewCell {
     
     var model:ShouyeSelectMenuCellModel = ShouyeSelectMenuCellModel()
     
+    var callBack: (_ model:SelectMenuCellModel) ->() = {model in }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,19 +29,29 @@ class ShouyeSelectMenuCell:UITableViewCell {
     
     func setupUI() {
     
+        //cell
         selectionStyle = .none
         
-        
+        //selectMenuView
         selectMenuView = SelectMenuView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: model.subModel.height))
+        selectMenuView?.delegate = self
+        selectMenuView?.addSubviewWithModel(model1: model.subModel)
         
-        selectMenuView?.model = model.subModel
-        
-        selectMenuView?.addSubview1()
     }
     
     func addSubView1() {
         
         contentView.addSubview(selectMenuView ?? SelectMenuView())
+    }
+}
+
+extension ShouyeSelectMenuCell:SelectMenuViewDelegate {
+    
+    func didSelectIndex(Index: Int) {
+        
+        let subModel:SelectMenuCellModel = model.subModel.btnModelArray[Index] as! SelectMenuCellModel
+        
+        callBack(subModel)
     }
 }
 
@@ -59,8 +71,11 @@ class ShouyeSelectMenuCellModel:BaseModel {
             subM.pageConut = 10
             subM.column = 5
             subM.btnModelArray = modelarray
+            subM.pointWidth = 7
+            subM.pointMargin = 4
+            subM.pointHeight = 7
             if subM.pageNum > 1 {
-                subM.bottomHeight = 20
+                subM.bottomHeight = 5
             }else {
                 subM.bottomHeight = 0
             }
@@ -69,6 +84,5 @@ class ShouyeSelectMenuCellModel:BaseModel {
         }
     }
     
-    var array = [["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"],["icon":"tijiaoyanzhi","title":"维修"]]
-    
+    var array = [["icon":"store","title":"维修1"],["icon":"store","title":"维修2"],["icon":"store","title":"维修3"],["icon":"store","title":"维修4"],["icon":"store","title":"维修5"],["icon":"store","title":"维修6"],["icon":"store","title":"维修7"],["icon":"store","title":"维修8"],["icon":"store","title":"维修9"],["icon":"store","title":"维修10"],["icon":"store","title":"维修11"],["icon":"store","title":"维修12"],["icon":"store","title":"维修13"],["icon":"store","title":"维修14"],["icon":"store","title":"维修15"],["icon":"store","title":"维修16"],["icon":"store","title":"维修17"],["icon":"store","title":"维修18"],["icon":"store","title":"维修19"],["icon":"store","title":"维修20"],["icon":"store","title":"维修21"]]
 }

@@ -19,7 +19,7 @@ class LunboqiView:UIView {
     weak var delegate : (LunboqiViewDelegate)?
     var collectionView: UICollectionView?
     lazy var model = LunboqiViewModel()
-    lazy var pageControl = UIPageControl()
+    var pageControl:PageControl?
     lazy var flowlayout = UICollectionViewFlowLayout()
     var timer:Timer?
     
@@ -50,14 +50,7 @@ class LunboqiView:UIView {
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.register(LunboqiCell.self, forCellWithReuseIdentifier: LunboqiCellID)
         addSubview(collectionView!)
-        
-        pageControl = UIPageControl.init(frame: CGRect.init(x: 0, y: self.height - 25, width: frame.size.width, height: 22))
-        pageControl.currentPageIndicatorTintColor = UIColor.green
-        pageControl.pageIndicatorTintColor = UIColor.white
-        pageControl.contentHorizontalAlignment = .center
-        pageControl.numberOfPages = model.cellModelArray.count
 
-        addSubview(pageControl)
         reloadData()
     }
     
@@ -117,6 +110,17 @@ extension LunboqiView {
     
     func reloadData() {
         
+        pageControl?.removeFromSuperview()
+        
+        let pageControlModel:PageControlModel = PageControlModel()
+        pageControlModel.pageNum = model.cellModelArray.count
+        pageControlModel.margin = model.pointMargin
+        pageControlModel.pointWidth = model.pointWidth
+        pageControlModel.pointHeight = model.pointHeight
+        pageControl = PageControl(frame: CGRect(x: (self.bounds.width - pageControlModel.allWitdth) / 2, y: self.height - 22, width: pageControlModel.allWitdth, height: 22))
+        pageControl?.setupUIWithModel(model1: pageControlModel)
+        addSubview(pageControl ?? PageControl())
+        
         if model.cellModelArray.count > 1 {
          
             scrollTo(pageNum: 1, animated: false)
@@ -127,18 +131,18 @@ extension LunboqiView {
             
             if model.cellModelArray.count > 1 {
                 
-                pageControl.isHidden = false
+                pageControl?.isHidden = false
                 
             }else {
                 
-                pageControl.isHidden = true
+                pageControl?.isHidden = true
             }
             
             flowlayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         }else {
         
             flowlayout.scrollDirection = UICollectionView.ScrollDirection.vertical
-            pageControl.isHidden = true
+            pageControl?.isHidden = true
         }
         
         collectionView?.reloadData()
@@ -232,12 +236,13 @@ extension LunboqiView:UICollectionViewDelegate,UICollectionViewDataSource {
         
         if offset <= 0 {
             scrollTo(pageNum: model.cellModelArray.count, animated: false)
-            self.pageControl.currentPage = model.cellModelArray.count - 1
+            pageControl?.changColorWithIndex(Index: model.cellModelArray.count - 1, isAnimation: true)
         } else if offset >= CGFloat(model.cellModelArray.count + 1) * x {
             scrollTo(pageNum: 1, animated: false)
-            self.pageControl.currentPage = 0
+            pageControl?.changColorWithIndex(Index: 0, isAnimation: true)
         } else {
-           self.pageControl.currentPage = lroundf(Float(offset/self.frame.size.width)) - 1
+            
+            pageControl?.changColorWithIndex(Index: lroundf(Float(offset/self.frame.size.width)) - 1, isAnimation: true)
         }
         
     }
@@ -279,4 +284,8 @@ class LunboqiViewModel:BaseModel {
         return modelarray
 
     }()
+    
+    var pointHeight:CGFloat = 5
+    var pointWidth:CGFloat = 5
+    var pointMargin:CGFloat = 3
 }

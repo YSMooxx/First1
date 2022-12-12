@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        
         return true
     }
     
@@ -45,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         UserDef.shard.hRatio = ScreenH / 896
-        UserDef.shard.token = "121213"
         UserDef.saveUserDefToSandBox()
         
         return true

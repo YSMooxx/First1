@@ -14,7 +14,6 @@ private let NormalCityCellID = "NormalCityCell"
     
     @objc optional func didBeginScroll()  -> Void
     @objc optional func didSelectCity(city:String)  -> Void
-
 }
 
 class searchResultView:UIView {

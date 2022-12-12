@@ -15,7 +15,10 @@ class BaseSearchViewController:UIViewController {
     
     let tableView:UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH - navHeight))
     
-    lazy var model:BaseSearchModel = BaseSearchModel()
+    lazy var model:BaseSearchModel = {
+        
+        return BaseSearchModel()
+    }()
     
     override func viewDidLoad() {
         

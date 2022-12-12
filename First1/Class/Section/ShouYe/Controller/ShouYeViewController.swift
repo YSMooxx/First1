@@ -22,8 +22,21 @@ class ShouYeViewController:BaseSearchViewController {
         setupModel()
         setupUI()
         setDefault()
+        
+        UserDef.shard.token = ""
+        UserDef.saveUserDefToSandBox()
+        
+        if UserDef.shard.token?.count ?? 0 <= 0 {
+            
+            let vc:LoginViewController = LoginViewController()
+            
+            let nav:BaseNavigationController = BaseNavigationController.init(rootViewController: vc)
+            definesPresentationContext = true
+            nav.modalPresentationStyle = .fullScreen
+            navigationController?.present(nav, animated: false)
+        }
     }
-
+    
     override func setupUI() {
         
         view.backgroundColor = UIColor.colorWithHex(hexStr: "#FEBA07")
@@ -40,10 +53,11 @@ class ShouYeViewController:BaseSearchViewController {
         tableView.register(ShouyeLunboqiCell.self, forCellReuseIdentifier: ShouyeLunboqiCellID)
         tableView.register(ShouyeSelectMenuCell.self, forCellReuseIdentifier: ShouyeSelectMenuCellID)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
+        tableView.separatorStyle = .none
         let header:MJRefreshNormalHeader = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(refresh))
         header.lastUpdatedTimeLabel?.isHidden = true
         let backView:UIView = UIView(frame: CGRect(x: 0, y: -ScreenH + header.height, width: ScreenW, height: ScreenH ))
-        backView.backgroundColor = UIColor.colorWithHex(hexStr: "#CCCCCC")
+        backView.backgroundColor = .gray
         tableView.mj_header = header
         tableView.mj_header?.insertSubview(backView, at: 0)
     }
@@ -67,6 +81,12 @@ class ShouYeViewController:BaseSearchViewController {
         titleCell?.addTimer()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         
         super.viewDidDisappear(animated)
@@ -88,11 +108,20 @@ class ShouYeViewController:BaseSearchViewController {
 //UITableViewDelegate,UITableViewDataSource
 extension ShouYeViewController {
     
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return model.subModelArray.count
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if model.subModelArray.count == 0 {
+        if section == 0 {
             
-            return 0
+            return 1
+        }else if section == 1{
+            
+            return 1
         }else {
             
             return 20
@@ -102,9 +131,9 @@ extension ShouYeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let row = indexPath.row
+        let section = indexPath.section
         
-        switch row{
+        switch section{
         case 0 :
             let cell = tableView.dequeueReusableCell(withIdentifier: ShouyeLunboqiCellID, for: indexPath) as! ShouyeLunboqiCell
             
@@ -118,6 +147,11 @@ extension ShouYeViewController {
             return cell
         case 1 :
             let cell = tableView.dequeueReusableCell(withIdentifier: ShouyeSelectMenuCellID, for: indexPath) as! ShouyeSelectMenuCell
+
+            cell.callBack = {(model) in
+                
+                print(model.title,model.subVC,model.icon)
+            }
             
             return cell
             
@@ -132,23 +166,20 @@ extension ShouYeViewController {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if model.subModelArray.count == 0 {
+        let section:Int = indexPath.section
+        
+        if section == 0 {
             
-            return 44
+            return (ScreenW - 50) / 1.7 + navHeight + 35
+        }else if section == 1{
+            
+            let selectMenuModel:ShouyeSelectMenuCellModel = model.subModelArray[1] as! ShouyeSelectMenuCellModel
+            
+            return selectMenuModel.subModel.height
+            
         }else {
             
-            if indexPath.row == 0 {
-                
-                return ScreenW  / 1.7
-            }else if indexPath.row == 1 {
-                
-                let selectMenuModel:ShouyeSelectMenuCellModel = model.subModelArray[1] as! ShouyeSelectMenuCellModel
-                
-                return selectMenuModel.subModel.height
-            }else {
-                
-                return 44
-            }
+            return 44
         }
         
     }

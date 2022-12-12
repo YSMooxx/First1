@@ -23,7 +23,9 @@ class TestWebViewController: UIViewController,WKUIDelegate {
     
     override func viewDidLoad() {
         
-        let url = URL(string:"http://www.djy-es.com")
+        webView.scrollView.showsVerticalScrollIndicator = false
+        webView.scrollView.showsHorizontalScrollIndicator = false
+        let url = URL(string:"https://mall.95516.com/newmobile/page/detail/7351?channel=3")
         let request = URLRequest(url: url!)
         webView.load(request)
     }

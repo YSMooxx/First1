@@ -113,10 +113,10 @@ class CityTitleView:BaseView {
             
             self.searchView.width = ScreenW - 30
             self.cancelBtn.isHidden = true
-        } completion: { Bool in
+        } completion: {[weak self] Bool in
             
-            self.searchView.width = ScreenW - 30
-            self.cancelBtn.isHidden = true
+            self?.searchView.width = ScreenW - 30
+            self?.cancelBtn.isHidden = true
         }
         
         delegate?.searchViewEndEdit?()
@@ -167,10 +167,10 @@ extension CityTitleView:UITextFieldDelegate {
             
             self.searchView.width = ScreenW - 65
             
-        } completion: { Bool in
+        } completion: {[weak self] Bool in
             
-            self.searchView.width = ScreenW - 65
-            self.cancelBtn.isHidden = false
+            self?.searchView.width = ScreenW - 65
+            self?.cancelBtn.isHidden = false
         }
     }
     

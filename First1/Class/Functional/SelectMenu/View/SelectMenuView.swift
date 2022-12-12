@@ -9,12 +9,14 @@ import Foundation
 
 @objc protocol SelectMenuViewDelegate : NSObjectProtocol {
     
-    @objc optional func didSelectIndexCollectionViewCell(index: Int)->Void
+    @objc optional func didSelectIndex(Index: Int)->Void
 }
 
 class SelectMenuView:UIView {
     
+    weak var delegate : (SelectMenuViewDelegate)?
     let scrollView:UIScrollView = UIScrollView()
+    var pageControl:PageControl?
     var model:SelectMenuModel = SelectMenuModel()
     
     override init(frame: CGRect) {
@@ -33,11 +35,14 @@ class SelectMenuView:UIView {
         scrollView.isPagingEnabled = true
         scrollView.frame = self.bounds
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.delegate = self
         addSubview(scrollView)
     }
     
-    func addSubview1() {
+    func addSubviewWithModel(model1:SelectMenuModel) {
 
+        model = model1
+        
         scrollView.contentSize = CGSize(width: self.bounds.width * CGFloat(model.pageNum), height: self.bounds.height)
         
         if model.btnArray.count != 0 {
@@ -50,6 +55,7 @@ class SelectMenuView:UIView {
             }
             
             model.btnArray = []
+            pageControl?.removeFromSuperview()
         }
         
         for i in 0..<(model.btnModelArray.count ) {
@@ -71,7 +77,7 @@ class SelectMenuView:UIView {
             
             btn.setTitleColor(.black, for: UIControl.State.normal)
             btn.setImage(UIImage.svgWithName(name: sModel.icon, size: CGSize(width: model.btnImageWH, height: model.btnImageWH)), for: UIControl.State.normal)
-            btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             btn.backgroundColor = UIColor.coloWithHex(hexStr: "#808080", alpha: 0.3)
             btn.setTitle(sModel.title, for: UIControl.State.normal)
             btn.addTarget(self, action: #selector(btnClick(btn:)), for: .touchUpInside)
@@ -80,13 +86,44 @@ class SelectMenuView:UIView {
             
             model.btnArray.append(btn)
         }
+        
+        //pageControl
+        
+        let pageModel:PageControlModel = PageControlModel()
+        pageModel.margin = model.pointMargin
+        pageModel.pointHeight = model.pointHeight
+        pageModel.pointWidth = model.pointWidth
+        pageModel.pageNum = model.pageNum
+        pageControl = PageControl.init(frame: CGRect(x: (self.bounds.width - pageModel.allWitdth) / 2, y: model.height - model.bottomHeight, width: pageModel.allWitdth, height: model.bottomHeight))
+        pageControl?.setupUIWithModel(model1: pageModel)
+        addSubview(pageControl ?? PageControl())
     }
     
     @objc func btnClick(btn:UIButton) {
         
+        let string:String = btn.titleLabel?.text ?? ""
         
+        for i in 0..<model.btnModelArray.count {
+                
+            let btnModel:SelectMenuCellModel = model.btnModelArray[i] as! SelectMenuCellModel
+            
+            if string == btnModel.title {
+                
+                delegate?.didSelectIndex?(Index: i)
+            }
+        }
     }
     
+}
+
+extension SelectMenuView:UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let Index:Int = Int(scrollView.contentOffset.x / ScreenW)
+        
+        pageControl?.changColorWithIndex(Index: Index,isAnimation: true)
+    }
 }
 
 class SelectMenuModel:BaseModel {
@@ -146,7 +183,7 @@ class SelectMenuModel:BaseModel {
         
         get {
             
-            return btnHeight * 0.6
+            return btnHeight * 0.7
         }
     }
     //按钮高度
@@ -160,10 +197,16 @@ class SelectMenuModel:BaseModel {
             return (ScreenW - btnMargin * CGFloat(column + 1)) / CGFloat(column)
         }
     }
+    
+    var pointHeight:CGFloat = 5
+    var pointWidth:CGFloat = 5
+    var pointMargin:CGFloat = 3
+    
 }
 
 class SelectMenuCellModel:BaseModel {
     
     var icon:String = ""
     var title:String = ""
+    var subVC:String = ""
 }

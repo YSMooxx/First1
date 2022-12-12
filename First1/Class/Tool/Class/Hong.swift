@@ -13,7 +13,7 @@ let ScreenW:CGFloat = UIScreen.main.bounds.size.width
 
 let ScreenH:CGFloat = UIScreen.main.bounds.size.height
 
-let mColor:UIColor = UIColor.colorWithHex(hexStr: "#41AF9B")
+let mColor:UIColor = UIColor.colorWithHex(hexStr: "#35AA79")
 
 let tColor:UIColor = UIColor.colorWithHex(hexStr: "#f8f8f8")
 

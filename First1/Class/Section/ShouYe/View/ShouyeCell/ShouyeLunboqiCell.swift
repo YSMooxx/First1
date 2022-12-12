@@ -9,8 +9,8 @@ import Foundation
 
 class ShouyeLunboqiCell:UITableViewCell {
     
-    var lunboqiView:LunboqiView = LunboqiView.init(frame: CGRect(x: 0, y: 0, width: ScreenW, height: ScreenW / 1.7))
-    var model:ShouyeLunboqiModel = ShouyeLunboqiModel()
+    lazy var model:ShouyeLunboqiModel = ShouyeLunboqiModel()
+    var lunboqiView:LunboqiView = LunboqiView.init(frame: CGRect(x: 25, y: navHeight + 10, width: ScreenW - 50, height: (ScreenW - 50) / 1.7))
     var callBack: (_ model:LunboqiCellModel) ->() = {model in }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -27,9 +27,16 @@ class ShouyeLunboqiCell:UITableViewCell {
     
     func setupUI() {
         
+        contentView.backgroundColor = .gray
+        
         lunboqiView.delegate = self
         lunboqiView.model.scrollModel = .horizontal
         lunboqiView.model.cellModelArray = model.cellModelArray
+        lunboqiView.model.pointHeight = 3
+        lunboqiView.model.pointWidth = 13
+        lunboqiView.model.pointMargin = 5
+        lunboqiView.layer.cornerRadius = 10
+        lunboqiView.layer.masksToBounds = true
         
         lunboqiView.reloadData()
         
@@ -75,7 +82,6 @@ class ShouyeLunboqiModel:BaseModel {
         return modelarray
 
     }()
-    
     
     func getLunboqiModel(result1:@escaping (_ array1:[Any])->Void) {
         
